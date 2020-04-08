@@ -368,7 +368,7 @@
 </li>
 <li><p>运行测试</p>
 <blockquote>
-<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span>hexo clean #用来清理缓存文件</span><br><span class="line"><span class="symbol">2 </span>hexo g     #生成文件</span><br><span class="line"><span class="symbol">3 </span>hexo s     #运行本地服务器</span><br><span class="line"><span class="symbol">4 </span>hexo d     #上传到服务器</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean <span class="comment">#用来清理缓存文件</span></span><br><span class="line">hexo g     <span class="comment">#生成文件</span></span><br><span class="line">hexo s     <span class="comment">#运行本地服务器</span></span><br><span class="line">hexo d     <span class="comment">#上传到服务器</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>我们运行<code>hexo g</code> 、<code>hexo s</code>，成功后打开浏览器并且输入<code>localhost:4000</code>即可看到hexo的界面</li>
@@ -407,11 +407,11 @@
 </ul>
 <ul>
 <li><p>打开站点的配置文件_config.yml，翻到最后修改为：</p>
-<p>deploy:<br>type: git<br>repo:  ‘<a href="https://github.com/xxxx/xxxx.github.io.git&#39;" target="_blank" rel="noopener">https://github.com/xxxx/xxxx.github.io.git&#39;</a>      #这里填入你之前在GitHub上创建仓库的完整路径</p>
+<p>deploy:</p>
+<p>​    type: git</p>
+<p>​    repo:  ‘<a href="https://github.com/xxxx/xxxx.github.io.git&#39;" target="_blank" rel="noopener">https://github.com/xxxx/xxxx.github.io.git&#39;</a></p>
+<p>​    branch: master</p>
 </li>
-</ul>
-<p>branch: master</p>
-<ul>
 <li><p>安装Git部署插件，输入命令：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 
