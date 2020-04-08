@@ -344,89 +344,27 @@
       
         
           
-            <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>[^0]: 这里只在Windows10 64 位下演示</p>
-<h2 id="01安装Node-js"><a href="#01安装Node-js" class="headerlink" title="01安装Node.js"></a>01安装Node.js</h2><ul>
-<li>打开官方网站安装所需版本的node.js</li>
-</ul>
-<h2 id="02安装Git"><a href="#02安装Git" class="headerlink" title="02安装Git"></a>02安装Git</h2><ul>
-<li>打开官方网站安装所需版本的git</li>
-</ul>
-<h1 id="用git安装hexo"><a href="#用git安装hexo" class="headerlink" title="用git安装hexo"></a>用git安装hexo</h1><ul>
-<li><p>新建一个文件夹</p>
-</li>
-<li><p>右键选用git bush 打开</p>
-</li>
-<li><p>输入<code>node -v</code> 通过查看版本判断是否已经安装好了node</p>
-</li>
-<li><p>输入<code>npm install -g hexo-cli</code>安装hexo</p>
-</li>
-<li><p>判断是否安装成功</p>
-</li>
-<li><p>安装 hexo 完成后，请执行<code>hexo init</code>，hexo 将会在指定文件夹中新建所需要的文件</p>
-</li>
-<li><p>输入<code>npm install</code>安装所需插件</p>
-</li>
-<li><p>运行测试</p>
-<blockquote>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean <span class="comment">#用来清理缓存文件</span></span><br><span class="line">hexo g     <span class="comment">#生成文件</span></span><br><span class="line">hexo s     <span class="comment">#运行本地服务器</span></span><br><span class="line">hexo d     <span class="comment">#上传到服务器</span></span><br></pre></td></tr></table></figure>
+          准备[^0]: 这里只在Windows10 64 位下演示
+01安装Node.js
+打开官方网站安装所需版本的node.js
 
-<ul>
-<li>我们运行<code>hexo g</code> 、<code>hexo s</code>，成功后打开浏览器并且输入<code>localhost:4000</code>即可看到hexo的界面</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<h1 id="部署到云端"><a href="#部署到云端" class="headerlink" title="部署到云端"></a>部署到云端</h1><h2 id="01在github上新建仓库"><a href="#01在github上新建仓库" class="headerlink" title="01在github上新建仓库"></a>01在github上新建仓库</h2><ul>
-<li>仓库名为: <username>.github.io</li>
-<li>选择public</li>
-</ul>
-<h2 id="02将github-page与hexo联系起来"><a href="#02将github-page与hexo联系起来" class="headerlink" title="02将github page与hexo联系起来"></a>02将github page与hexo联系起来</h2><ul>
-<li><p>设置git的user name 和email</p>
-<blockquote>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>--global user.name <span class="string">"xxx"</span></span><br><span class="line">---</span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"xxxxx@xxx.com"</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-</ul>
-<ul>
-<li><p>生成密钥文件</p>
-<blockquote>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure>
-</blockquote>
-</li>
-<li><p>然后直接三个回车即可，默认不需要设置密码</p>
-</li>
-<li><p>找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制</p>
-</li>
-<li><p>打开<a href="https://link.zhihu.com/?target=https%3A//github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p>
-</li>
-<li><p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去</p>
-</li>
-<li><p>在Git Bash中检测GitHub公钥设置是否成功，输入<code>ssh git@github.com</code></p>
-<p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/YKO3%247%5DRM%5D6O%7D%5BOFBK1%7EIMO.png" alt="若Hi后面出现的为你的username则表示成功"></p>
-</li>
-</ul>
-<ul>
-<li><p>打开站点的配置文件_config.yml，翻到最后修改为：</p>
-<p>deploy:</p>
-<p>​    type: git</p>
-<p>​    repo:  ‘<a href="https://github.com/xxxx/xxxx.github.io.git&#39;" target="_blank" rel="noopener">https://github.com/xxxx/xxxx.github.io.git&#39;</a></p>
-<p>​    branch: master</p>
-</li>
-<li><p>安装Git部署插件，输入命令：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+02安装Git
+打开官方网站安装所需版本的git
 
+用git安装hexo
+新建一个文件夹
 
+右键选用git bush 打开
 
-</li>
-</ul>
-<h1 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h1><p>我们分别输入三条命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>hexo d 是部署网站命令，d是deploy的缩写</p>
-<p>此时你就可通过 xxx.github.io 对你的博客进行访问了</p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>ssh：因为GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当然你也可以再每次推送时输入一遍账号和密码而跳过ssh这一步</p>
-
-          
+输入node -v 通过查看版本判断是否已经安
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/DXYD.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -544,10 +482,17 @@
       
         
           
-            <h2 id="QQ"><a href="#QQ" class="headerlink" title="QQ"></a>QQ</h2><p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/qq_pic_merged_1586329479532.jpg" alt=""></p>
-<h2 id="WeChat"><a href="#WeChat" class="headerlink" title="WeChat"></a>WeChat</h2><p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/weixin.png" alt=""></p>
-<h2 id="头条号"><a href="#头条号" class="headerlink" title="头条号"></a>头条号</h2><h4 id="一点调茶局"><a href="#一点调茶局" class="headerlink" title="一点调茶局"></a>一点调茶局</h4><h2 id="微信公众号"><a href="#微信公众号" class="headerlink" title="微信公众号"></a>微信公众号</h2><h4 id="东西一点"><a href="#东西一点" class="headerlink" title="东西一点"></a>东西一点</h4>
+          QQ
+WeChat
+头条号一点调茶局微信公众号东西一点
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/DXYD.github.io/2020/04/06/My-Gallery/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
