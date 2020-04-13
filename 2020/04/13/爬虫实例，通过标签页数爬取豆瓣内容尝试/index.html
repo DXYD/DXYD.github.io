@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="笔记," />
+  <meta name="keywords" content="尝试," />
 
 
 
@@ -79,18 +79,23 @@
 
 
 
-<meta name="description" content="python模拟登陆 用Google浏览器开发者工具中的network进行抓包  时间戳 1234567891011121314import timeget now_time():    &#39;&#39;&#39;获取时间戳    秒级 10位    毫秒级 13位    微秒级 16位    &#39;&#39;&#39;    now_time &#x3D; int(time.time())    print(&quot;now time:&quot;,now_ti">
+<meta name="description" content="前言 去年暑假起，自学python，后因琐事一直未系统地学习，今年寒假重拾旧业，顺便入门了爬虫，尝试写过很多爬虫大多无功而返，近几天又入坑了，便又着手写爬虫.  过程 又又又复习了一遍requests库 又又又复习了一遍BeautifulSoup库 又又复习了一遍Response对象的属性 又看了之前的B站视频 终于开始冥想了  爬什么？听说豆瓣很适合爬虫入门选手 -&gt; 爬豆瓣 -&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python时间戳">
-<meta property="og:url" content="https://dxyd.github.io/2020/04/11/python%E6%97%B6%E9%97%B4%E6%88%B3/index.html">
+<meta property="og:title" content="爬虫实例，通过标签页数爬取豆瓣内容尝试">
+<meta property="og:url" content="https://dxyd.github.io/2020/04/13/%E7%88%AC%E8%99%AB%E5%AE%9E%E4%BE%8B%EF%BC%8C%E9%80%9A%E8%BF%87%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%95%B0%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E5%86%85%E5%AE%B9%E5%B0%9D%E8%AF%95/index.html">
 <meta property="og:site_name" content="小汤圆のblog">
-<meta property="og:description" content="python模拟登陆 用Google浏览器开发者工具中的network进行抓包  时间戳 1234567891011121314import timeget now_time():    &#39;&#39;&#39;获取时间戳    秒级 10位    毫秒级 13位    微秒级 16位    &#39;&#39;&#39;    now_time &#x3D; int(time.time())    print(&quot;now time:&quot;,now_ti">
+<meta property="og:description" content="前言 去年暑假起，自学python，后因琐事一直未系统地学习，今年寒假重拾旧业，顺便入门了爬虫，尝试写过很多爬虫大多无功而返，近几天又入坑了，便又着手写爬虫.  过程 又又又复习了一遍requests库 又又又复习了一遍BeautifulSoup库 又又复习了一遍Response对象的属性 又看了之前的B站视频 终于开始冥想了  爬什么？听说豆瓣很适合爬虫入门选手 -&gt; 爬豆瓣 -&gt;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-11T09:32:39.000Z">
-<meta property="article:modified_time" content="2020-04-11T10:19:13.787Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413164357.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413163822.png">
+<meta property="og:image" content="https://dxyd.github.io/2020/04/13/%E7%88%AC%E8%99%AB%E5%AE%9E%E4%BE%8B%EF%BC%8C%E9%80%9A%E8%BF%87%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%95%B0%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E5%86%85%E5%AE%B9%E5%B0%9D%E8%AF%95/!%5B%5D(https://raw.githubusercontent.com/DXYD/pic/master/img/940S%25SF%7BR)JMZ%25%242%25I%5DKXN0.png">
+<meta property="og:image" content="https://dxyd.github.io/2020/04/13/%E7%88%AC%E8%99%AB%E5%AE%9E%E4%BE%8B%EF%BC%8C%E9%80%9A%E8%BF%87%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%95%B0%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E5%86%85%E5%AE%B9%E5%B0%9D%E8%AF%95/!%5B%5D(https://raw.githubusercontent.com/DXYD/pic/master/img/20200413172713.png)">
+<meta property="article:published_time" content="2020-04-13T08:54:22.000Z">
+<meta property="article:modified_time" content="2020-04-13T09:28:22.270Z">
 <meta property="article:author" content="Lrunn">
-<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="尝试">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413164357.png">
 
 
 
@@ -120,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="https://DXYD.github.io/2020/04/11/python时间戳/"/>
+  <link rel="canonical" href="https://DXYD.github.io/2020/04/13/爬虫实例，通过标签页数爬取豆瓣内容尝试/"/>
 
 
 
 
 
-  <title>Python时间戳 | 小汤圆のblog</title>
+  <title>爬虫实例，通过标签页数爬取豆瓣内容尝试 | 小汤圆のblog</title>
   
 
 
@@ -254,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://DXYD.github.io/DXYD.github.io/2020/04/11/python%E6%97%B6%E9%97%B4%E6%88%B3/">
+    <link itemprop="mainEntityOfPage" href="https://DXYD.github.io/DXYD.github.io/2020/04/13/%E7%88%AC%E8%99%AB%E5%AE%9E%E4%BE%8B%EF%BC%8C%E9%80%9A%E8%BF%87%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%95%B0%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E5%86%85%E5%AE%B9%E5%B0%9D%E8%AF%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lrunn">
@@ -271,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python时间戳</h1>
+          <h1 class="post-title" itemprop="name headline">爬虫实例，通过标签页数爬取豆瓣内容尝试</h1>
         
 
         <div class="post-meta">
@@ -283,8 +288,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-11T17:32:39+08:00">
-                2020-04-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-13T16:54:22+08:00">
+                2020-04-13
               </time>
             
 
@@ -348,97 +353,38 @@
       
 
       
-        <h1 id="python模拟登陆"><a href="#python模拟登陆" class="headerlink" title="python模拟登陆"></a>python模拟登陆</h1><blockquote>
-<p>用Google浏览器开发者工具中的network进行抓包</p>
-<ul>
-<li><p>时间戳</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">get now_time():</span><br><span class="line">    <span class="string">'''获取时间戳</span></span><br><span class="line"><span class="string">    秒级 10位</span></span><br><span class="line"><span class="string">    毫秒级 13位</span></span><br><span class="line"><span class="string">    微秒级 16位</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    now_time = int(time.time())</span><br><span class="line">    print(<span class="string">"now time:"</span>,now_time)</span><br><span class="line">    print(now_time)</span><br><span class="line">    <span class="keyword">return</span> now_time</span><br><span class="line"></span><br><span class="line">get now_time()</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>例如现在的时间戳为：1586600279</p>
-<p>即：2020-04-11 18:17:59</p>
-</li>
-</ul>
-</li>
-<li><p>代理人</p>
-<p>headers = {‘User-Agent’: ‘ ‘}   #字典类型</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#例如</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">R = requests.get(url,headers=headers)     <span class="comment">#Response 对象</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>time_one = get_now_time</p>
-</li>
-<li><p>准备请求参数</p>
-</li>
-<li><p>发送获取验证码图片请求</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">img_url = <span class="string">''</span> + time_one</span><br><span class="line">response = requests.get(img_url)</span><br><span class="line">img_data = response.content</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'xxx.jpg'</span>,mode = <span class="string">'wb'</span>) <span class="keyword">as</span> f: <span class="comment">##写入</span></span><br><span class="line">    f.write(img_data)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>对接打码平台，智能 图形识别、图片分类</p>
-</li>
-</ul>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>去年暑假起，自学python，后因琐事一直未系统地学习，今年寒假重拾旧业，顺便入门了爬虫，尝试写过很多爬虫大多无功而返，近几天又入坑了，便又着手写爬虫.</p>
 </blockquote>
-<h3 id="获取当前时间戳"><a href="#获取当前时间戳" class="headerlink" title="获取当前时间戳"></a>获取当前时间戳</h3><table>
-<thead>
-<tr>
-<th>Swift</th>
-<th align="left"><code>NSDate().timeIntervalSince1970</code></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Go</td>
-<td align="left"><code>import (  &quot;time&quot; ) int32(time.Now().Unix())</code></td>
-</tr>
-<tr>
-<td>Java</td>
-<td align="left"><code>// pure java (int) (System.currentTimeMillis() / 1000)``// joda (int) (DateTime.now().getMillis() / 1000)</code></td>
-</tr>
-<tr>
-<td>JavaScript</td>
-<td align="left"><code>Math.round(new Date() / 1000)</code></td>
-</tr>
-<tr>
-<td>Objective-C</td>
-<td align="left"><code>[[NSDate date] timeIntervalSince1970]</code></td>
-</tr>
-<tr>
-<td>MySQL</td>
-<td align="left"><code>SELECT unix_timestamp(now())</code></td>
-</tr>
-<tr>
-<td>SQLite</td>
-<td align="left"><code>SELECT strftime(&#39;%s&#39;, &#39;now&#39;)</code></td>
-</tr>
-<tr>
-<td>Erlang</td>
-<td align="left"><code>calendar:datetime_to_gregorian_seconds(calendar:universal_time())-719528*24*3600.</code></td>
-</tr>
-<tr>
-<td>PHP</td>
-<td align="left"><code>// pure php time()``// Carbon\Carbon Carbon::now()-&gt;timestamp</code></td>
-</tr>
-<tr>
-<td>Python</td>
-<td align="left"><code>import time time.time()</code></td>
-</tr>
-<tr>
-<td>Ruby</td>
-<td align="left"><code>Time.now.to_i</code></td>
-</tr>
-<tr>
-<td>Shell</td>
-<td align="left"><code>date +%s</code></td>
-</tr>
-<tr>
-<td>Groovy</td>
-<td align="left"><code>(new Date().time / 1000).intValue()</code></td>
-</tr>
-<tr>
-<td>Lua</td>
-<td align="left"><code>os.time()</code></td>
-</tr>
-<tr>
-<td>.NET/C#</td>
-<td align="left"><code>(DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000</code></td>
-</tr>
-</tbody></table>
+<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><ul>
+<li>又又又复习了一遍<a href="http://cn.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="noopener">requests库</a></li>
+<li>又又又复习了一遍<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="noopener">BeautifulSoup库</a></li>
+<li>又又复习了一遍Response对象的属性</li>
+<li>又看了之前的B站视频</li>
+<li>终于开始冥想了</li>
+</ul>
+<h2 id="爬什么？"><a href="#爬什么？" class="headerlink" title="爬什么？"></a>爬什么？</h2><p>听说豆瓣很适合爬虫入门选手 -&gt; 爬豆瓣 -&gt; 爬最简单的标题</p>
+<h2 id="怎么爬？"><a href="#怎么爬？" class="headerlink" title="怎么爬？"></a>怎么爬？</h2><blockquote>
+<p>​    本来想用正则表达式来爬的，但是但是我忘了，脑子一片空白</p>
+</blockquote>
+<ul>
+<li>requests + BeautifulSoup 实现简单的信息检索</li>
+<li>请求</li>
+<li>回应</li>
+<li>解析</li>
+<li>寻找</li>
+<li>保存</li>
+</ul>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><blockquote>
+<p>​    虽然代码不多，但是对于新手的我一边找error一边找文档是真的吐血，手敲7个钟头……</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> xlwt</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pages_</span><span class="params">(page)</span>:</span></span><br><span class="line">    pages = <span class="number">0</span></span><br><span class="line">    pages += page * <span class="number">20</span> - <span class="number">20</span></span><br><span class="line">    <span class="keyword">return</span> pages</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fiction_page</span><span class="params">(url, data)</span>:</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'</span></span><br><span class="line">    &#125;</span><br><span class="line">    response = requests.get(url, headers=headers)</span><br><span class="line">    soup = BeautifulSoup(response.content, features=<span class="string">'lxml'</span>)</span><br><span class="line">    soup_1 = soup.select(<span class="string">"a[title]"</span>)</span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> soup_1:</span><br><span class="line">        s_s = x[<span class="string">"title"</span>]</span><br><span class="line">        data.append(s_s)</span><br><span class="line">    <span class="keyword">return</span> data</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_fiction</span><span class="params">(save, page)</span>:</span></span><br><span class="line">    <span class="comment">#    with open("爬取文件","w",encoding ="utf-8" ) as f:</span></span><br><span class="line">    <span class="comment">#  s_s=' '.join(s["title"])</span></span><br><span class="line">    <span class="comment"># print(s_s)</span></span><br><span class="line">    book = xlwt.Workbook(encoding=<span class="string">"utf-8"</span>, style_compression=<span class="number">0</span>)  <span class="comment"># 创建workbook对象</span></span><br><span class="line">    sheet = book.add_sheet(<span class="string">'爬取书籍'</span>, cell_overwrite_ok=<span class="literal">True</span>)  <span class="comment"># 创建工作表</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, int(page) * <span class="number">20</span>):</span><br><span class="line">        data_20 = save[i]</span><br><span class="line">        sheet.write(i, <span class="number">0</span>, data_20)</span><br><span class="line">    book.save(<span class="string">'爬取的书籍.xls'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    tag = input(<span class="string">"请输入你想输入的标签："</span>)</span><br><span class="line">    page = input(<span class="string">"请输入要下载前几页的内容："</span>)</span><br><span class="line">    data = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(int(page)):</span><br><span class="line">        pages_s = pages_(i + <span class="number">1</span>)</span><br><span class="line">        <span class="comment">#     # tags = quote(tag,encoding ='GBK' )</span></span><br><span class="line">        url = <span class="string">'https://book.douban.com/tag/'</span> + tag + <span class="string">'?start='</span> + str(pages_s) + <span class="string">'&amp;type=T'</span></span><br><span class="line">        print(<span class="string">"第%d页下载中"</span> % (i + <span class="number">1</span>))</span><br><span class="line">        save = fiction_page(url, data)</span><br><span class="line">    save_fiction(save, page)</span><br><span class="line">    print(<span class="string">"保存成功！"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413164357.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413163822.png" alt=""></p>
+<p><img src="!%5B%5D(https://raw.githubusercontent.com/DXYD/pic/master/img/940S%25SF%7BR)JMZ%25%242%25I%5DKXN0.png" alt="">))</p>
+<p><img src="!%5B%5D(https://raw.githubusercontent.com/DXYD/pic/master/img/20200413172713.png)" alt=""></p>
+<hr>
 
       
     </div>
@@ -464,7 +410,7 @@
       
         <div class="post-tags">
           
-            <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/" rel="tag"># 笔记</a>
+            <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/" rel="tag"># 尝试</a>
           
         </div>
       
@@ -477,8 +423,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/DXYD.github.io/2020/04/11/%E5%85%B3%E4%BA%8Ephp%E7%9A%84%E5%AD%A6%E4%B9%A0-%E4%BA%8C/" rel="next" title="关于PHP的学习<二>">
-                <i class="fa fa-chevron-left"></i> 关于PHP的学习<二>
+              <a href="/DXYD.github.io/2020/04/13/BeautifulSoup/" rel="next" title="BeautifulSoup">
+                <i class="fa fa-chevron-left"></i> BeautifulSoup
               </a>
             
           </div>
@@ -486,10 +432,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/DXYD.github.io/2020/04/13/requests/" rel="prev" title="Requests">
-                Requests <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -652,7 +594,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python模拟登陆"><span class="nav-number">1.</span> <span class="nav-text">python模拟登陆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取当前时间戳"><span class="nav-number">1.0.1.</span> <span class="nav-text">获取当前时间戳</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#爬什么？"><span class="nav-number">2.1.</span> <span class="nav-text">爬什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#怎么爬？"><span class="nav-number">2.2.</span> <span class="nav-text">怎么爬？</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片"><span class="nav-number">4.</span> <span class="nav-text">图片</span></a></li></ol></div>
             
 
           </div>
