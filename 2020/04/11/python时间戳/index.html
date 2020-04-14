@@ -29,7 +29,7 @@
 
     <script src="/DXYD.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -483,8 +483,20 @@
 <p>用Google浏览器开发者工具中的network进行抓包</p>
 <ul>
 <li><p>时间戳</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">get now_time():</span><br><span class="line">    <span class="string">'''获取时间戳</span></span><br><span class="line"><span class="string">    秒级 10位</span></span><br><span class="line"><span class="string">    毫秒级 13位</span></span><br><span class="line"><span class="string">    微秒级 16位</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    now_time = int(time.time())</span><br><span class="line">    print(<span class="string">"now time:"</span>,now_time)</span><br><span class="line">    print(now_time)</span><br><span class="line">    <span class="keyword">return</span> now_time</span><br><span class="line"></span><br><span class="line">get now_time()</span><br></pre></td></tr></table></figure>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> time
 
+get now_time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''获取时间戳
+    秒级 10位
+    毫秒级 13位
+    微秒级 16位
+    '''</span>
+    now_time <span class="token operator">=</span> int<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"now time:"</span><span class="token punctuation">,</span>now_time<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>now_time<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> now_time
+
+get now_time<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 <ul>
 <li><p>例如现在的时间戳为：1586600279</p>
 <p>即：2020-04-11 18:17:59</p>
@@ -493,14 +505,23 @@
 </li>
 <li><p>代理人</p>
 <p>headers = {‘User-Agent’: ‘ ‘}   #字典类型</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#例如</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">R = requests.get(url,headers=headers)     <span class="comment">#Response 对象</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#例如</span>
+
+<span class="token keyword">import</span> requests
+
+R <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">#Response 对象</span>
+</code></pre>
 </li>
 <li><p>time_one = get_now_time</p>
 </li>
 <li><p>准备请求参数</p>
 </li>
 <li><p>发送获取验证码图片请求</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">img_url = <span class="string">''</span> + time_one</span><br><span class="line">response = requests.get(img_url)</span><br><span class="line">img_data = response.content</span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'xxx.jpg'</span>,mode = <span class="string">'wb'</span>) <span class="keyword">as</span> f: <span class="comment">##写入</span></span><br><span class="line">    f.write(img_data)</span><br></pre></td></tr></table></figure>
+<pre class=" language-python"><code class="language-python">img_url <span class="token operator">=</span> <span class="token string">''</span> <span class="token operator">+</span> time_one
+response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>img_url<span class="token punctuation">)</span>
+img_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content
+<span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'xxx.jpg'</span><span class="token punctuation">,</span>mode <span class="token operator">=</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">##写入</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>img_data<span class="token punctuation">)</span></code></pre>
 </li>
 <li><p>对接打码平台，智能 图形识别、图片分类</p>
 </li>
@@ -806,22 +827,28 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/13/requests/">
+                <a href="/DXYD.github.io/2020/04/13/BeautifulSoup/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="Requests">
+                        <img src="/DXYD.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="BeautifulSoup">
                         
-                        <span class="card-title">Requests</span>
+                        <span class="card-title">BeautifulSoup</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            爬虫
-先模拟浏览器发送requests请求——requests.get()
+                            BeautifulSoup四大对象种类：
 
-requests发送请求1234567891011121 requests.get(‘https://github.com/timeline.json’)# GE
+Tag
+NavigableString
+BeautifulSoup
+Comment
+
+
+
+from bs4 import BeautifulSoupsoup = BeautifilSoup(htm
                         
                     </div>
                     <div class="publish-info">
@@ -847,8 +874,8 @@ requests发送请求1234567891011121 requests.get(‘https://github.com/timeline
                         <span class="chip bg-color">笔记</span>
                     </a>
                     
-                    <a href="/DXYD.github.io/tags/requests%E5%BA%93/">
-                        <span class="chip bg-color">requests库</span>
+                    <a href="/DXYD.github.io/tags/BeautifulSoup/">
+                        <span class="chip bg-color">BeautifulSoup</span>
                     </a>
                     
                 </div>

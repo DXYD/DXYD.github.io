@@ -29,7 +29,7 @@
 
     <script src="/DXYD.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -513,9 +513,10 @@
 </li>
 <li><p>运行测试</p>
 <blockquote>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean <span class="comment">#用来清理缓存文件</span></span><br><span class="line">hexo g     <span class="comment">#生成文件</span></span><br><span class="line">hexo s     <span class="comment">#运行本地服务器</span></span><br><span class="line">hexo d     <span class="comment">#上传到服务器</span></span><br></pre></td></tr></table></figure>
-
-<ul>
+<pre><code> hexo clean #用来清理缓存文件
+ hexo g     #生成文件
+ hexo s     #运行本地服务器
+ hexo d     #上传到服务器</code></pre><ul>
 <li>我们运行<code>hexo g</code> 、<code>hexo s</code>，成功后打开浏览器并且输入<code>localhost:4000</code>即可看到hexo的界面</li>
 </ul>
 </blockquote>
@@ -528,15 +529,15 @@
 <h2 id="02将github-page与hexo联系起来"><a href="#02将github-page与hexo联系起来" class="headerlink" title="02将github page与hexo联系起来"></a>02将github page与hexo联系起来</h2><ul>
 <li><p>设置git的user name 和email</p>
 <blockquote>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git<span class="built_in"> config </span>--global user.name <span class="string">"xxx"</span></span><br><span class="line">---</span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email <span class="string">"xxxxx@xxx.com"</span></span><br></pre></td></tr></table></figure>
-</blockquote>
+<pre><code>$ git config --global user.name &quot;xxx&quot;
+---
+$ git config --global user.email &quot;xxxxx@xxx.com&quot;</code></pre></blockquote>
 </li>
 </ul>
 <ul>
 <li><p>生成密钥文件</p>
 <blockquote>
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure>
-</blockquote>
+<pre><code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</code></pre></blockquote>
 </li>
 <li><p>然后直接三个回车即可，默认不需要设置密码</p>
 </li>
@@ -558,15 +559,12 @@
 <p>​    branch: master</p>
 </li>
 <li><p>安装Git部署插件，输入命令：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-
-
-
-</li>
+<pre><code>npm install hexo-deployer-git --save</code></pre></li>
 </ul>
 <h1 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h1><p>我们分别输入三条命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g </span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-bash"><code class="language-bash">hexo clean 
+hexo g 
+hexo d</code></pre>
 <p>hexo d 是部署网站命令，d是deploy的缩写</p>
 <p>此时你就可通过 xxx.github.io 对你的博客进行访问了</p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>ssh：因为GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当然你也可以再每次推送时输入一遍账号和密码而跳过ssh这一步</p>

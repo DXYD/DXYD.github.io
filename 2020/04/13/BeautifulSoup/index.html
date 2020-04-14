@@ -29,7 +29,7 @@
 
     <script src="/DXYD.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -495,17 +495,23 @@
 <h2 id="from-bs4-import-BeautifulSoup"><a href="#from-bs4-import-BeautifulSoup" class="headerlink" title="from bs4 import BeautifulSoup"></a>from bs4 import BeautifulSoup</h2><p>soup = BeautifilSoup(html,’lxml’)</p>
 <hr>
 <p>tag  先获取tag（标签），再获取属性</p>
-<h2 id="01-获取属性"><a href="#01-获取属性" class="headerlink" title="01 获取属性"></a>01 获取属性</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取所有属性</span></span><br><span class="line">print(soup.title.attrs)</span><br><span class="line"></span><br><span class="line"><span class="comment">#获取单个属性</span></span><br><span class="line">print(soup.div.get(<span class="string">'class'</span>))</span><br><span class="line">print(soup.div[<span class="string">'class'</span>])</span><br><span class="line">print(soup.a[<span class="string">'href'</span>])</span><br></pre></td></tr></table></figure>
+<h2 id="01-获取属性"><a href="#01-获取属性" class="headerlink" title="01 获取属性"></a>01 获取属性</h2><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#获取所有属性</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>title<span class="token punctuation">.</span>attrs<span class="token punctuation">)</span>
 
+<span class="token comment" spellcheck="true">#获取单个属性</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>div<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'class'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>div<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>a<span class="token punctuation">[</span><span class="token string">'href'</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
 <hr>
 <p>先取tag，再取内容</p>
-<h2 id="02-NvigableString获取内容"><a href="#02-NvigableString获取内容" class="headerlink" title="02 NvigableString获取内容"></a>02 NvigableString获取内容</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(soup.title.string)</span><br><span class="line">print(soup.title.text)</span><br></pre></td></tr></table></figure>
-
+<h2 id="02-NvigableString获取内容"><a href="#02-NvigableString获取内容" class="headerlink" title="02 NvigableString获取内容"></a>02 NvigableString获取内容</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>title<span class="token punctuation">.</span>string<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>title<span class="token punctuation">.</span>text<span class="token punctuation">)</span></code></pre>
 <hr>
-<h2 id="03-Beautiful-soup"><a href="#03-Beautiful-soup" class="headerlink" title="03 Beautiful soup"></a>03 Beautiful soup</h2><h2 id="04-comment"><a href="#04-comment" class="headerlink" title="04 comment"></a>04 comment</h2><h2 id="搜素文档树"><a href="#搜素文档树" class="headerlink" title="搜素文档树"></a>搜素文档树</h2><h1 id="find-all"><a href="#find-all" class="headerlink" title="find_all"></a>find_all</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">soup.find_all(<span class="string">'title'</span>)  <span class="comment">#根据标签去找</span></span><br><span class="line">soup.find_all(<span class="string">'id = title'</span>)  <span class="comment">#根据id去找</span></span><br><span class="line">soup.find_all(class_ = <span class="string">"info"</span>)  <span class="comment">#根据class去找</span></span><br><span class="line">soup.find_all(attrs = &#123;<span class="string">'float'</span>:<span class="string">'left'</span>&#125;)   <span class="comment">#根据参数</span></span><br><span class="line">soup.find_all(<span class="string">"div"</span>,attrs=&#123;<span class="string">'float'</span>,<span class="string">'left'</span>&#125;)  <span class="comment">#过滤器</span></span><br></pre></td></tr></table></figure>
-
-
-
+<h2 id="03-Beautiful-soup"><a href="#03-Beautiful-soup" class="headerlink" title="03 Beautiful soup"></a>03 Beautiful soup</h2><h2 id="04-comment"><a href="#04-comment" class="headerlink" title="04 comment"></a>04 comment</h2><h2 id="搜素文档树"><a href="#搜素文档树" class="headerlink" title="搜素文档树"></a>搜素文档树</h2><h1 id="find-all"><a href="#find-all" class="headerlink" title="find_all"></a>find_all</h1><pre class=" language-python"><code class="language-python">soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#根据标签去找</span>
+soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'id = title'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#根据id去找</span>
+soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span>class_ <span class="token operator">=</span> <span class="token string">"info"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#根据class去找</span>
+soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span>attrs <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'float'</span><span class="token punctuation">:</span><span class="token string">'left'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#根据参数</span>
+soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">,</span>attrs<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'float'</span><span class="token punctuation">,</span><span class="token string">'left'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#过滤器</span></code></pre>
 <h1 id="Requests的使用"><a href="#Requests的使用" class="headerlink" title="Requests的使用"></a>Requests的使用</h1><ul>
 <li>req = requests.get(“url”)</li>
 <li>req = requests.post(“url”)</li>
@@ -762,60 +768,6 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/13/%E7%88%AC%E8%99%AB%E5%AE%9E%E4%BE%8B%EF%BC%8C%E9%80%9A%E8%BF%87%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%95%B0%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E5%86%85%E5%AE%B9%E5%B0%9D%E8%AF%95/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/DXYD.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="爬虫实例，通过标签页数爬取豆瓣内容尝试">
-                        
-                        <span class="card-title">爬虫实例，通过标签页数爬取豆瓣内容尝试</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            前言
-去年暑假起，自学python，后因琐事一直未系统地学习，今年寒假重拾旧业，顺便入门了爬虫，尝试写过很多爬虫大多无功而返，近几天又入坑了，便又着手写爬虫.
-
-过程
-又又又复习了一遍requests库
-又又又复习了一遍BeautifulS
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/DXYD.github.io/categories/python/" class="post-category">
-                                    python
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
-                        <span class="chip bg-color">尝试</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
                 <a href="/DXYD.github.io/2020/04/13/requests/">
                     <div class="card-image">
                         
@@ -831,13 +783,15 @@
                             爬虫
 先模拟浏览器发送requests请求——requests.get()
 
-requests发送请求1234567891011121 requests.get(‘https://github.com/timeline.json’)# GE
+requests发送请求1 requests.get(‘https://github.com/timeline.json’)# GET请求
+
+2   reques
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -859,6 +813,65 @@ requests发送请求1234567891011121 requests.get(‘https://github.com/timeline
                     
                     <a href="/DXYD.github.io/tags/requests%E5%BA%93/">
                         <span class="chip bg-color">requests库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/DXYD.github.io/2020/04/11/python%E6%97%B6%E9%97%B4%E6%88%B3/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/DXYD.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="Python时间戳">
+                        
+                        <span class="card-title">Python时间戳</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            python模拟登陆
+用Google浏览器开发者工具中的network进行抓包
+
+时间戳
+import time
+
+get now_time():
+    '''获取时间戳
+    秒级 10位
+    毫秒级 13位
+    微秒级 16
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/DXYD.github.io/categories/python/" class="post-category">
+                                    python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>

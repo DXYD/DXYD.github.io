@@ -29,7 +29,7 @@
 
     <script src="/DXYD.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -496,8 +496,13 @@
 <li>类似c语言</li>
 </ul>
 <h1 id="php变量"><a href="#php变量" class="headerlink" title="php变量"></a>php变量</h1><p><u>变量是用于存储信息的容器</u>   </p>
-<figure class="highlight puppet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="string">'php</span></span><br><span class="line"><span class="string">echo '</span>dxyd<span class="string">';</span></span><br><span class="line"><span class="string"><span class="variable">$x</span>=1</span></span><br><span class="line"><span class="string"><span class="variable">$y</span>=2</span></span><br><span class="line"><span class="string"><span class="variable">$z</span>=<span class="variable">$x</span>+<span class="variable">$y</span></span></span><br><span class="line"><span class="string">echo <span class="variable">$z</span></span></span><br><span class="line"><span class="string">?&gt;</span></span><br></pre></td></tr></table></figure>
-<h1 id="php-echo和print语句"><a href="#php-echo和print语句" class="headerlink" title="php echo和print语句"></a>php echo和print语句</h1><p>echo 和print的区别</p>
+<pre><code>    &lt;&#39;php
+    echo &#39;dxyd&#39;;
+    $x=1
+    $y=2
+    $z=$x+$y
+    echo $z
+    ?&gt;</code></pre><h1 id="php-echo和print语句"><a href="#php-echo和print语句" class="headerlink" title="php echo和print语句"></a>php echo和print语句</h1><p>echo 和print的区别</p>
 <ul>
 <li>echo 可以输出一个或多个字符串</li>
 <li>print 只能输出一个字符串，返回值总为1</li>
@@ -505,41 +510,77 @@
 <p>echo输出的速度比print快，echo没有返回值，print有返回值1.</p>
 <h2 id="php-echo语句"><a href="#php-echo语句" class="headerlink" title="php echo语句"></a>php echo语句</h2><p>echo是一个语言结构，使用的时候可以不用家括号，也可以加上括号：echo或echo()</p>
 <h3 id="显示字符串"><a href="#显示字符串" class="headerlink" title="显示字符串"></a>显示字符串</h3><blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"&lt;h3&gt;php 牛逼！&lt;/h3&gt;"</span>;</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"hello&lt;br&gt;"</span>;</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"my"</span>,<span class="string">"blog"</span>,<span class="string">"欢迎"</span></span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
-</blockquote>
+<pre><code>&lt;?php
+echo &quot;&lt;h3&gt;php 牛逼！&lt;/h3&gt;&quot;;
+echo &quot;hello&lt;br&gt;&quot;;
+echo &quot;my&quot;,&quot;blog&quot;,&quot;欢迎&quot;
+?&gt;</code></pre></blockquote>
 <h3 id="显示变量"><a href="#显示变量" class="headerlink" title="显示变量"></a>显示变量</h3><blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">$txt1=<span class="string">"学习 PHP"</span>;</span></span><br><span class="line"><span class="php">$txt2=<span class="string">"RUNOOB.COM"</span>;</span></span><br><span class="line"><span class="php">$cars=<span class="keyword">array</span>(<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>,<span class="string">"Toyota"</span>);</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> $txt1;</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"&lt;br&gt;"</span>;</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"在 $txt2 学习 PHP "</span>;</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"&lt;br&gt;"</span>;</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"我车的品牌是 &#123;$cars[0]&#125;"</span>;</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
-</blockquote>
+<pre><code>&lt;?php
+$txt1=&quot;学习 PHP&quot;;
+$txt2=&quot;RUNOOB.COM&quot;;
+$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;);
+echo $txt1;
+echo &quot;&lt;br&gt;&quot;;
+echo &quot;在 $txt2 学习 PHP &quot;;
+echo &quot;&lt;br&gt;&quot;;
+echo &quot;我车的品牌是 {$cars[0]}&quot;;
+?&gt;</code></pre></blockquote>
 <h2 id="php-print语句"><a href="#php-print语句" class="headerlink" title="php print语句"></a>php print语句</h2><p>与echo 一样是一个语言结构，可以是用括号，也可以不适应括号：print()或print</p>
 <h3 id="显示字符串-1"><a href="#显示字符串-1" class="headerlink" title="显示字符串"></a>显示字符串</h3><h3 id="显示变量-1"><a href="#显示变量-1" class="headerlink" title="显示变量"></a>显示变量</h3><h1 id="php-数据类型"><a href="#php-数据类型" class="headerlink" title="php 数据类型"></a>php 数据类型</h1><p>String（字符串）, Integer（整型）, Float（浮点型）, Boolean（布尔型）, Array（数组）, Object（对象）, NULL（空值）。</p>
 <p>类似<code>c语言的数据类型</code></p>
 <h2 id="php布尔型"><a href="#php布尔型" class="headerlink" title="php布尔型"></a>php布尔型</h2><blockquote>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$x=<span class="literal">true</span></span><br><span class="line">$y=<span class="literal">false</span></span><br></pre></td></tr></table></figure>
-<ul>
+<pre><code>$x=true
+$y=false</code></pre><ul>
 <li>通常用于条件判断</li>
 </ul>
 </blockquote>
 <h2 id="php数组"><a href="#php数组" class="headerlink" title="php数组"></a>php数组</h2><p>数组可以在一个变量中存储多个值。可用php var_dump()函数返回数组的数据类型和值</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">$dong=<span class="keyword">array</span>(<span class="string">"me"</span>,<span class="string">"lrunn"</span>,<span class="string">"dxyd"</span>);</span></span><br><span class="line"><span class="php">var_dump($dong);</span></span><br></pre></td></tr></table></figure>
-<h2 id="php-对象"><a href="#php-对象" class="headerlink" title="php 对象"></a>php 对象</h2><p>使用关键词class声明类对象。<br>类似<code>c++</code><br>在<code>类</code>中定义数据类型，在实例化类中使用数据类型</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php"><span class="class"><span class="keyword">class</span> <span class="title">Car</span></span></span></span><br><span class="line"><span class="php">&#123;</span></span><br><span class="line"><span class="php">  <span class="keyword">var</span> $color;</span></span><br><span class="line"><span class="php">  <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">($color=<span class="string">"green"</span>)</span> </span>&#123;</span></span><br><span class="line"><span class="php">    <span class="keyword">$this</span>-&gt;color = $color;</span></span><br><span class="line"><span class="php">  &#125;</span></span><br><span class="line"><span class="php">  <span class="function"><span class="keyword">function</span> <span class="title">what_color</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="php">    <span class="keyword">return</span> <span class="keyword">$this</span>-&gt;color;</span></span><br><span class="line"><span class="php">  &#125;</span></span><br><span class="line"><span class="php">&#125;</span></span><br><span class="line"><span class="php"><span class="comment">//显示一个对象，白色的新金龟车</span></span></span><br><span class="line"><span class="php">$herbie = <span class="keyword">new</span> Car(<span class="string">"white"</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="php"><span class="comment">//显示 herbie 属性</span></span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> <span class="string">"\therbie: Propertise\n"</span>;</span></span><br><span class="line"><span class="php">print_vars($herbie);</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="php-null值"><a href="#php-null值" class="headerlink" title="php null值"></a>php null值</h2><p>null值表示变量没有值。努力了是数据类型为null的值。<br>null值表示指明一个变量是否为空值。同样可用于控制和null值的区别。<br>可通过设置变量值为null来清空变量数据</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">$x=<span class="string">"hello world"</span>;</span></span><br><span class="line"><span class="php">$x=<span class="keyword">null</span>;</span></span><br><span class="line"><span class="php">var_dump($x);</span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h1 id="php比较类型"><a href="#php比较类型" class="headerlink" title="php比较类型"></a>php比较类型</h1><ul>
+<pre><code>&lt;?php
+$dong=array(&quot;me&quot;,&quot;lrunn&quot;,&quot;dxyd&quot;);
+var_dump($dong);</code></pre><h2 id="php-对象"><a href="#php-对象" class="headerlink" title="php 对象"></a>php 对象</h2><p>使用关键词class声明类对象。<br>类似<code>c++</code><br>在<code>类</code>中定义数据类型，在实例化类中使用数据类型</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;?php
+class Car
+{
+  var $color;
+  function __construct($color=&quot;green&quot;) {
+    $this-&gt;color = $color;
+  }
+  function what_color() {
+    return $this-&gt;color;
+  }
+}
+//显示一个对象，白色的新金龟车
+$herbie = new Car(&quot;white&quot;)
+
+//显示 herbie 属性
+echo &quot;\therbie: Propertise\n&quot;;
+print_vars($herbie);
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><h2 id="php-null值"><a href="#php-null值" class="headerlink" title="php null值"></a>php null值</h2><p>null值表示变量没有值。努力了是数据类型为null的值。<br>null值表示指明一个变量是否为空值。同样可用于控制和null值的区别。<br>可通过设置变量值为null来清空变量数据</p>
+<pre><code>&lt;?php
+$x=&quot;hello world&quot;;
+$x=null;
+var_dump($x);
+?&gt;</code></pre><h1 id="php比较类型"><a href="#php比较类型" class="headerlink" title="php比较类型"></a>php比较类型</h1><ul>
 <li>松散比较：使用两个等号 == 比较，只比较值，不比较类型。</li>
 <li>严格比较：用三个等号 === 比较，除了比较值，也比较类型。</li>
 </ul>
 <h1 id="php常量"><a href="#php常量" class="headerlink" title="php常量"></a>php常量</h1><p>常量值被定义后，再脚本的的其他仁河地方都不能被改变。<br>一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 (常量名不需要加 $ 修饰符)</p>
 <h2 id="设置php常量"><a href="#设置php常量" class="headerlink" title="设置php常量"></a>设置php常量</h2><p>使用<code>define()</code>函数</p>
-<figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool <span class="class"><span class="keyword">define</span></span>(<span class="built_in">string</span> $name,mixed $value <span class="meta">[</span>, bool $case_insensitive = <span class="literal">false</span><span class="meta">]</span> )</span><br></pre></td></tr></table></figure>
-<ul>
+<pre><code>bool define(string $name,mixed $value [, bool $case_insensitive = false] )</code></pre><ul>
 <li>name 必选参数，常量名称（标识符）</li>
 <li>value 必选擦拭，常量的值</li>
 <li>case_insensitive 可选参数,如果设置成TRUE，该常量则大小写不敏感，默认是大小写敏感的。</li>
 </ul>
 <p>例如</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="php"><span class="meta">&lt;?php</span></span></span><br><span class="line"><span class="php">define(<span class="string">"DXYD"</span>,<span class="string">"欢迎访问lirundong.top"</span>);</span></span><br><span class="line"><span class="php"><span class="keyword">echo</span> DXYD;      <span class="comment">//输出"欢迎访问lirundong.top"</span></span></span><br><span class="line"><span class="php"><span class="meta">?&gt;</span></span></span><br></pre></td></tr></table></figure>
-<h2 id="常量是全局的"><a href="#常量是全局的" class="headerlink" title="常量是全局的"></a>常量是全局的</h2>
+<pre><code>&lt;?php
+define(&quot;DXYD&quot;,&quot;欢迎访问lirundong.top&quot;);
+echo DXYD;      //输出&quot;欢迎访问lirundong.top&quot;
+?&gt;</code></pre><h2 id="常量是全局的"><a href="#常量是全局的" class="headerlink" title="常量是全局的"></a>常量是全局的</h2>
             </div>
             <hr/>
 

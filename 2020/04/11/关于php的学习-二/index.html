@@ -29,7 +29,7 @@
 
     <script src="/DXYD.github.io/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -486,20 +486,26 @@
                 <h1 id="PHP字符串变量"><a href="#PHP字符串变量" class="headerlink" title="PHP字符串变量"></a>PHP字符串变量</h1><p>字符串变量用于存储并处理文本</p>
 <h2 id="PHP中的字符串变量"><a href="#PHP中的字符串变量" class="headerlink" title="PHP中的字符串变量"></a>PHP中的字符串变量</h2><p>字符串变量用于包含有字符的值</p>
 <p>在创建字符串以后，我们就可以对他进行操作。可以直接在函数中使用字符串，或者把它存储在变量中。在下面的实例中，我们创建一个名为 txt 的字符串变量，并赋值为 “Hello world!” 。然后我们输出 txt 变量的值</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$txt &#x3D; &quot;hello world&quot;;</span><br><span class="line">echo $txt;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-php+HTML"><code class="language-php+HTML"><?php
+$txt = "hello world";
+echo $txt;
+?></code></pre>
 <ul>
 <li>赋予一个文本值给变量时，请记得给文本值加上单引号或着双引号</li>
 </ul>
 <h2 id="PHP并置运算符"><a href="#PHP并置运算符" class="headerlink" title="PHP并置运算符"></a>PHP并置运算符</h2><p>在PHP中，只有一个字符串运算符</p>
 <p>并置运算符(.)用于把两个字符串值连接起来</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$txt_1 = <span class="string">"dxyd"</span></span><br><span class="line">$txt_2 = <span class="string">"hello world"</span></span><br><span class="line"><span class="keyword">echo</span> $txt_1.<span class="string">" "</span>.$txt_2</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$txt_1</span> <span class="token operator">=</span> <span class="token string">"dxyd"</span>
+<span class="token variable">$txt_2</span> <span class="token operator">=</span> <span class="token string">"hello world"</span>
+<span class="token keyword">echo</span> <span class="token variable">$txt_1</span><span class="token punctuation">.</span><span class="token string">" "</span><span class="token punctuation">.</span><span class="token variable">$txt_2</span>
+<span class="token delimiter">?></span></code></pre>
 <h2 id="PHP-strlen-函数"><a href="#PHP-strlen-函数" class="headerlink" title="PHP strlen()函数"></a>PHP strlen()函数</h2><p>strlen() 函数返回字符串的长度（字节数）</p>
 <h2 id="PHP-strpos-函数"><a href="#PHP-strpos-函数" class="headerlink" title="PHP strpos()函数"></a>PHP strpos()函数</h2><p>strpos() 函数用于在字符串内查找一个字符或一段指定的文本</p>
 <p>如果在字符串中找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> strpos(<span class="string">"hello dxyd"</span>,<span class="string">"dxyd"</span>);</span><br><span class="line"><span class="meta">?&gt;</span> 			<span class="comment">#将输出：6</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">echo</span> <span class="token function">strpos</span><span class="token punctuation">(</span><span class="token string">"hello dxyd"</span><span class="token punctuation">,</span><span class="token string">"dxyd"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span>             <span class="token shell-comment comment">#将输出：6 </span></code></pre>
 <h1 id="PHP运算符"><a href="#PHP运算符" class="headerlink" title="PHP运算符"></a>PHP运算符</h1><table>
 <thead>
 <tr>
@@ -603,12 +609,9 @@
 <td align="left">如果 x 不等于 y，则返回 true</td>
 </tr>
 </tbody></table>
-<h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(expr1) ? (expr2) : (expr3)</span><br></pre></td></tr></table></figure>
-
+<h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><pre class=" language-php"><code class="language-php"><span class="token punctuation">(</span>expr1<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">(</span>expr2<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>expr3<span class="token punctuation">)</span> </code></pre>
 <h2 id="组合比较符"><a href="#组合比较符" class="headerlink" title="组合比较符"></a>组合比较符</h2><p>语法格式如下：</p>
-<figure class="highlight pf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$c</span> = <span class="variable">$a</span> <span class="variable">&lt;=&gt;</span> <span class="variable">$b</span>;</span><br></pre></td></tr></table></figure>
-
-<p>解析如下：</p>
+<pre><code>$c = $a &lt;=&gt; $b;</code></pre><p>解析如下：</p>
 <ul>
 <li>如果 <strong>$a &gt; $b</strong>, 则 <strong>$c</strong> 的值为 <strong>1</strong>。</li>
 <li>如果 <strong>$a == $b</strong>, 则 <strong>$c</strong> 的值为 <strong>0</strong>。</li>
@@ -634,22 +637,31 @@
 </ul>
 <h2 id="PHP-数值数组"><a href="#PHP-数值数组" class="headerlink" title="PHP 数值数组"></a>PHP 数值数组</h2><p>这里有两种创建数值数组的方法：</p>
 <p>自动分配 ID 键（ID 键总是从 0 开始）：</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$cars=<span class="keyword">array</span>(<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>,<span class="string">"Toyota"</span>);</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-php"><code class="language-php"><span class="token variable">$cars</span><span class="token operator">=</span><span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"Volvo"</span><span class="token punctuation">,</span><span class="token string">"BMW"</span><span class="token punctuation">,</span><span class="token string">"Toyota"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <p>人工分配id键</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$cars[<span class="number">0</span>]=<span class="string">"Volvo"</span>;</span><br><span class="line">$cars[<span class="number">1</span>]=<span class="string">"BMW"</span>;</span><br><span class="line">$cars[<span class="number">2</span>]=<span class="string">"Toyota"</span>;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">$cars=<span class="keyword">array</span>(<span class="string">"Volvo"</span>,<span class="string">"BMW"</span>,<span class="string">"Toyota"</span>);</span><br><span class="line"><span class="keyword">echo</span> <span class="string">"I like "</span> . $cars[<span class="number">0</span>] . <span class="string">", "</span> . $cars[<span class="number">1</span>] . <span class="string">" and "</span> . $cars[<span class="number">2</span>] . <span class="string">"."</span>;</span><br><span class="line"><span class="meta">?&gt;</span>            <span class="comment"># I like volvo,BMW and Toyota.</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-php"><code class="language-php"><span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"Volvo"</span><span class="token punctuation">;</span>
+<span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"BMW"</span><span class="token punctuation">;</span>
+<span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"Toyota"</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$cars</span><span class="token operator">=</span><span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"Volvo"</span><span class="token punctuation">,</span><span class="token string">"BMW"</span><span class="token punctuation">,</span><span class="token string">"Toyota"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string">"I like "</span> <span class="token punctuation">.</span> <span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">.</span> <span class="token string">", "</span> <span class="token punctuation">.</span> <span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">.</span> <span class="token string">" and "</span> <span class="token punctuation">.</span> <span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token punctuation">.</span> <span class="token string">"."</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span>            <span class="token shell-comment comment"># I like volvo,BMW and Toyota.</span></code></pre>
 <h2 id="获取数组的长度-count-函数"><a href="#获取数组的长度-count-函数" class="headerlink" title="获取数组的长度 - count() 函数"></a>获取数组的长度 - count() 函数</h2><h2 id="遍历数值数组"><a href="#遍历数值数组" class="headerlink" title="遍历数值数组"></a>遍历数值数组</h2><p>类似c中的for，不同于python中的遍历</p>
 <h2 id="PHP-关联数组"><a href="#PHP-关联数组" class="headerlink" title="PHP 关联数组"></a>PHP 关联数组</h2><p>关联数组是使用您分配给数组的指定的键的数组。</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$age=<span class="keyword">array</span>(<span class="string">"Peter"</span>=&gt;<span class="string">"35"</span>,<span class="string">"Ben"</span>=&gt;<span class="string">"37"</span>,<span class="string">"Joe"</span>=&gt;<span class="string">"43"</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$age[<span class="string">'Peter'</span>]=<span class="string">"35"</span>;</span><br><span class="line">$age[<span class="string">'Ben'</span>]=<span class="string">"37"</span>;</span><br><span class="line">$age[<span class="string">'Joe'</span>]=<span class="string">"43"</span>;</span><br></pre></td></tr></table></figure>
-
+<pre class=" language-php"><code class="language-php"><span class="token variable">$age</span><span class="token operator">=</span><span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"Peter"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"35"</span><span class="token punctuation">,</span><span class="token string">"Ben"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"37"</span><span class="token punctuation">,</span><span class="token string">"Joe"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"43"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-php"><code class="language-php"><span class="token variable">$age</span><span class="token punctuation">[</span><span class="token string">'Peter'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"35"</span><span class="token punctuation">;</span>
+<span class="token variable">$age</span><span class="token punctuation">[</span><span class="token string">'Ben'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"37"</span><span class="token punctuation">;</span>
+<span class="token variable">$age</span><span class="token punctuation">[</span><span class="token string">'Joe'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"43"</span><span class="token punctuation">;</span></code></pre>
 <h2 id="遍历关联数组"><a href="#遍历关联数组" class="headerlink" title="遍历关联数组"></a>遍历关联数组</h2><p>遍历并打印关联数组中的所有值，使用 foreach 循环</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">$age&#x3D;array(&quot;Peter&quot;&#x3D;&gt;&quot;35&quot;,&quot;Ben&quot;&#x3D;&gt;&quot;37&quot;,&quot;Joe&quot;&#x3D;&gt;&quot;43&quot;);</span><br><span class="line"> </span><br><span class="line">foreach($age as $x&#x3D;&gt;$x_value)	遍历</span><br><span class="line">&#123;</span><br><span class="line">    echo &quot;Key&#x3D;&quot; . $x . &quot;, Value&#x3D;&quot; . $x_value;</span><br><span class="line">    echo &quot;&lt;br&gt;&quot;;   	#换行</span><br><span class="line">&#125;</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
+<pre class=" language-php+HTML"><code class="language-php+HTML"><?php
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
 
+foreach($age as $x=>$x_value)    遍历
+{
+    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "<br>";       #换行
+}
+?></code></pre>
 <hr>
 <p>类似python中的字典?</p>
 <p>以键值对的形式</p>
@@ -909,7 +921,13 @@
 用Google浏览器开发者工具中的network进行抓包
 
 时间戳
-1234567891011121314import timeget now_time():    '''获取时间戳    秒级 10位    毫秒级 
+import time
+
+get now_time():
+    '''获取时间戳
+    秒级 10位
+    毫秒级 13位
+    微秒级 16
                         
                     </div>
                     <div class="publish-info">
