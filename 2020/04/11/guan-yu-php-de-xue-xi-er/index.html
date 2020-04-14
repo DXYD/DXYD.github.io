@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo+GitHub 搭建个人博客, 小汤圆のblog">
+    <meta name="keywords" content="关于PHP的学习&lt;二&gt;, 小汤圆のblog">
     <meta name="description" content="peace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo+GitHub 搭建个人博客 | 小汤圆のblog</title>
+    <title>关于PHP的学习&lt;二&gt; | 小汤圆のblog</title>
     <link rel="icon" type="image/png" href="/DXYD.github.io/medias/favicon-32x32-next.png">
 
     <link rel="stylesheet" type="text/css" href="/DXYD.github.io/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo+GitHub 搭建个人博客</h1>
+                    <h1 class="description center-align post-title">关于PHP的学习&lt;二&gt;</h1>
                 </div>
             </div>
         </div>
@@ -442,12 +442,8 @@
                                 <span class="chip bg-color">笔记</span>
                             </a>
                         
-                            <a href="/DXYD.github.io/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
-                            <a href="/DXYD.github.io/tags/%E5%BB%BA%E7%AB%99/">
-                                <span class="chip bg-color">建站</span>
+                            <a href="/DXYD.github.io/tags/PHP/">
+                                <span class="chip bg-color">PHP</span>
                             </a>
                         
                     </div>
@@ -458,8 +454,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/DXYD.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                个人博客
+                            <a href="/DXYD.github.io/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -471,28 +467,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-08
+                    2020-04-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-08
+                    2020-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    574
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -502,87 +498,188 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>[^0]: 这里只在Windows10 64 位下演示</p>
-<h2 id="01安装Node-js"><a href="#01安装Node-js" class="headerlink" title="01安装Node.js"></a>01安装Node.js</h2><ul>
-<li>打开官方网站安装所需版本的node.js</li>
+                <h1 id="PHP字符串变量"><a href="#PHP字符串变量" class="headerlink" title="PHP字符串变量"></a>PHP字符串变量</h1><p>字符串变量用于存储并处理文本</p>
+<h2 id="PHP中的字符串变量"><a href="#PHP中的字符串变量" class="headerlink" title="PHP中的字符串变量"></a>PHP中的字符串变量</h2><p>字符串变量用于包含有字符的值</p>
+<p>在创建字符串以后，我们就可以对他进行操作。可以直接在函数中使用字符串，或者把它存储在变量中。在下面的实例中，我们创建一个名为 txt 的字符串变量，并赋值为 “Hello world!” 。然后我们输出 txt 变量的值</p>
+<pre class=" language-php+HTML"><code class="language-php+HTML"><?php
+$txt = "hello world";
+echo $txt;
+?></code></pre>
+<ul>
+<li>赋予一个文本值给变量时，请记得给文本值加上单引号或着双引号</li>
 </ul>
-<h2 id="02安装Git"><a href="#02安装Git" class="headerlink" title="02安装Git"></a>02安装Git</h2><ul>
-<li>打开官方网站安装所需版本的git</li>
+<h2 id="PHP并置运算符"><a href="#PHP并置运算符" class="headerlink" title="PHP并置运算符"></a>PHP并置运算符</h2><p>在PHP中，只有一个字符串运算符</p>
+<p>并置运算符(.)用于把两个字符串值连接起来</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$txt_1</span> <span class="token operator">=</span> <span class="token string">"dxyd"</span>
+<span class="token variable">$txt_2</span> <span class="token operator">=</span> <span class="token string">"hello world"</span>
+<span class="token keyword">echo</span> <span class="token variable">$txt_1</span><span class="token punctuation">.</span><span class="token string">" "</span><span class="token punctuation">.</span><span class="token variable">$txt_2</span>
+<span class="token delimiter">?></span></code></pre>
+<h2 id="PHP-strlen-函数"><a href="#PHP-strlen-函数" class="headerlink" title="PHP strlen()函数"></a>PHP strlen()函数</h2><p>strlen() 函数返回字符串的长度（字节数）</p>
+<h2 id="PHP-strpos-函数"><a href="#PHP-strpos-函数" class="headerlink" title="PHP strpos()函数"></a>PHP strpos()函数</h2><p>strpos() 函数用于在字符串内查找一个字符或一段指定的文本</p>
+<p>如果在字符串中找到匹配，该函数会返回第一个匹配的字符位置。如果未找到匹配，则返回 FALSE</p>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token keyword">echo</span> <span class="token function">strpos</span><span class="token punctuation">(</span><span class="token string">"hello dxyd"</span><span class="token punctuation">,</span><span class="token string">"dxyd"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span>             <span class="token shell-comment comment">#将输出：6 </span></code></pre>
+<h1 id="PHP运算符"><a href="#PHP运算符" class="headerlink" title="PHP运算符"></a>PHP运算符</h1><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-x</td>
+<td align="left">x取反</td>
+</tr>
+<tr>
+<td>a.b</td>
+<td align="left">连接两个字符串</td>
+</tr>
+</tbody></table>
+<hr>
+<p>a.=b        ==        a=a.b</p>
+<h2 id="PHP逻辑运算符"><a href="#PHP逻辑运算符" class="headerlink" title="PHP逻辑运算符"></a>PHP逻辑运算符</h2><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">实例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">x and y</td>
+<td align="left">与</td>
+<td align="left">如果 x 和 y 都为 true，则返回 true</td>
+<td align="left">x=6 y=3 (x &lt; 10 and y &gt; 1) 返回 true</td>
+</tr>
+<tr>
+<td align="left">x or y</td>
+<td align="left">或</td>
+<td align="left">如果 x 和 y 至少有一个为 true，则返回 true</td>
+<td align="left">x=6 y=3 (x= =6 or y==5) 返回 true</td>
+</tr>
+<tr>
+<td align="left">x xor y</td>
+<td align="left">异或</td>
+<td align="left">如果 x 和 y 有且仅有一个为 true，则返回 true</td>
+<td align="left">x=6 y=3 (x= =6 xor y==3) 返回 false</td>
+</tr>
+<tr>
+<td align="left">x &amp;&amp; y</td>
+<td align="left">与</td>
+<td align="left">如果 x 和 y 都为 true，则返回 true</td>
+<td align="left">x=6 y=3 (x &lt; 10 &amp;&amp; y &gt; 1) 返回 true</td>
+</tr>
+<tr>
+<td align="left">x || y</td>
+<td align="left">或</td>
+<td align="left">如果 x 和 y 至少有一个为 true，则返回 true</td>
+<td align="left">x=6 y=3 (x= =5 || y==5) 返回 false</td>
+</tr>
+<tr>
+<td align="left">! x</td>
+<td align="left">非</td>
+<td align="left">如果 x 不为 true，则返回 true</td>
+<td align="left">x=6 y=3 !(x==y) 返回 true</td>
+</tr>
+</tbody></table>
+<h2 id="PHP-数组运算符"><a href="#PHP-数组运算符" class="headerlink" title="PHP 数组运算符"></a>PHP 数组运算符</h2><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">x + y</td>
+<td align="left">集合</td>
+<td align="left">x 和 y 的集合</td>
+</tr>
+<tr>
+<td align="left">x == y</td>
+<td align="left">相等</td>
+<td align="left">如果 x 和 y 具有相同的键/值对，则返回 true</td>
+</tr>
+<tr>
+<td align="left">x === y</td>
+<td align="left">恒等</td>
+<td align="left">如果 x 和 y 具有相同的键/值对，且顺序相同类型相同，则返回 true</td>
+</tr>
+<tr>
+<td align="left">x != y</td>
+<td align="left">不相等</td>
+<td align="left">如果 x 不等于 y，则返回 true</td>
+</tr>
+<tr>
+<td align="left">x &lt;&gt; y</td>
+<td align="left">不相等</td>
+<td align="left">如果 x 不等于 y，则返回 true</td>
+</tr>
+<tr>
+<td align="left">x !== y</td>
+<td align="left">不恒等</td>
+<td align="left">如果 x 不等于 y，则返回 true</td>
+</tr>
+</tbody></table>
+<h2 id="三元运算符"><a href="#三元运算符" class="headerlink" title="三元运算符"></a>三元运算符</h2><pre class=" language-php"><code class="language-php"><span class="token punctuation">(</span>expr1<span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token punctuation">(</span>expr2<span class="token punctuation">)</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>expr3<span class="token punctuation">)</span> </code></pre>
+<h2 id="组合比较符"><a href="#组合比较符" class="headerlink" title="组合比较符"></a>组合比较符</h2><p>语法格式如下：</p>
+<pre><code>$c = $a &lt;=&gt; $b;</code></pre><p>解析如下：</p>
+<ul>
+<li>如果 <strong>$a &gt; $b</strong>, 则 <strong>$c</strong> 的值为 <strong>1</strong>。</li>
+<li>如果 <strong>$a == $b</strong>, 则 <strong>$c</strong> 的值为 <strong>0</strong>。</li>
+<li>如果 <strong>$a &lt; $b</strong>, 则 <strong>$c</strong> 的值为 <strong>-1</strong>。</li>
 </ul>
-<a id="more"></a>
+<h2 id="括号的引用"><a href="#括号的引用" class="headerlink" title="括号的引用"></a>括号的引用</h2><p>我们通过括号的配对来明确标明运算顺序，而非靠运算符优先级和结合性来决定，通常能够增加代码的可读性</p>
+<h1 id="PHP-If…Else-语句"><a href="#PHP-If…Else-语句" class="headerlink" title="PHP If…Else 语句"></a>PHP If…Else 语句</h1><p>条件语句用于根据不同条件执行不同动作。</p>
+<h2 id="PHP-条件语句"><a href="#PHP-条件语句" class="headerlink" title="PHP 条件语句"></a>PHP 条件语句</h2><p>当您编写代码时，您常常需要为不同的判断执行不同的动作。您可以在代码中使用条件语句来完成此任务。</p>
+<p>在 PHP 中，提供了下列条件语句：</p>
+<ul>
+<li><strong>if 语句</strong> - 在条件成立时执行代码</li>
+<li><strong>if…else 语句</strong> - 在条件成立时执行一块代码，条件不成立时执行另一块代码</li>
+<li><strong>if…elseif….else 语句</strong> - 在若干条件之一成立时执行一个代码块</li>
+<li><strong>switch 语句</strong> - 在若干条件之一成立时执行一个代码块</li>
+</ul>
+<h1 id="PHP-Switch语句"><a href="#PHP-Switch语句" class="headerlink" title="PHP Switch语句"></a>PHP Switch语句</h1><h1 id="PHP-array"><a href="#PHP-array" class="headerlink" title="PHP array"></a>PHP array</h1><h2 id="在-PHP-中创建数组"><a href="#在-PHP-中创建数组" class="headerlink" title="在 PHP 中创建数组"></a>在 PHP 中创建数组</h2><p>在 PHP 中，array() 函数用于创建数组：</p>
+<p>array();</p>
+<p>在 PHP 中，有三种类型的数组：</p>
+<ul>
+<li><strong>数值数组</strong> - 带有数字 ID 键的数组</li>
+<li><strong>关联数组</strong> - 带有指定的键的数组，每个键关联一个值</li>
+<li><strong>多维数组</strong> - 包含一个或多个数组的数组</li>
+</ul>
+<h2 id="PHP-数值数组"><a href="#PHP-数值数组" class="headerlink" title="PHP 数值数组"></a>PHP 数值数组</h2><p>这里有两种创建数值数组的方法：</p>
+<p>自动分配 ID 键（ID 键总是从 0 开始）：</p>
+<pre class=" language-php"><code class="language-php"><span class="token variable">$cars</span><span class="token operator">=</span><span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"Volvo"</span><span class="token punctuation">,</span><span class="token string">"BMW"</span><span class="token punctuation">,</span><span class="token string">"Toyota"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>人工分配id键</p>
+<pre class=" language-php"><code class="language-php"><span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"Volvo"</span><span class="token punctuation">;</span>
+<span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"BMW"</span><span class="token punctuation">;</span>
+<span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"Toyota"</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-php"><code class="language-php"><span class="token delimiter">&lt;?php</span>
+<span class="token variable">$cars</span><span class="token operator">=</span><span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"Volvo"</span><span class="token punctuation">,</span><span class="token string">"BMW"</span><span class="token punctuation">,</span><span class="token string">"Toyota"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">echo</span> <span class="token string">"I like "</span> <span class="token punctuation">.</span> <span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token punctuation">.</span> <span class="token string">", "</span> <span class="token punctuation">.</span> <span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token punctuation">.</span> <span class="token string">" and "</span> <span class="token punctuation">.</span> <span class="token variable">$cars</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token punctuation">.</span> <span class="token string">"."</span><span class="token punctuation">;</span>
+<span class="token delimiter">?></span>            <span class="token shell-comment comment"># I like volvo,BMW and Toyota.</span></code></pre>
+<h2 id="获取数组的长度-count-函数"><a href="#获取数组的长度-count-函数" class="headerlink" title="获取数组的长度 - count() 函数"></a>获取数组的长度 - count() 函数</h2><h2 id="遍历数值数组"><a href="#遍历数值数组" class="headerlink" title="遍历数值数组"></a>遍历数值数组</h2><p>类似c中的for，不同于python中的遍历</p>
+<h2 id="PHP-关联数组"><a href="#PHP-关联数组" class="headerlink" title="PHP 关联数组"></a>PHP 关联数组</h2><p>关联数组是使用您分配给数组的指定的键的数组。</p>
+<pre class=" language-php"><code class="language-php"><span class="token variable">$age</span><span class="token operator">=</span><span class="token keyword">array</span><span class="token punctuation">(</span><span class="token string">"Peter"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"35"</span><span class="token punctuation">,</span><span class="token string">"Ben"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"37"</span><span class="token punctuation">,</span><span class="token string">"Joe"</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">"43"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<pre class=" language-php"><code class="language-php"><span class="token variable">$age</span><span class="token punctuation">[</span><span class="token string">'Peter'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"35"</span><span class="token punctuation">;</span>
+<span class="token variable">$age</span><span class="token punctuation">[</span><span class="token string">'Ben'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"37"</span><span class="token punctuation">;</span>
+<span class="token variable">$age</span><span class="token punctuation">[</span><span class="token string">'Joe'</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"43"</span><span class="token punctuation">;</span></code></pre>
+<h2 id="遍历关联数组"><a href="#遍历关联数组" class="headerlink" title="遍历关联数组"></a>遍历关联数组</h2><p>遍历并打印关联数组中的所有值，使用 foreach 循环</p>
+<pre class=" language-php+HTML"><code class="language-php+HTML"><?php
+$age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
 
-<h1 id="用git安装hexo"><a href="#用git安装hexo" class="headerlink" title="用git安装hexo"></a>用git安装hexo</h1><ul>
-<li><p>新建一个文件夹</p>
-</li>
-<li><p>右键选用git bush 打开</p>
-</li>
-<li><p>输入<code>node -v</code> 通过查看版本判断是否已经安装好了node</p>
-</li>
-<li><p>输入<code>npm install -g hexo-cli</code>安装hexo</p>
-</li>
-<li><p>判断是否安装成功</p>
-</li>
-<li><p>安装 hexo 完成后，请执行<code>hexo init</code>，hexo 将会在指定文件夹中新建所需要的文件</p>
-</li>
-<li><p>输入<code>npm install</code>安装所需插件</p>
-</li>
-<li><p>运行测试</p>
-<blockquote>
-<pre><code> hexo clean #用来清理缓存文件
- hexo g     #生成文件
- hexo s     #运行本地服务器
- hexo d     #上传到服务器</code></pre><ul>
-<li>我们运行<code>hexo g</code> 、<code>hexo s</code>，成功后打开浏览器并且输入<code>localhost:4000</code>即可看到hexo的界面</li>
-</ul>
-</blockquote>
-</li>
-</ul>
-<h1 id="部署到云端"><a href="#部署到云端" class="headerlink" title="部署到云端"></a>部署到云端</h1><h2 id="01在github上新建仓库"><a href="#01在github上新建仓库" class="headerlink" title="01在github上新建仓库"></a>01在github上新建仓库</h2><ul>
-<li>仓库名为: <username>.github.io</li>
-<li>选择public</li>
-</ul>
-<h2 id="02将github-page与hexo联系起来"><a href="#02将github-page与hexo联系起来" class="headerlink" title="02将github page与hexo联系起来"></a>02将github page与hexo联系起来</h2><ul>
-<li><p>设置git的user name 和email</p>
-<blockquote>
-<pre><code>$ git config --global user.name &quot;xxx&quot;
----
-$ git config --global user.email &quot;xxxxx@xxx.com&quot;</code></pre></blockquote>
-</li>
-</ul>
-<ul>
-<li><p>生成密钥文件</p>
-<blockquote>
-<pre><code>ssh-keygen -t rsa -C &quot;你的GitHub注册邮箱&quot;</code></pre></blockquote>
-</li>
-<li><p>然后直接三个回车即可，默认不需要设置密码</p>
-</li>
-<li><p>找到生成的.ssh的文件夹中的id_rsa.pub密钥，将内容全部复制</p>
-</li>
-<li><p>打开<a href="https://link.zhihu.com/?target=https%3A//github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key</p>
-</li>
-<li><p>Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去</p>
-</li>
-<li><p>在Git Bash中检测GitHub公钥设置是否成功，输入<code>ssh git@github.com</code></p>
-<p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/YKO3%247%5DRM%5D6O%7D%5BOFBK1%7EIMO.png" alt="若Hi后面出现的为你的username则表示成功"></p>
-</li>
-</ul>
-<ul>
-<li><p>打开站点的配置文件_config.yml，翻到最后修改为：</p>
-<p>deploy:</p>
-<p>​    type: git</p>
-<p>​    repo:  ‘<a href="https://github.com/xxxx/xxxx.github.io.git&#39;" target="_blank" rel="noopener">https://github.com/xxxx/xxxx.github.io.git&#39;</a></p>
-<p>​    branch: master</p>
-</li>
-<li><p>安装Git部署插件，输入命令：</p>
-<pre><code>npm install hexo-deployer-git --save</code></pre></li>
-</ul>
-<h1 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h1><p>我们分别输入三条命令：</p>
-<pre class=" language-bash"><code class="language-bash">hexo clean 
-hexo g 
-hexo d</code></pre>
-<p>hexo d 是部署网站命令，d是deploy的缩写</p>
-<p>此时你就可通过 xxx.github.io 对你的博客进行访问了</p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>ssh：因为GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当然你也可以再每次推送时输入一遍账号和密码而跳过ssh这一步</p>
+foreach($age as $x=>$x_value)    遍历
+{
+    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "<br>";       #换行
+}
+?></code></pre>
+<hr>
+<p>类似python中的字典?</p>
+<p>以键值对的形式</p>
 
             </div>
             <hr/>
@@ -608,7 +705,7 @@ hexo d</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://DXYD.github.io/DXYD.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">https://DXYD.github.io/DXYD.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</a>
+                    <a href="https://DXYD.github.io/DXYD.github.io/2020/04/11/guan-yu-php-de-xue-xi-er/">https://DXYD.github.io/DXYD.github.io/2020/04/11/guan-yu-php-de-xue-xi-er/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -650,12 +747,8 @@ hexo d</code></pre>
                                     <span class="chip bg-color">笔记</span>
                                 </a>
                             
-                                <a href="/DXYD.github.io/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
-                            
-                                <a href="/DXYD.github.io/tags/%E5%BB%BA%E7%AB%99/">
-                                    <span class="chip bg-color">建站</span>
+                                <a href="/DXYD.github.io/tags/PHP/">
+                                    <span class="chip bg-color">PHP</span>
                                 </a>
                             
                         </div>
@@ -701,41 +794,41 @@ hexo d</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/09/%E6%88%91%E5%A4%AA%E9%9A%BE%E4%BA%86/">
+                <a href="/DXYD.github.io/2020/04/11/python-shi-jian-chuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="我太难了">
+                        <img src="/DXYD.github.io/medias/featureimages/1.jpg" class="responsive-img" alt="Python时间戳">
                         
-                        <span class="card-title">我太难了</span>
+                        <span class="card-title">Python时间戳</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            python模拟登陆
+用Google浏览器开发者工具中的network进行抓包
 
- 为了弄这个pages 绑定域名是真的难受哦
+时间戳
+import time
 
-
-
-
-踩坑宝典
-
-
-
+get now_time():
+    '''获取时间戳
+    秒级 10位
+    毫秒级 13位
+    微秒级 16
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-11
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/DXYD.github.io/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                    生活
+                            <a href="/DXYD.github.io/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -745,12 +838,8 @@ hexo d</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
-                    </a>
-                    
-                    <a href="/DXYD.github.io/tags/%E6%82%B2%E4%BC%A4/">
-                        <span class="chip bg-color">悲伤</span>
+                    <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>
@@ -764,33 +853,42 @@ hexo d</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/06/My-Gallery/">
+                <a href="/DXYD.github.io/2020/04/10/guan-yu-php-de-xue-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/18.jpg" class="responsive-img" alt="My Gallery">
+                        <img src="/DXYD.github.io/medias/featureimages/23.jpg" class="responsive-img" alt="关于Php的学习">
                         
-                        <span class="card-title">My Gallery</span>
+                        <span class="card-title">关于Php的学习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            QQ
-WeChat
-头条号一点调茶局
+                            php的语法PHP 脚本在服务器上执行，然后将纯 HTML 结果发送回浏览器。
 
-微信公众号东西一点
+基本的php语法
+php脚本可以放在文档中的任何位置
+以&lt;?php 开始 , 以 ？&gt; 结束
+
+
+php中的注释
+单行注释  //
+多行注释 /*
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Lrunn
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/DXYD.github.io/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -798,8 +896,12 @@ WeChat
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/DXYD.github.io/tags/php/">
+                        <span class="chip bg-color">php</span>
                     </a>
                     
                 </div>

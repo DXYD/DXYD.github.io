@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我太难了, 小汤圆のblog">
+    <meta name="keywords" content="关于Php的学习, 小汤圆のblog">
     <meta name="description" content="peace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我太难了 | 小汤圆のblog</title>
+    <title>关于Php的学习 | 小汤圆のblog</title>
     <link rel="icon" type="image/png" href="/DXYD.github.io/medias/favicon-32x32-next.png">
 
     <link rel="stylesheet" type="text/css" href="/DXYD.github.io/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我太难了</h1>
+                    <h1 class="description center-align post-title">关于Php的学习</h1>
                 </div>
             </div>
         </div>
@@ -438,12 +438,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/DXYD.github.io/tags/%E9%9A%8F%E7%AC%94/">
-                                <span class="chip bg-color">随笔</span>
+                            <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
-                            <a href="/DXYD.github.io/tags/%E6%82%B2%E4%BC%A4/">
-                                <span class="chip bg-color">悲伤</span>
+                            <a href="/DXYD.github.io/tags/php/">
+                                <span class="chip bg-color">php</span>
                             </a>
                         
                     </div>
@@ -454,8 +454,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/DXYD.github.io/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                生活
+                            <a href="/DXYD.github.io/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
+                                笔记
                             </a>
                         
                     </div>
@@ -467,28 +467,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-09
+                    2020-04-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-11
+                    2020-04-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    20
+                    843
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -498,17 +498,104 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<ul>
-<li><input checked="" disabled="" type="checkbox"> 为了弄这个pages 绑定域名是真的难受哦</li>
+                <h1 id="php的语法"><a href="#php的语法" class="headerlink" title="php的语法"></a>php的语法</h1><p>PHP 脚本在服务器上执行，然后将纯 HTML 结果发送回浏览器。</p>
+<hr>
+<h2 id="基本的php语法"><a href="#基本的php语法" class="headerlink" title="基本的php语法"></a>基本的php语法</h2><ul>
+<li>php脚本可以放在文档中的任何位置</li>
+<li>以&lt;?php 开始 , 以 ？&gt; 结束</li>
 </ul>
 <hr>
-<!-- move -->
+<h2 id="php中的注释"><a href="#php中的注释" class="headerlink" title="php中的注释"></a>php中的注释</h2><ul>
+<li>单行注释  //</li>
+<li>多行注释 /*     */</li>
+<li>类似c语言</li>
+</ul>
+<h1 id="php变量"><a href="#php变量" class="headerlink" title="php变量"></a>php变量</h1><p><u>变量是用于存储信息的容器</u>   </p>
+<pre><code>    &lt;&#39;php
+    echo &#39;dxyd&#39;;
+    $x=1
+    $y=2
+    $z=$x+$y
+    echo $z
+    ?&gt;</code></pre><h1 id="php-echo和print语句"><a href="#php-echo和print语句" class="headerlink" title="php echo和print语句"></a>php echo和print语句</h1><p>echo 和print的区别</p>
+<ul>
+<li>echo 可以输出一个或多个字符串</li>
+<li>print 只能输出一个字符串，返回值总为1</li>
+</ul>
+<p>echo输出的速度比print快，echo没有返回值，print有返回值1.</p>
+<h2 id="php-echo语句"><a href="#php-echo语句" class="headerlink" title="php echo语句"></a>php echo语句</h2><p>echo是一个语言结构，使用的时候可以不用家括号，也可以加上括号：echo或echo()</p>
+<h3 id="显示字符串"><a href="#显示字符串" class="headerlink" title="显示字符串"></a>显示字符串</h3><blockquote>
+<pre><code>&lt;?php
+echo &quot;&lt;h3&gt;php 牛逼！&lt;/h3&gt;&quot;;
+echo &quot;hello&lt;br&gt;&quot;;
+echo &quot;my&quot;,&quot;blog&quot;,&quot;欢迎&quot;
+?&gt;</code></pre></blockquote>
+<h3 id="显示变量"><a href="#显示变量" class="headerlink" title="显示变量"></a>显示变量</h3><blockquote>
+<pre><code>&lt;?php
+$txt1=&quot;学习 PHP&quot;;
+$txt2=&quot;RUNOOB.COM&quot;;
+$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;);
+echo $txt1;
+echo &quot;&lt;br&gt;&quot;;
+echo &quot;在 $txt2 学习 PHP &quot;;
+echo &quot;&lt;br&gt;&quot;;
+echo &quot;我车的品牌是 {$cars[0]}&quot;;
+?&gt;</code></pre></blockquote>
+<h2 id="php-print语句"><a href="#php-print语句" class="headerlink" title="php print语句"></a>php print语句</h2><p>与echo 一样是一个语言结构，可以是用括号，也可以不适应括号：print()或print</p>
+<h3 id="显示字符串-1"><a href="#显示字符串-1" class="headerlink" title="显示字符串"></a>显示字符串</h3><h3 id="显示变量-1"><a href="#显示变量-1" class="headerlink" title="显示变量"></a>显示变量</h3><h1 id="php-数据类型"><a href="#php-数据类型" class="headerlink" title="php 数据类型"></a>php 数据类型</h1><p>String（字符串）, Integer（整型）, Float（浮点型）, Boolean（布尔型）, Array（数组）, Object（对象）, NULL（空值）。</p>
+<p>类似<code>c语言的数据类型</code></p>
+<h2 id="php布尔型"><a href="#php布尔型" class="headerlink" title="php布尔型"></a>php布尔型</h2><blockquote>
+<pre><code>$x=true
+$y=false</code></pre><ul>
+<li>通常用于条件判断</li>
+</ul>
+</blockquote>
+<h2 id="php数组"><a href="#php数组" class="headerlink" title="php数组"></a>php数组</h2><p>数组可以在一个变量中存储多个值。可用php var_dump()函数返回数组的数据类型和值</p>
+<pre><code>&lt;?php
+$dong=array(&quot;me&quot;,&quot;lrunn&quot;,&quot;dxyd&quot;);
+var_dump($dong);</code></pre><h2 id="php-对象"><a href="#php-对象" class="headerlink" title="php 对象"></a>php 对象</h2><p>使用关键词class声明类对象。<br>类似<code>c++</code><br>在<code>类</code>中定义数据类型，在实例化类中使用数据类型</p>
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;?php
+class Car
+{
+  var $color;
+  function __construct($color=&quot;green&quot;) {
+    $this-&gt;color = $color;
+  }
+  function what_color() {
+    return $this-&gt;color;
+  }
+}
+//显示一个对象，白色的新金龟车
+$herbie = new Car(&quot;white&quot;)
 
-<h1 id="踩坑宝典"><a href="#踩坑宝典" class="headerlink" title="踩坑宝典"></a>踩坑宝典</h1><p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200409223429.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200409223552.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200409223708.png" alt=""></p>
-
+//显示 herbie 属性
+echo &quot;\therbie: Propertise\n&quot;;
+print_vars($herbie);
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre><h2 id="php-null值"><a href="#php-null值" class="headerlink" title="php null值"></a>php null值</h2><p>null值表示变量没有值。努力了是数据类型为null的值。<br>null值表示指明一个变量是否为空值。同样可用于控制和null值的区别。<br>可通过设置变量值为null来清空变量数据</p>
+<pre><code>&lt;?php
+$x=&quot;hello world&quot;;
+$x=null;
+var_dump($x);
+?&gt;</code></pre><h1 id="php比较类型"><a href="#php比较类型" class="headerlink" title="php比较类型"></a>php比较类型</h1><ul>
+<li>松散比较：使用两个等号 == 比较，只比较值，不比较类型。</li>
+<li>严格比较：用三个等号 === 比较，除了比较值，也比较类型。</li>
+</ul>
+<h1 id="php常量"><a href="#php常量" class="headerlink" title="php常量"></a>php常量</h1><p>常量值被定义后，再脚本的的其他仁河地方都不能被改变。<br>一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 (常量名不需要加 $ 修饰符)</p>
+<h2 id="设置php常量"><a href="#设置php常量" class="headerlink" title="设置php常量"></a>设置php常量</h2><p>使用<code>define()</code>函数</p>
+<pre><code>bool define(string $name,mixed $value [, bool $case_insensitive = false] )</code></pre><ul>
+<li>name 必选参数，常量名称（标识符）</li>
+<li>value 必选擦拭，常量的值</li>
+<li>case_insensitive 可选参数,如果设置成TRUE，该常量则大小写不敏感，默认是大小写敏感的。</li>
+</ul>
+<p>例如</p>
+<pre><code>&lt;?php
+define(&quot;DXYD&quot;,&quot;欢迎访问lirundong.top&quot;);
+echo DXYD;      //输出&quot;欢迎访问lirundong.top&quot;
+?&gt;</code></pre><h2 id="常量是全局的"><a href="#常量是全局的" class="headerlink" title="常量是全局的"></a>常量是全局的</h2>
             </div>
             <hr/>
 
@@ -533,7 +620,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://DXYD.github.io/DXYD.github.io/2020/04/09/%E6%88%91%E5%A4%AA%E9%9A%BE%E4%BA%86/">https://DXYD.github.io/DXYD.github.io/2020/04/09/%E6%88%91%E5%A4%AA%E9%9A%BE%E4%BA%86/</a>
+                    <a href="https://DXYD.github.io/DXYD.github.io/2020/04/10/guan-yu-php-de-xue-xi/">https://DXYD.github.io/DXYD.github.io/2020/04/10/guan-yu-php-de-xue-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -571,12 +658,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/DXYD.github.io/tags/%E9%9A%8F%E7%AC%94/">
-                                    <span class="chip bg-color">随笔</span>
+                                <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
                                 </a>
                             
-                                <a href="/DXYD.github.io/tags/%E6%82%B2%E4%BC%A4/">
-                                    <span class="chip bg-color">悲伤</span>
+                                <a href="/DXYD.github.io/tags/php/">
+                                    <span class="chip bg-color">php</span>
                                 </a>
                             
                         </div>
@@ -622,33 +709,26 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/10/%E5%85%B3%E4%BA%8Ephp%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+                <a href="/DXYD.github.io/2020/04/11/guan-yu-php-de-xue-xi-er/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/23.jpg" class="responsive-img" alt="关于Php的学习">
+                        <img src="/DXYD.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="关于PHP的学习&lt;二&gt;">
                         
-                        <span class="card-title">关于Php的学习</span>
+                        <span class="card-title">关于PHP的学习&lt;二&gt;</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            php的语法PHP 脚本在服务器上执行，然后将纯 HTML 结果发送回浏览器。
-
-基本的php语法
-php脚本可以放在文档中的任何位置
-以&lt;?php 开始 , 以 ？&gt; 结束
-
-
-php中的注释
-单行注释  //
-多行注释 /*
+                            PHP字符串变量字符串变量用于存储并处理文本
+PHP中的字符串变量字符串变量用于包含有字符的值
+在创建字符串以后，我们就可以对他进行操作。可以直接在函数中使用字符串，或者把它存储在变量中。在下面的实例中，我们创建一个名为 txt 的字符串变
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-10
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-11
                         </span>
                         <span class="publish-author">
                             
@@ -669,8 +749,8 @@ php中的注释
                         <span class="chip bg-color">笔记</span>
                     </a>
                     
-                    <a href="/DXYD.github.io/tags/php/">
-                        <span class="chip bg-color">php</span>
+                    <a href="/DXYD.github.io/tags/PHP/">
+                        <span class="chip bg-color">PHP</span>
                     </a>
                     
                 </div>
@@ -684,43 +764,41 @@ php中的注释
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+                <a href="/DXYD.github.io/2020/04/09/wo-tai-nan-liao/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="Hexo+GitHub 搭建个人博客">
+                        <img src="/DXYD.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="我太难了">
                         
-                        <span class="card-title">Hexo+GitHub 搭建个人博客</span>
+                        <span class="card-title">我太难了</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            准备[^0]: 这里只在Windows10 64 位下演示
-01安装Node.js
-打开官方网站安装所需版本的node.js
+                            
 
-02安装Git
-打开官方网站安装所需版本的git
+ 为了弄这个pages 绑定域名是真的难受哦
 
 
 
-用git安装hexo
-新建一个文件夹
 
-右键选用git 
+踩坑宝典
+
+
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/DXYD.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    个人博客
+                            <a href="/DXYD.github.io/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
+                                    生活
                                 </a>
                             
                             
@@ -730,16 +808,12 @@ php中的注释
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
+                    <a href="/DXYD.github.io/tags/%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">随笔</span>
                     </a>
                     
-                    <a href="/DXYD.github.io/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
-                    </a>
-                    
-                    <a href="/DXYD.github.io/tags/%E5%BB%BA%E7%AB%99/">
-                        <span class="chip bg-color">建站</span>
+                    <a href="/DXYD.github.io/tags/%E6%82%B2%E4%BC%A4/">
+                        <span class="chip bg-color">悲伤</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="关于Php的学习, 小汤圆のblog">
+    <meta name="keywords" content="爬虫实例，通过标签页数爬取豆瓣内容尝试, 小汤圆のblog">
     <meta name="description" content="peace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>关于Php的学习 | 小汤圆のblog</title>
+    <title>爬虫实例，通过标签页数爬取豆瓣内容尝试 | 小汤圆のblog</title>
     <link rel="icon" type="image/png" href="/DXYD.github.io/medias/favicon-32x32-next.png">
 
     <link rel="stylesheet" type="text/css" href="/DXYD.github.io/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">关于Php的学习</h1>
+                    <h1 class="description center-align post-title">爬虫实例，通过标签页数爬取豆瓣内容尝试</h1>
                 </div>
             </div>
         </div>
@@ -438,12 +438,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
-                            </a>
-                        
-                            <a href="/DXYD.github.io/tags/php/">
-                                <span class="chip bg-color">php</span>
+                            <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
+                                <span class="chip bg-color">尝试</span>
                             </a>
                         
                     </div>
@@ -454,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/DXYD.github.io/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                笔记
+                            <a href="/DXYD.github.io/categories/python/" class="post-category">
+                                python
                             </a>
                         
                     </div>
@@ -467,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-10
+                    2020-04-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-12
+                    2020-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    843
+                    464
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -498,104 +494,87 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="php的语法"><a href="#php的语法" class="headerlink" title="php的语法"></a>php的语法</h1><p>PHP 脚本在服务器上执行，然后将纯 HTML 结果发送回浏览器。</p>
-<hr>
-<h2 id="基本的php语法"><a href="#基本的php语法" class="headerlink" title="基本的php语法"></a>基本的php语法</h2><ul>
-<li>php脚本可以放在文档中的任何位置</li>
-<li>以&lt;?php 开始 , 以 ？&gt; 结束</li>
-</ul>
-<hr>
-<h2 id="php中的注释"><a href="#php中的注释" class="headerlink" title="php中的注释"></a>php中的注释</h2><ul>
-<li>单行注释  //</li>
-<li>多行注释 /*     */</li>
-<li>类似c语言</li>
-</ul>
-<h1 id="php变量"><a href="#php变量" class="headerlink" title="php变量"></a>php变量</h1><p><u>变量是用于存储信息的容器</u>   </p>
-<pre><code>    &lt;&#39;php
-    echo &#39;dxyd&#39;;
-    $x=1
-    $y=2
-    $z=$x+$y
-    echo $z
-    ?&gt;</code></pre><h1 id="php-echo和print语句"><a href="#php-echo和print语句" class="headerlink" title="php echo和print语句"></a>php echo和print语句</h1><p>echo 和print的区别</p>
-<ul>
-<li>echo 可以输出一个或多个字符串</li>
-<li>print 只能输出一个字符串，返回值总为1</li>
-</ul>
-<p>echo输出的速度比print快，echo没有返回值，print有返回值1.</p>
-<h2 id="php-echo语句"><a href="#php-echo语句" class="headerlink" title="php echo语句"></a>php echo语句</h2><p>echo是一个语言结构，使用的时候可以不用家括号，也可以加上括号：echo或echo()</p>
-<h3 id="显示字符串"><a href="#显示字符串" class="headerlink" title="显示字符串"></a>显示字符串</h3><blockquote>
-<pre><code>&lt;?php
-echo &quot;&lt;h3&gt;php 牛逼！&lt;/h3&gt;&quot;;
-echo &quot;hello&lt;br&gt;&quot;;
-echo &quot;my&quot;,&quot;blog&quot;,&quot;欢迎&quot;
-?&gt;</code></pre></blockquote>
-<h3 id="显示变量"><a href="#显示变量" class="headerlink" title="显示变量"></a>显示变量</h3><blockquote>
-<pre><code>&lt;?php
-$txt1=&quot;学习 PHP&quot;;
-$txt2=&quot;RUNOOB.COM&quot;;
-$cars=array(&quot;Volvo&quot;,&quot;BMW&quot;,&quot;Toyota&quot;);
-echo $txt1;
-echo &quot;&lt;br&gt;&quot;;
-echo &quot;在 $txt2 学习 PHP &quot;;
-echo &quot;&lt;br&gt;&quot;;
-echo &quot;我车的品牌是 {$cars[0]}&quot;;
-?&gt;</code></pre></blockquote>
-<h2 id="php-print语句"><a href="#php-print语句" class="headerlink" title="php print语句"></a>php print语句</h2><p>与echo 一样是一个语言结构，可以是用括号，也可以不适应括号：print()或print</p>
-<h3 id="显示字符串-1"><a href="#显示字符串-1" class="headerlink" title="显示字符串"></a>显示字符串</h3><h3 id="显示变量-1"><a href="#显示变量-1" class="headerlink" title="显示变量"></a>显示变量</h3><h1 id="php-数据类型"><a href="#php-数据类型" class="headerlink" title="php 数据类型"></a>php 数据类型</h1><p>String（字符串）, Integer（整型）, Float（浮点型）, Boolean（布尔型）, Array（数组）, Object（对象）, NULL（空值）。</p>
-<p>类似<code>c语言的数据类型</code></p>
-<h2 id="php布尔型"><a href="#php布尔型" class="headerlink" title="php布尔型"></a>php布尔型</h2><blockquote>
-<pre><code>$x=true
-$y=false</code></pre><ul>
-<li>通常用于条件判断</li>
-</ul>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
+<p>去年暑假起，自学python，后因琐事一直未系统地学习，今年寒假重拾旧业，顺便入门了爬虫，尝试写过很多爬虫大多无功而返，近几天又入坑了，便又着手写爬虫.</p>
 </blockquote>
-<h2 id="php数组"><a href="#php数组" class="headerlink" title="php数组"></a>php数组</h2><p>数组可以在一个变量中存储多个值。可用php var_dump()函数返回数组的数据类型和值</p>
-<pre><code>&lt;?php
-$dong=array(&quot;me&quot;,&quot;lrunn&quot;,&quot;dxyd&quot;);
-var_dump($dong);</code></pre><h2 id="php-对象"><a href="#php-对象" class="headerlink" title="php 对象"></a>php 对象</h2><p>使用关键词class声明类对象。<br>类似<code>c++</code><br>在<code>类</code>中定义数据类型，在实例化类中使用数据类型</p>
-<pre><code>&lt;html&gt;
-&lt;body&gt;
-&lt;?php
-class Car
-{
-  var $color;
-  function __construct($color=&quot;green&quot;) {
-    $this-&gt;color = $color;
-  }
-  function what_color() {
-    return $this-&gt;color;
-  }
-}
-//显示一个对象，白色的新金龟车
-$herbie = new Car(&quot;white&quot;)
+<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><ul>
+<li>又又又复习了一遍<a href="http://cn.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="noopener">requests库</a></li>
+<li>又又又复习了一遍<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="noopener">BeautifulSoup库</a></li>
+<li>又又复习了一遍Response对象的属性</li>
+<li>又看了之前的B站视频</li>
+<li>终于开始冥想了</li>
+</ul>
+<h2 id="爬什么？"><a href="#爬什么？" class="headerlink" title="爬什么？"></a>爬什么？</h2><p>听说豆瓣很适合爬虫入门选手 -&gt; 爬豆瓣 -&gt; 爬最简单的标题</p>
+<h2 id="怎么爬？"><a href="#怎么爬？" class="headerlink" title="怎么爬？"></a>怎么爬？</h2><blockquote>
+<p>​    本来想用正则表达式来爬的，但是但是我忘了，脑子一片空白</p>
+</blockquote>
+<ul>
+<li>requests + BeautifulSoup 实现简单的信息检索</li>
+<li>请求</li>
+<li>回应</li>
+<li>解析</li>
+<li>寻找</li>
+<li>保存</li>
+</ul>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><blockquote>
+<p>​    虽然代码不多，但是对于新手的我一边找error一边找文档是真的吐血，手敲7个钟头……</p>
+</blockquote>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> xlwt
 
-//显示 herbie 属性
-echo &quot;\therbie: Propertise\n&quot;;
-print_vars($herbie);
-?&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre><h2 id="php-null值"><a href="#php-null值" class="headerlink" title="php null值"></a>php null值</h2><p>null值表示变量没有值。努力了是数据类型为null的值。<br>null值表示指明一个变量是否为空值。同样可用于控制和null值的区别。<br>可通过设置变量值为null来清空变量数据</p>
-<pre><code>&lt;?php
-$x=&quot;hello world&quot;;
-$x=null;
-var_dump($x);
-?&gt;</code></pre><h1 id="php比较类型"><a href="#php比较类型" class="headerlink" title="php比较类型"></a>php比较类型</h1><ul>
-<li>松散比较：使用两个等号 == 比较，只比较值，不比较类型。</li>
-<li>严格比较：用三个等号 === 比较，除了比较值，也比较类型。</li>
-</ul>
-<h1 id="php常量"><a href="#php常量" class="headerlink" title="php常量"></a>php常量</h1><p>常量值被定义后，再脚本的的其他仁河地方都不能被改变。<br>一个常量由英文字母、下划线、和数字组成,但数字不能作为首字母出现。 (常量名不需要加 $ 修饰符)</p>
-<h2 id="设置php常量"><a href="#设置php常量" class="headerlink" title="设置php常量"></a>设置php常量</h2><p>使用<code>define()</code>函数</p>
-<pre><code>bool define(string $name,mixed $value [, bool $case_insensitive = false] )</code></pre><ul>
-<li>name 必选参数，常量名称（标识符）</li>
-<li>value 必选擦拭，常量的值</li>
-<li>case_insensitive 可选参数,如果设置成TRUE，该常量则大小写不敏感，默认是大小写敏感的。</li>
-</ul>
-<p>例如</p>
-<pre><code>&lt;?php
-define(&quot;DXYD&quot;,&quot;欢迎访问lirundong.top&quot;);
-echo DXYD;      //输出&quot;欢迎访问lirundong.top&quot;
-?&gt;</code></pre><h2 id="常量是全局的"><a href="#常量是全局的" class="headerlink" title="常量是全局的"></a>常量是全局的</h2>
+<span class="token keyword">def</span> <span class="token function">pages_</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    pages <span class="token operator">=</span> <span class="token number">0</span>
+    pages <span class="token operator">+=</span> page <span class="token operator">*</span> <span class="token number">20</span> <span class="token operator">-</span> <span class="token number">20</span>
+    <span class="token keyword">return</span> pages
+
+
+<span class="token keyword">def</span> <span class="token function">fiction_page</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'</span>
+    <span class="token punctuation">}</span>
+    response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
+    soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">,</span> features<span class="token operator">=</span><span class="token string">'lxml'</span><span class="token punctuation">)</span>
+    soup_1 <span class="token operator">=</span> soup<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"a[title]"</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> x <span class="token keyword">in</span> soup_1<span class="token punctuation">:</span>
+        s_s <span class="token operator">=</span> x<span class="token punctuation">[</span><span class="token string">"title"</span><span class="token punctuation">]</span>
+        data<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s_s<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> data
+
+
+<span class="token keyword">def</span> <span class="token function">save_fiction</span><span class="token punctuation">(</span>save<span class="token punctuation">,</span> page<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true">#    with open("爬取文件","w",encoding ="utf-8" ) as f:</span>
+    <span class="token comment" spellcheck="true">#  s_s=' '.join(s["title"])</span>
+    <span class="token comment" spellcheck="true"># print(s_s)</span>
+    book <span class="token operator">=</span> xlwt<span class="token punctuation">.</span>Workbook<span class="token punctuation">(</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">,</span> style_compression<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 创建workbook对象</span>
+    sheet <span class="token operator">=</span> book<span class="token punctuation">.</span>add_sheet<span class="token punctuation">(</span><span class="token string">'爬取书籍'</span><span class="token punctuation">,</span> cell_overwrite_ok<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 创建工作表</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> int<span class="token punctuation">(</span>page<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        data_20 <span class="token operator">=</span> save<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        sheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> data_20<span class="token punctuation">)</span>
+    book<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'爬取的书籍.xls'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    tag <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">"请输入你想输入的标签："</span><span class="token punctuation">)</span>
+    page <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">"请输入要下载前几页的内容："</span><span class="token punctuation">)</span>
+    data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>int<span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        pages_s <span class="token operator">=</span> pages_<span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">#     # tags = quote(tag,encoding ='GBK' )</span>
+        url <span class="token operator">=</span> <span class="token string">'https://book.douban.com/tag/'</span> <span class="token operator">+</span> tag <span class="token operator">+</span> <span class="token string">'?start='</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>pages_s<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'&amp;type=T'</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"第%d页下载中"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        save <span class="token operator">=</span> fiction_page<span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+    save_fiction<span class="token punctuation">(</span>save<span class="token punctuation">,</span> page<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"保存成功！"</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413164357.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413163822.png" alt=""></p>
+<p><img src="!%5B%5D(https://raw.githubusercontent.com/DXYD/pic/master/img/940S%25SF%7BR)JMZ%25%242%25I%5DKXN0.png" alt="">))</p>
+<hr>
+
             </div>
             <hr/>
 
@@ -620,7 +599,7 @@ echo DXYD;      //输出&quot;欢迎访问lirundong.top&quot;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://DXYD.github.io/DXYD.github.io/2020/04/10/%E5%85%B3%E4%BA%8Ephp%E7%9A%84%E5%AD%A6%E4%B9%A0/">https://DXYD.github.io/DXYD.github.io/2020/04/10/%E5%85%B3%E4%BA%8Ephp%E7%9A%84%E5%AD%A6%E4%B9%A0/</a>
+                    <a href="https://DXYD.github.io/DXYD.github.io/2020/04/13/pa-chong-shi-li-tong-guo-biao-qian-ye-shu-pa-qu-dou-ban-nei-rong-chang-shi/">https://DXYD.github.io/DXYD.github.io/2020/04/13/pa-chong-shi-li-tong-guo-biao-qian-ye-shu-pa-qu-dou-ban-nei-rong-chang-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -658,12 +637,8 @@ echo DXYD;      //输出&quot;欢迎访问lirundong.top&quot;
                     
                         <div class="article-tag">
                             
-                                <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
-                                </a>
-                            
-                                <a href="/DXYD.github.io/tags/php/">
-                                    <span class="chip bg-color">php</span>
+                                <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
+                                    <span class="chip bg-color">尝试</span>
                                 </a>
                             
                         </div>
@@ -705,52 +680,53 @@ echo DXYD;      //输出&quot;欢迎访问lirundong.top&quot;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/11/%E5%85%B3%E4%BA%8Ephp%E7%9A%84%E5%AD%A6%E4%B9%A0-%E4%BA%8C/">
+                <a href="/DXYD.github.io/2020/04/13/pa-chong-shi-li-tong-guo-biao-qian-ye-shu-pa-qu-dou-ban-nei-rong-chang-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="关于PHP的学习&lt;二&gt;">
+                        <img src="/DXYD.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="爬虫实例，通过标签页数爬取豆瓣内容尝试">
                         
-                        <span class="card-title">关于PHP的学习&lt;二&gt;</span>
+                        <span class="card-title">爬虫实例，通过标签页数爬取豆瓣内容尝试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            PHP字符串变量字符串变量用于存储并处理文本
-PHP中的字符串变量字符串变量用于包含有字符的值
-在创建字符串以后，我们就可以对他进行操作。可以直接在函数中使用字符串，或者把它存储在变量中。在下面的实例中，我们创建一个名为 txt 的字符串变
+                            前言
+去年暑假起，自学python，后因琐事一直未系统地学习，今年寒假重拾旧业，顺便入门了爬虫，尝试写过很多爬虫大多无功而返，近几天又入坑了，便又着手写爬虫.
+
+过程
+又又又复习了一遍requests库
+又又又复习了一遍BeautifulS
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-11
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/DXYD.github.io/categories/%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    笔记
+                            <a href="/DXYD.github.io/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/DXYD.github.io/tags/PHP/">
-                        <span class="chip bg-color">PHP</span>
+                    <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
+                        <span class="chip bg-color">尝试</span>
                     </a>
                     
                 </div>
@@ -764,41 +740,40 @@ PHP中的字符串变量字符串变量用于包含有字符的值
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/09/%E6%88%91%E5%A4%AA%E9%9A%BE%E4%BA%86/">
+                <a href="/DXYD.github.io/2020/04/13/beautifulsoup/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="我太难了">
+                        <img src="/DXYD.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="BeautifulSoup">
                         
-                        <span class="card-title">我太难了</span>
+                        <span class="card-title">BeautifulSoup</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            BeautifulSoup四大对象种类：
 
- 为了弄这个pages 绑定域名是真的难受哦
-
-
-
-
-踩坑宝典
+Tag
+NavigableString
+BeautifulSoup
+Comment
 
 
 
+from bs4 import BeautifulSoupsoup = BeautifilSoup(htm
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/DXYD.github.io/categories/%E7%94%9F%E6%B4%BB/" class="post-category">
-                                    生活
+                            <a href="/DXYD.github.io/categories/python%E7%88%AC%E8%99%AB/" class="post-category">
+                                    python爬虫
                                 </a>
                             
                             
@@ -808,12 +783,12 @@ PHP中的字符串变量字符串变量用于包含有字符的值
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/%E9%9A%8F%E7%AC%94/">
-                        <span class="chip bg-color">随笔</span>
+                    <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
-                    <a href="/DXYD.github.io/tags/%E6%82%B2%E4%BC%A4/">
-                        <span class="chip bg-color">悲伤</span>
+                    <a href="/DXYD.github.io/tags/BeautifulSoup/">
+                        <span class="chip bg-color">BeautifulSoup</span>
                     </a>
                     
                 </div>
