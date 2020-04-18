@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="爬虫实例，通过标签页数爬取豆瓣内容尝试, 小汤圆のblog">
+    <meta name="keywords" content=" 基于python的WordCloud词云的简单尝试, 小汤圆のblog">
     <meta name="description" content="peace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>爬虫实例，通过标签页数爬取豆瓣内容尝试 | 小汤圆のblog</title>
+    <title> 基于python的WordCloud词云的简单尝试 | 小汤圆のblog</title>
     <link rel="icon" type="image/png" href="/DXYD.github.io/medias/favicon-32x32-next.png">
 
     <link rel="stylesheet" type="text/css" href="/DXYD.github.io/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">爬虫实例，通过标签页数爬取豆瓣内容尝试</h1>
+                    <h1 class="description center-align post-title"> 基于python的WordCloud词云的简单尝试</h1>
                 </div>
             </div>
         </div>
@@ -438,8 +438,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
-                                <span class="chip bg-color">尝试</span>
+                            <a href="/DXYD.github.io/tags/WordCloud/">
+                                <span class="chip bg-color">WordCloud</span>
+                            </a>
+                        
+                            <a href="/DXYD.github.io/tags/python/">
+                                <span class="chip bg-color">python</span>
                             </a>
                         
                     </div>
@@ -463,28 +467,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-04-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-04-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    464
+                    188
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -494,86 +498,49 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote>
-<p>去年暑假起，自学python，后因琐事一直未系统地学习，今年寒假重拾旧业，顺便入门了爬虫，尝试写过很多爬虫大多无功而返，近几天又入坑了，便又着手写爬虫.</p>
+                <h1 id="基于python的WordCloud词云的简单尝试"><a href="#基于python的WordCloud词云的简单尝试" class="headerlink" title="基于python的WordCloud词云的简单尝试"></a>基于python的WordCloud词云的简单尝试</h1><h2 id="0-准备——安装python的第三方库如"><a href="#0-准备——安装python的第三方库如" class="headerlink" title="0 准备——安装python的第三方库如:"></a>0 准备——安装python的第三方库如:</h2><ul>
+<li><p>jieba   </p>
+<blockquote>
+<p>中文分词</p>
 </blockquote>
-<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><ul>
-<li>又又又复习了一遍<a href="http://cn.python-requests.org/zh_CN/latest/user/quickstart.html" target="_blank" rel="noopener">requests库</a></li>
-<li>又又又复习了一遍<a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/index.zh.html" target="_blank" rel="noopener">BeautifulSoup库</a></li>
-<li>又又复习了一遍Response对象的属性</li>
-<li>又看了之前的B站视频</li>
-<li>终于开始冥想了</li>
+</li>
+<li><p>imageio</p>
+<blockquote>
+<p>导入图片</p>
+</blockquote>
+</li>
+<li><p>WordCloud</p>
+<blockquote>
+<p>词云工具</p>
+</blockquote>
+</li>
 </ul>
-<h2 id="爬什么？"><a href="#爬什么？" class="headerlink" title="爬什么？"></a>爬什么？</h2><p>听说豆瓣很适合爬虫入门选手 -&gt; 爬豆瓣 -&gt; 爬最简单的标题</p>
-<h2 id="怎么爬？"><a href="#怎么爬？" class="headerlink" title="怎么爬？"></a>怎么爬？</h2><blockquote>
-<p>​    本来想用正则表达式来爬的，但是但是我忘了，脑子一片空白</p>
-</blockquote>
-<ul>
-<li>requests + BeautifulSoup 实现简单的信息检索</li>
-<li>请求</li>
-<li>回应</li>
-<li>解析</li>
-<li>寻找</li>
-<li>保存</li>
+<h2 id="0-在互联网上找到所需图片"><a href="#0-在互联网上找到所需图片" class="headerlink" title="0 在互联网上找到所需图片"></a>0 在互联网上找到所需图片</h2><p><img src="%E5%9F%BA%E4%BA%8Epython%E7%9A%84WordCloud%E8%AF%8D%E4%BA%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%B0%9D%E8%AF%95/b.png" alt="image-20200418104152035"></p>
+<h2 id="1-在Photoshop上编辑所需图片使得背景为纯白色"><a href="#1-在Photoshop上编辑所需图片使得背景为纯白色" class="headerlink" title="1 在Photoshop上编辑所需图片使得背景为纯白色"></a>1 在Photoshop上编辑所需图片使得背景为纯白色</h2><p><img src="%E5%9F%BA%E4%BA%8Epython%E7%9A%84WordCloud%E8%AF%8D%E4%BA%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%B0%9D%E8%AF%95/a.png" alt="image-20200418102506572"></p>
+<h2 id="3-摘录txt格式的文本段落"><a href="#3-摘录txt格式的文本段落" class="headerlink" title="3 摘录txt格式的文本段落"></a>3 摘录txt格式的文本段落</h2><ul>
+<li>在互联网上自行寻找文字素材并保存</li>
 </ul>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><blockquote>
-<p>​    虽然代码不多，但是对于新手的我一边找error一边找文档是真的吐血，手敲7个钟头……</p>
-</blockquote>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> bs4 <span class="token keyword">import</span> BeautifulSoup
-<span class="token keyword">import</span> requests
-<span class="token keyword">import</span> xlwt
+<h2 id="4-代码"><a href="#4-代码" class="headerlink" title="4 代码"></a>4 代码</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> jieba
+<span class="token keyword">import</span> wordcloud
+<span class="token keyword">import</span> imageio
+mk <span class="token operator">=</span> imageio<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">"hello.png"</span><span class="token punctuation">)</span>
 
-<span class="token keyword">def</span> <span class="token function">pages_</span><span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    pages <span class="token operator">=</span> <span class="token number">0</span>
-    pages <span class="token operator">+=</span> page <span class="token operator">*</span> <span class="token number">20</span> <span class="token operator">-</span> <span class="token number">20</span>
-    <span class="token keyword">return</span> pages
+w <span class="token operator">=</span> wordcloud<span class="token punctuation">.</span>WordCloud<span class="token punctuation">(</span>
+                        scale<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>
+                        background_color<span class="token operator">=</span><span class="token string">"white"</span><span class="token punctuation">,</span>
+                        font_path<span class="token operator">=</span><span class="token string">"msyh.ttc"</span><span class="token punctuation">,</span>
+                        mask<span class="token operator">=</span>mk<span class="token punctuation">)</span>
 
-
-<span class="token keyword">def</span> <span class="token function">fiction_page</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    headers <span class="token operator">=</span> <span class="token punctuation">{</span>
-        <span class="token string">'User-Agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'</span>
-    <span class="token punctuation">}</span>
-    response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>
-    soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">,</span> features<span class="token operator">=</span><span class="token string">'lxml'</span><span class="token punctuation">)</span>
-    soup_1 <span class="token operator">=</span> soup<span class="token punctuation">.</span>select<span class="token punctuation">(</span><span class="token string">"a[title]"</span><span class="token punctuation">)</span>
-    <span class="token keyword">for</span> x <span class="token keyword">in</span> soup_1<span class="token punctuation">:</span>
-        s_s <span class="token operator">=</span> x<span class="token punctuation">[</span><span class="token string">"title"</span><span class="token punctuation">]</span>
-        data<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s_s<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> data
-
-
-<span class="token keyword">def</span> <span class="token function">save_fiction</span><span class="token punctuation">(</span>save<span class="token punctuation">,</span> page<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment" spellcheck="true">#    with open("爬取文件","w",encoding ="utf-8" ) as f:</span>
-    <span class="token comment" spellcheck="true">#  s_s=' '.join(s["title"])</span>
-    <span class="token comment" spellcheck="true"># print(s_s)</span>
-    book <span class="token operator">=</span> xlwt<span class="token punctuation">.</span>Workbook<span class="token punctuation">(</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">,</span> style_compression<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 创建workbook对象</span>
-    sheet <span class="token operator">=</span> book<span class="token punctuation">.</span>add_sheet<span class="token punctuation">(</span><span class="token string">'爬取书籍'</span><span class="token punctuation">,</span> cell_overwrite_ok<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 创建工作表</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> int<span class="token punctuation">(</span>page<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        data_20 <span class="token operator">=</span> save<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-        sheet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> data_20<span class="token punctuation">)</span>
-    book<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'爬取的书籍.xls'</span><span class="token punctuation">)</span>
-
-<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    tag <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">"请输入你想输入的标签："</span><span class="token punctuation">)</span>
-    page <span class="token operator">=</span> input<span class="token punctuation">(</span><span class="token string">"请输入要下载前几页的内容："</span><span class="token punctuation">)</span>
-    data <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>int<span class="token punctuation">(</span>page<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        pages_s <span class="token operator">=</span> pages_<span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
-        <span class="token comment" spellcheck="true">#     # tags = quote(tag,encoding ='GBK' )</span>
-        url <span class="token operator">=</span> <span class="token string">'https://book.douban.com/tag/'</span> <span class="token operator">+</span> tag <span class="token operator">+</span> <span class="token string">'?start='</span> <span class="token operator">+</span> str<span class="token punctuation">(</span>pages_s<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'&amp;type=T'</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"第%d页下载中"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-        save <span class="token operator">=</span> fiction_page<span class="token punctuation">(</span>url<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
-    save_fiction<span class="token punctuation">(</span>save<span class="token punctuation">,</span> page<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"保存成功！"</span><span class="token punctuation">)</span>
-
-
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    main<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413164357.png" alt=""></p>
-<p><img src="https://raw.githubusercontent.com/DXYD/pic/master/img/20200413163822.png" alt=""></p>
-<p><img src="!%5B%5D(https://raw.githubusercontent.com/DXYD/pic/master/img/940S%25SF%7BR)JMZ%25%242%25I%5DKXN0.png" alt="">))</p>
-<hr>
+f <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">"WordCloud.txt"</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
+text <span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+_text <span class="token operator">=</span> jieba<span class="token punctuation">.</span>lcut<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+string <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>_text<span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+w<span class="token punctuation">.</span>generate<span class="token punctuation">(</span>string<span class="token punctuation">)</span>
+w<span class="token punctuation">.</span>to_file<span class="token punctuation">(</span><span class="token string">"word.png"</span><span class="token punctuation">)</span></code></pre>
+<h2 id="5-结果"><a href="#5-结果" class="headerlink" title="5 结果"></a>5 结果</h2><p><img src="%E5%9F%BA%E4%BA%8Epython%E7%9A%84WordCloud%E8%AF%8D%E4%BA%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%B0%9D%E8%AF%95/word.png" alt="word"></p>
+<h1 id="关于党徽"><a href="#关于党徽" class="headerlink" title="关于党徽"></a>关于党徽</h1><p><a href="党旗制作和使用的若干规定.pdf">《中国共产党党旗党徽制作和使用的若干规定》附件</a></p>
+<p><a href="ab.pdf">《网络信息内容生态治理规定》附件</a></p>
 
             </div>
             <hr/>
@@ -599,7 +566,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://DXYD.github.io/DXYD.github.io/2020/04/13/pa-chong-shi-li-tong-guo-biao-qian-ye-shu-pa-qu-dou-ban-nei-rong-chang-shi/">https://DXYD.github.io/DXYD.github.io/2020/04/13/pa-chong-shi-li-tong-guo-biao-qian-ye-shu-pa-qu-dou-ban-nei-rong-chang-shi/</a>
+                    <a href="https://DXYD.github.io/DXYD.github.io/2020/04/18/ji-yu-python-de-wordcloud-ci-yun-de-jian-dan-chang-shi/">https://DXYD.github.io/DXYD.github.io/2020/04/18/ji-yu-python-de-wordcloud-ci-yun-de-jian-dan-chang-shi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -637,8 +604,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
-                                    <span class="chip bg-color">尝试</span>
+                                <a href="/DXYD.github.io/tags/WordCloud/">
+                                    <span class="chip bg-color">WordCloud</span>
+                                </a>
+                            
+                                <a href="/DXYD.github.io/tags/python/">
+                                    <span class="chip bg-color">python</span>
                                 </a>
                             
                         </div>
@@ -680,9 +651,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/DXYD.github.io/2020/04/18/ji-yu-python-de-wordcloud-ci-yun-de-jian-dan-chang-shi/">
                     <div class="card-image">
@@ -718,9 +690,9 @@ WordCloud
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -733,6 +705,7 @@ WordCloud
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -755,28 +728,24 @@ WordCloud
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/13/beautifulsoup/">
+                <a href="/DXYD.github.io/2020/04/13/pa-chong-shi-li-tong-guo-biao-qian-ye-shu-pa-qu-dou-ban-nei-rong-chang-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/16.jpg" class="responsive-img" alt="BeautifulSoup">
+                        <img src="/DXYD.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="爬虫实例，通过标签页数爬取豆瓣内容尝试">
                         
-                        <span class="card-title">BeautifulSoup</span>
+                        <span class="card-title">爬虫实例，通过标签页数爬取豆瓣内容尝试</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            BeautifulSoup四大对象种类：
+                            前言
+去年暑假起，自学python，后因琐事一直未系统地学习，今年寒假重拾旧业，顺便入门了爬虫，尝试写过很多爬虫大多无功而返，近几天又入坑了，便又着手写爬虫.
 
-Tag
-NavigableString
-BeautifulSoup
-Comment
-
-
-
-from bs4 import BeautifulSoupsoup = BeautifilSoup(htm
+过程
+又又又复习了一遍requests库
+又又又复习了一遍BeautifulS
                         
                     </div>
                     <div class="publish-info">
@@ -787,8 +756,8 @@ from bs4 import BeautifulSoupsoup = BeautifilSoup(htm
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/DXYD.github.io/categories/python%E7%88%AC%E8%99%AB/" class="post-category">
-                                    python爬虫
+                            <a href="/DXYD.github.io/categories/python/" class="post-category">
+                                    python
                                 </a>
                             
                             
@@ -798,12 +767,8 @@ from bs4 import BeautifulSoupsoup = BeautifilSoup(htm
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/DXYD.github.io/tags/BeautifulSoup/">
-                        <span class="chip bg-color">BeautifulSoup</span>
+                    <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
+                        <span class="chip bg-color">尝试</span>
                     </a>
                     
                 </div>
@@ -941,6 +906,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
