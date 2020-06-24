@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>张宇</title>
+      <link href="/DXYD.github.io/2020/06/24/zhang-yu/"/>
+      <url>/DXYD.github.io/2020/06/24/zhang-yu/</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="我是宇哥"><a href="#我是宇哥" class="headerlink" title="我是宇哥"></a>我是宇哥</h1><p>非常英俊</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git&amp;github</title>
       <link href="/DXYD.github.io/2020/06/20/git-github/"/>
       <url>/DXYD.github.io/2020/06/20/git-github/</url>
@@ -100,33 +113,6 @@
     
     
     <entry>
-      <title>Requests</title>
-      <link href="/DXYD.github.io/2020/04/13/requests/"/>
-      <url>/DXYD.github.io/2020/04/13/requests/</url>
-      
-        <content type="html"><![CDATA[<h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><ul><li><p>先模拟浏览器发送requests请求——requests.get()</p><blockquote><h2 id="requests发送请求"><a href="#requests发送请求" class="headerlink" title="requests发送请求"></a>requests发送请求</h2><pre class=" language-python"><code class="language-python"><span class="token number">1</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>‘https<span class="token punctuation">:</span><span class="token operator">//</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>timeline<span class="token punctuation">.</span>json’<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># GET请求</span><span class="token number">2</span>   requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>post”<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># POST请求</span><span class="token number">3</span>   requests<span class="token punctuation">.</span>put<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>put”<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># PUT请求</span><span class="token number">4</span>  requests<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>delete”<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># DELETE请求</span><span class="token number">5</span>   requests<span class="token punctuation">.</span>head<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>get”<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># HEAD请求</span><span class="token number">6</span>   requests<span class="token punctuation">.</span>options<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>get” <span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># OPTIONS请求</span></code></pre></blockquote></li><li><p>response 收到服务器回应的网页（未解析）</p><blockquote><h2 id="Response-对象的属性"><a href="#Response-对象的属性" class="headerlink" title="Response 对象的属性"></a>Response 对象的属性</h2><h3 id="r-status-code"><a href="#r-status-code" class="headerlink" title="r.status_code"></a>r.status_code</h3><p>http请求的返回状态，200表示连接成功，404表示连接失败</p><h3 id="r-text"><a href="#r-text" class="headerlink" title="r.text"></a>r.text</h3><p>http响应内容的字符串形式，url对应的页面内容</p><h3 id="r-encoding"><a href="#r-encoding" class="headerlink" title="r.encoding"></a>r.encoding</h3><p>从HTTP header中猜测的响应内容编码方式</p><h3 id="r-apparent-encoding"><a href="#r-apparent-encoding" class="headerlink" title="r.apparent_encoding"></a>r.apparent_encoding</h3><p>从内容分析出的响应内容的编码方式（备选编码方式）</p><h3 id="r-content"><a href="#r-content" class="headerlink" title="r.content"></a>r.content</h3><p>HTTP响应内容的二进制形式</p><h3 id="r-headers"><a href="#r-headers" class="headerlink" title="r.headers"></a>r.headers</h3><p>http响应内容的头部内容</p></blockquote></li><li><p>解析response的内容——BeautifulSoup</p><blockquote><p>​    具体见BeautifulSoup的markdown笔记</p></blockquote></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> python爬虫 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 笔记 </tag>
-            
-            <tag> requests库 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>BeautifulSoup</title>
       <link href="/DXYD.github.io/2020/04/13/beautifulsoup/"/>
       <url>/DXYD.github.io/2020/04/13/beautifulsoup/</url>
@@ -146,6 +132,33 @@
             <tag> 笔记 </tag>
             
             <tag> BeautifulSoup </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Requests</title>
+      <link href="/DXYD.github.io/2020/04/13/requests/"/>
+      <url>/DXYD.github.io/2020/04/13/requests/</url>
+      
+        <content type="html"><![CDATA[<h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><ul><li><p>先模拟浏览器发送requests请求——requests.get()</p><blockquote><h2 id="requests发送请求"><a href="#requests发送请求" class="headerlink" title="requests发送请求"></a>requests发送请求</h2><pre class=" language-python"><code class="language-python"><span class="token number">1</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>‘https<span class="token punctuation">:</span><span class="token operator">//</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>timeline<span class="token punctuation">.</span>json’<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># GET请求</span><span class="token number">2</span>   requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>post”<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># POST请求</span><span class="token number">3</span>   requests<span class="token punctuation">.</span>put<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>put”<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># PUT请求</span><span class="token number">4</span>  requests<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>delete”<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># DELETE请求</span><span class="token number">5</span>   requests<span class="token punctuation">.</span>head<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>get”<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># HEAD请求</span><span class="token number">6</span>   requests<span class="token punctuation">.</span>options<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>get” <span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># OPTIONS请求</span></code></pre></blockquote></li><li><p>response 收到服务器回应的网页（未解析）</p><blockquote><h2 id="Response-对象的属性"><a href="#Response-对象的属性" class="headerlink" title="Response 对象的属性"></a>Response 对象的属性</h2><h3 id="r-status-code"><a href="#r-status-code" class="headerlink" title="r.status_code"></a>r.status_code</h3><p>http请求的返回状态，200表示连接成功，404表示连接失败</p><h3 id="r-text"><a href="#r-text" class="headerlink" title="r.text"></a>r.text</h3><p>http响应内容的字符串形式，url对应的页面内容</p><h3 id="r-encoding"><a href="#r-encoding" class="headerlink" title="r.encoding"></a>r.encoding</h3><p>从HTTP header中猜测的响应内容编码方式</p><h3 id="r-apparent-encoding"><a href="#r-apparent-encoding" class="headerlink" title="r.apparent_encoding"></a>r.apparent_encoding</h3><p>从内容分析出的响应内容的编码方式（备选编码方式）</p><h3 id="r-content"><a href="#r-content" class="headerlink" title="r.content"></a>r.content</h3><p>HTTP响应内容的二进制形式</p><h3 id="r-headers"><a href="#r-headers" class="headerlink" title="r.headers"></a>r.headers</h3><p>http响应内容的头部内容</p></blockquote></li><li><p>解析response的内容——BeautifulSoup</p><blockquote><p>​    具体见BeautifulSoup的markdown笔记</p></blockquote></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> python爬虫 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> requests库 </tag>
             
         </tags>
       
