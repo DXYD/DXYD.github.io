@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git&amp;github, 小汤圆のblog">
+    <meta name="keywords" content="我的第一个GUI程序, 小汤圆のblog">
     <meta name="description" content="peace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Git&amp;github | 小汤圆のblog</title>
+    <title>我的第一个GUI程序 | 小汤圆のblog</title>
     <link rel="icon" type="image/png" href="/DXYD.github.io/medias/favicon-32x32-next.png">
 
     <link rel="stylesheet" type="text/css" href="/DXYD.github.io/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/%5C%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAGUI%E7%A8%8B%E5%BA%8F%5Cgui.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git&amp;github</h1>
+                    <h1 class="description center-align post-title">我的第一个GUI程序</h1>
                 </div>
             </div>
         </div>
@@ -438,14 +438,23 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/DXYD.github.io/tags/git/">
-                                <span class="chip bg-color">git</span>
+                            <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
+                                <span class="chip bg-color">尝试</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/DXYD.github.io/categories/python-GUI/" class="post-category">
+                                python-GUI
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -454,7 +463,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-20
+                    2020-07-04
                 </div>
                 
 
@@ -468,14 +477,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    217
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    1 分
                 </div>
                 
 
@@ -485,336 +494,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>git Bash: Unix与Linux风格的命令行，使用最多<br>git CMD:Windows风格的命令行<br>git GUI:图形界面Git</p>
-<hr>
-<p>基本的Linux命令:</p>
-<blockquote>
-<p>cd 改变目录<br>cd.. 退回上一个目录<br>pwd 显示当前文件路径<br>ls 列出当前目录内容<br>touch 新建一个文件 例如 touch index.js 就会在当前目录下新建一个index.js 文件<br>rm 删除一个文件，rm index.js 就会把index.js 文件删除<br>mkdir 新建一个目录，就是新建一个文件夹<br>rm-r 删除一个文件夹，rm-r src 删除src目录<br>mv 移动文件 如mv index.html src index.html<br>reset 重新初始化终端/清屏<br>clear 清屏<br>history 查看命令历史<br>help 帮助<br>exit 退出<br>#注释</p>
-</blockquote>
-<p>git 配置:<br>查看配置 <code>git config -l</code><br>查看本地配置 <code>git config --system -list</code><br>查看全局配置 <code>git config --global -list</code></p>
-<h2 id="基本理论"><a href="#基本理论" class="headerlink" title="基本理论"></a>基本理论</h2><p>三个工作区域</p>
-<ul>
-<li>工作区</li>
-<li>暂存区</li>
-<li>资源库</li>
+                <h1 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h1><p>一直想弄一个有图形界面的软件，最近摸索了pyqt5和pyside2，最后用pyqt5设置了一个简单的图形界面，逻辑部分则采用了之前的爬虫程序。</p>
+<a id="more"></a>
+
+<h2 id="界面部分"><a href="#界面部分" class="headerlink" title="界面部分"></a>界面部分</h2><p>采用qt设计师进行简单的布局</p>
+<p>准备有登陆界面和爬虫界面，及两者的交互，时间原因随便弄了弄。</p>
+<h2 id="逻辑部分"><a href="#逻辑部分" class="headerlink" title="逻辑部分"></a>逻辑部分</h2><p>仿照之前的豆瓣标签爬虫爬取豆瓣的标题的简单实例</p>
+<p>并通过qt的文本标记框和游标插入for循环遍历显示在界面上。</p>
+<p>具体可参考之前的文章</p>
+<h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><p><img src="%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAGUI%E7%A8%8B%E5%BA%8F%5Cgui.png" alt=""></p>
+<h1 id="程序打包"><a href="#程序打包" class="headerlink" title="程序打包"></a>程序打包</h1><ul>
+<li>利用pyinstaller转换成.exe</li>
+<li>利用HM NIS Edit 进行程序安装向导打包</li>
 </ul>
-<p>workspace-&gt;<code>add</code>-&gt;index-&gt;<code>commit</code>-&gt;repository-&gt;<code>push</code>-&gt;remote</p>
-<h2 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a>项目搭建</h2><ul>
-<li>创建新的仓库<pre class=" language-git"><code class="language-git"><span class="token command">$ git init</span></code></pre>
-</li>
-<li>克隆远程仓库<pre><code>$ git clone [url]</code></pre><h2 id="git文件操作p"><a href="#git文件操作p" class="headerlink" title="git文件操作p"></a>git文件操作p</h2></li>
-</ul>
-<p>文件的四种状态<br>通过<code>git status [文件名]</code>查看指定文件的状态<br>通过<code>git status</code>查看所有文件状态</p>
+<h2 id="打包实现"><a href="#打包实现" class="headerlink" title="打包实现"></a>打包实现</h2><p><img src="%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAGUI%E7%A8%8B%E5%BA%8F%5Cdab.png" alt=""></p>
 <hr>
-<pre><code>git add . #添加所有文件到暂存区
-git commit -m &quot;消息内容&quot; #提交暂存区的内容到本地仓库 -m提交信息</code></pre><p>忽略文件<br>在主目录下建立”.gitignore”文件</p>
-<pre><code># 为注释
-*.txt #忽略所以以txt结尾的文件
-！lib.txt #但lib.txt除外
-temp/ #忽略temp目录下的所有文件</code></pre><h2 id="ssh-公钥"><a href="#ssh-公钥" class="headerlink" title="ssh 公钥"></a>ssh 公钥</h2><p>免密码登陆</p>
-<h2 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h2><ul>
-<li>列出所有本地分支<br><code>git branch</code></li>
-<li>列出所有远程分支<br><code>git branch -r</code></li>
-<li>新建一个分支，但仍然停留在当前分支<br><code>git branch [branch-name]</code></li>
-<li>新建一个分支，并切换到改分支<br><code>git checkout -b [branch]</code></li>
-<li>合并指定分支到当前分支<br><code>git merge [branch]</code></li>
-<li>删除分支<br><code>git branch -d [branch-name]</code></li>
-<li>删除远程分支<br><code>git push origin --delete [branch-name]</code></li>
-</ul>
-<hr>
-<p>关于并行分支</p>
-<hr>
-<p>后续</p>
-<h1 id="Git-大全"><a href="#Git-大全" class="headerlink" title="Git 大全"></a>Git 大全</h1><p>以下常用命令来自阮一峰老师的博客文章《常用 Git 命令清单》，感谢阮老师！</p>
-<h2 id="一、Git-GUI-客户端"><a href="#一、Git-GUI-客户端" class="headerlink" title="一、Git GUI 客户端"></a>一、Git GUI 客户端</h2><p>##</p>
-<p><a href="https://www.oschina.net/p/git" target="_blank" rel="noopener">Git 客户端下载（Windows）</a></p>
-<p><a href="https://www.oschina.net/p/tortoisegit" target="_blank" rel="noopener">TortoiseGit 客户端下载（Windows）</a></p>
-<p><a href="https://www.oschina.net/p/sourcetree" target="_blank" rel="noopener">Sourcetree 客户端下载（Windows、Mac）</a></p>
-<p><a href="https://www.oschina.net/p/git-extensions" target="_blank" rel="noopener">Git Extensions 客户端下载（Windows、Mac、Linux）</a></p>
-<p><a href="https://www.oschina.net/p/smartgit" target="_blank" rel="noopener">SmartGit 客户端下载（Windows、Mac、Linux）</a></p>
-<p><a href="https://www.oschina.net/p/giteye" target="_blank" rel="noopener">GitEye 客户端下载 （Windows、Mac、Linux）</a></p>
-<p><a href="https://www.oschina.net/p/gitg" target="_blank" rel="noopener">gitg 客户端下载（Windows、Linux）</a></p>
-<p><a href="https://www.oschina.net/p/ungit" target="_blank" rel="noopener">ungit 客户端下载（Windows、Mac、Linux）</a></p>
-<p><a href="https://www.oschina.net/p/git-cola" target="_blank" rel="noopener">git-cola 客户端下载（Windows、Mac、Linux）</a></p>
-<p><a href="https://www.oschina.net/p/tower" target="_blank" rel="noopener">Tower 客户端下载（Windows、Mac）</a></p>
-<p><a href="https://www.oschina.net/p/gitbox" target="_blank" rel="noopener">Gitbox 客户端下载（Mac）</a></p>
-<p><a href="https://www.oschina.net/p/gitup" target="_blank" rel="noopener">GitUp 客户端下载（Mac）</a></p>
-<p><a href="https://www.oschina.net/p/giggle" target="_blank" rel="noopener">giggle 客户端下载（Linux）</a></p>
-<p><a href="https://www.oschina.net/p/pocket-git" target="_blank" rel="noopener">Pocket Git 客户端下载（Andorid）</a></p>
-<p><a href="https://workingcopyapp.com/" target="_blank" rel="noopener">Working Copy 客户端下载（IOS）</a></p>
-<p><a href="https://git2go.com/" target="_blank" rel="noopener">Git2Go 客户端下载（IOS）</a></p>
-<p><a href="http://gitdrive.com/" target="_blank" rel="noopener">GitDrive 客户端下载（IOS）</a></p>
-<p><a href="https://git-fork.com/" target="_blank" rel="noopener">Fork 客户端（Windows、Mac）</a></p>
-<p><a href="https://www.gitkraken.com/" target="_blank" rel="noopener">GitKraken 客户端（Windows、Mac、Linux）</a></p>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h2 id="二、Git-IDE-插件"><a href="#二、Git-IDE-插件" class="headerlink" title="二、Git IDE 插件"></a>二、Git IDE 插件</h2><p>##</p>
-<p><a href="https://gitee.com/oschina/eclipse-oscgit" target="_blank" rel="noopener">Eclipse、Myeclipse 插件下载</a></p>
-<p><a href="https://www.oschina.net/p/nbgit" target="_blank" rel="noopener">Netbeans 插件下载</a></p>
-<p><a href="https://www.oschina.net/p/intellij-gitosc" target="_blank" rel="noopener">IntelliJ IDEA 插件下载</a></p>
-<p><a href="https://www.oschina.net/p/codecloud-visualstudio" target="_blank" rel="noopener">Visual Studio 插件下载</a></p>
-<p><a href="https://gitee.com/GitGroup/atom-gitosc" target="_blank" rel="noopener">Atom 插件下载</a></p>
-<p><a href="https://www.oschina.net/p/gitsavvy" target="_blank" rel="noopener">Sublime Text 插件下载</a></p>
-<h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><h2 id="三、Git-浏览器插件"><a href="#三、Git-浏览器插件" class="headerlink" title="三、Git 浏览器插件"></a>三、Git 浏览器插件</h2><h2 id="-2"><a href="#-2" class="headerlink" title=""></a></h2><p><a href="https://gitee.com/oschina/GitCodeTree" target="_blank" rel="noopener">Git 浏览器插件下载（Chrome、Firefox、Safari、Opera，支持码云和Github）</a></p>
-<p><a href="https://www.oschina.net/p/octotree" target="_blank" rel="noopener">Octotree 浏览器插件下载（Chrome，支持Github）</a></p>
-<p><a href="https://www.oschina.net/p/gitlab-treeview" target="_blank" rel="noopener">GitLab-TreeView 浏览器插件下载（Chrome，支持GitLab）</a></p>
-<h1 id="-3"><a href="#-3" class="headerlink" title=""></a></h1><h2 id="四、在线-Git-代码托管平台"><a href="#四、在线-Git-代码托管平台" class="headerlink" title="四、在线 Git 代码托管平台"></a>四、在线 Git 代码托管平台</h2><h2 id="-4"><a href="#-4" class="headerlink" title=""></a></h2><p><a href="https://gitee.com/" target="_blank" rel="noopener">码云 Gitee 官网</a></p>
-<p><a href="https://github.com/" target="_blank" rel="noopener">GitHub 官网</a></p>
-<p><a href="https://about.gitlab.com/" target="_blank" rel="noopener">GitLab 官网</a></p>
-<p><a href="https://bitbucket.org/" target="_blank" rel="noopener">Bitbucket 官网</a></p>
-<h1 id="-5"><a href="#-5" class="headerlink" title=""></a></h1><h2 id="五、搭建-Git-服务"><a href="#五、搭建-Git-服务" class="headerlink" title="五、搭建 Git 服务"></a>五、搭建 Git 服务</h2><p>##</p>
-<p><a href="https://www.oschina.net/p/gitlab" target="_blank" rel="noopener">GitLab 开源版本下载</a></p>
-<p><a href="https://www.oschina.net/p/gitblit" target="_blank" rel="noopener">Gitblit 开源版本下载</a></p>
-<p><a href="https://www.oschina.net/p/gogs" target="_blank" rel="noopener">Gogs 开源版本下载</a></p>
-<p><a href="https://www.oschina.net/p/gitea" target="_blank" rel="noopener">Gitea 开源版本下载</a></p>
-<p><a href="https://www.oschina.net/p/gitosis" target="_blank" rel="noopener">Gitosis 开源版本下载</a></p>
-<p><a href="https://www.oschina.net/p/gitolite" target="_blank" rel="noopener">Gitolite 开源版本下载</a></p>
-<p><a href="https://www.oschina.net/p/gitstack" target="_blank" rel="noopener">GitStack 开源版本下载</a></p>
-<p><a href="https://www.oschina.net/p/gidder" target="_blank" rel="noopener">Gidder开源版本下载</a></p>
-<h1 id="-6"><a href="#-6" class="headerlink" title=""></a></h1><h2 id="六、Git-教程"><a href="#六、Git-教程" class="headerlink" title="六、Git 教程"></a>六、Git 教程</h2><h2 id="-7"><a href="#-7" class="headerlink" title=""></a></h2><p><a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">廖雪峰 | Git教程</a></p>
-<p><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="noopener">Git - Book</a></p>
-<p><a href="https://gitee.com/progit/" target="_blank" rel="noopener">Pro Git</a></p>
-<p><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="noopener">Git 简易指南</a></p>
-<p><a href="http://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">菜鸟教程 | Git教程</a></p>
-<p><a href="https://www.cnblogs.com/syp172654682/p/7689328.html" target="_blank" rel="noopener">博客园 | 深入浅出Git教程</a></p>
-<p><a href="https://www.w3cschool.cn/git/" target="_blank" rel="noopener">W3Cschool | Git教程</a></p>
-<p><a href="https://www.yiibai.com/git/" target="_blank" rel="noopener">易百教程 | Git教程</a></p>
-<p><a href="https://backlog.com/git-tutorial/cn/intro/intro1_1.html" target="_blank" rel="noopener">Backlog | Git入门</a></p>
-<p><a href="https://blog.csdn.net/Free_Wind22/article/details/50967723" target="_blank" rel="noopener">CSDN | Git 使用详细教程</a></p>
-<p><a href="https://lufficc.com/blog/the-core-conception-of-git#版本控制系统" target="_blank" rel="noopener">Lufficc | Git教程</a></p>
-<h1 id="-8"><a href="#-8" class="headerlink" title=""></a></h1><h2 id="七、Git-常用命令"><a href="#七、Git-常用命令" class="headerlink" title="七、Git 常用命令"></a>七、Git 常用命令</h2><h2 id="-9"><a href="#-9" class="headerlink" title=""></a></h2><h3 id="仓库"><a href="#仓库" class="headerlink" title="仓库"></a>仓库</h3><h2 id="-10"><a href="#-10" class="headerlink" title=""></a></h2><pre><code># 在当前目录新建一个Git代码库
-$ git init
+<p>有时间再讲讲通过何种方式打包压缩的文件大小的比较</p>
 
-# 新建一个目录，将其初始化为Git代码库
-$ git init [project-name]
-
-# 下载一个项目和它的整个代码历史
-$ git clone [url]</code></pre><h2 id="-11"><a href="#-11" class="headerlink" title=""></a></h2><h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><h2 id="-12"><a href="#-12" class="headerlink" title=""></a></h2><pre><code># 显示当前的Git配置
-$ git config --list
-
-# 编辑Git配置文件
-$ git config -e [--global]
-
-# 设置提交代码时的用户信息
-$ git config [--global] user.name &quot;[name]&quot;
-$ git config [--global] user.email &quot;[email address]&quot;</code></pre><h2 id="-13"><a href="#-13" class="headerlink" title=""></a></h2><h3 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h3><h2 id="-14"><a href="#-14" class="headerlink" title=""></a></h2><pre><code># 添加指定文件到暂存区
-$ git add [file1] [file2] ...
-
-# 添加指定目录到暂存区，包括子目录
-$ git add [dir]
-
-# 添加当前目录的所有文件到暂存区
-$ git add .
-
-# 添加每个变化前，都会要求确认
-# 对于同一个文件的多处变化，可以实现分次提交
-$ git add -p
-
-# 删除工作区文件，并且将这次删除放入暂存区
-$ git rm [file1] [file2] ...
-
-# 停止追踪指定文件，但该文件会保留在工作区
-$ git rm --cached [file]
-
-# 改名文件，并且将这个改名放入暂存区
-$ git mv [file-original] [file-renamed]</code></pre><h2 id="-15"><a href="#-15" class="headerlink" title=""></a></h2><h3 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h3><h2 id="-16"><a href="#-16" class="headerlink" title=""></a></h2><pre><code># 提交暂存区到仓库区
-$ git commit -m [message]
-
-# 提交暂存区的指定文件到仓库区
-$ git commit [file1] [file2] ... -m [message]
-
-# 提交工作区自上次commit之后的变化，直接到仓库区
-$ git commit -a
-
-# 提交时显示所有diff信息
-$ git commit -v
-
-# 使用一次新的commit，替代上一次提交
-# 如果代码没有任何新变化，则用来改写上一次commit的提交信息
-$ git commit --amend -m [message]
-
-# 重做上一次commit，并包括指定文件的新变化
-$ git commit --amend [file1] [file2] ...</code></pre><h2 id="-17"><a href="#-17" class="headerlink" title=""></a></h2><h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><h2 id="-18"><a href="#-18" class="headerlink" title=""></a></h2><pre><code># 列出所有本地分支
-$ git branch
-
-# 列出所有远程分支
-$ git branch -r
-
-# 列出所有本地分支和远程分支
-$ git branch -a
-
-# 新建一个分支，但依然停留在当前分支
-$ git branch [branch-name]
-
-# 新建一个分支，并切换到该分支
-$ git checkout -b [branch]
-
-# 新建一个分支，指向指定commit
-$ git branch [branch] [commit]
-
-# 新建一个分支，与指定的远程分支建立追踪关系
-$ git branch --track [branch] [remote-branch]
-
-# 切换到指定分支，并更新工作区
-$ git checkout [branch-name]
-
-# 切换到上一个分支
-$ git checkout -
-
-# 建立追踪关系，在现有分支与指定的远程分支之间
-$ git branch --set-upstream [branch] [remote-branch]
-
-# 合并指定分支到当前分支
-$ git merge [branch]
-
-# 选择一个commit，合并进当前分支
-$ git cherry-pick [commit]
-
-# 删除分支
-$ git branch -d [branch-name]
-
-# 删除远程分支
-$ git push origin --delete [branch-name]
-$ git branch -dr [remote/branch]</code></pre><h2 id="-19"><a href="#-19" class="headerlink" title=""></a></h2><h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><h2 id="-20"><a href="#-20" class="headerlink" title=""></a></h2><pre><code># 列出所有tag
-$ git tag
-
-# 新建一个tag在当前commit
-$ git tag [tag]
-
-# 新建一个tag在指定commit
-$ git tag [tag] [commit]
-
-# 删除本地tag
-$ git tag -d [tag]
-
-# 删除远程tag
-$ git push origin :refs/tags/[tagName]
-
-# 查看tag信息
-$ git show [tag]
-
-# 提交指定tag
-$ git push [remote] [tag]
-
-# 提交所有tag
-$ git push [remote] --tags
-
-# 新建一个分支，指向某个tag
-$ git checkout -b [branch] [tag]</code></pre><h2 id="-21"><a href="#-21" class="headerlink" title=""></a></h2><h3 id="查看信息"><a href="#查看信息" class="headerlink" title="查看信息"></a>查看信息</h3><h2 id="-22"><a href="#-22" class="headerlink" title=""></a></h2><pre><code># 显示有变更的文件
-$ git status
-
-# 显示当前分支的版本历史
-$ git log
-
-# 显示commit历史，以及每次commit发生变更的文件
-$ git log --stat
-
-# 搜索提交历史，根据关键词
-$ git log -S [keyword]
-
-# 显示某个commit之后的所有变动，每个commit占据一行
-$ git log [tag] HEAD --pretty=format:%s
-
-# 显示某个commit之后的所有变动，其&quot;提交说明&quot;必须符合搜索条件
-$ git log [tag] HEAD --grep feature
-
-# 显示某个文件的版本历史，包括文件改名
-$ git log --follow [file]
-$ git whatchanged [file]
-
-# 显示指定文件相关的每一次diff
-$ git log -p [file]
-
-# 显示过去5次提交
-$ git log -5 --pretty --oneline
-
-# 显示所有提交过的用户，按提交次数排序
-$ git shortlog -sn
-
-# 显示指定文件是什么人在什么时间修改过
-$ git blame [file]
-
-# 显示暂存区和工作区的差异
-$ git diff
-
-# 显示暂存区和上一个commit的差异
-$ git diff --cached [file]
-
-# 显示工作区与当前分支最新commit之间的差异
-$ git diff HEAD
-
-# 显示两次提交之间的差异
-$ git diff [first-branch]...[second-branch]
-
-# 显示今天你写了多少行代码
-$ git diff --shortstat &quot;@{0 day ago}&quot;
-
-# 显示某次提交的元数据和内容变化
-$ git show [commit]
-
-# 显示某次提交发生变化的文件
-$ git show --name-only [commit]
-
-# 显示某次提交时，某个文件的内容
-$ git show [commit]:[filename]
-
-# 显示当前分支的最近几次提交
-$ git reflog</code></pre><p>##</p>
-<h3 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h3><h2 id="-23"><a href="#-23" class="headerlink" title=""></a></h2><pre><code># 下载远程仓库的所有变动
-$ git fetch [remote]
-
-# 显示所有远程仓库
-$ git remote -v
-
-# 显示某个远程仓库的信息
-$ git remote show [remote]
-
-# 增加一个新的远程仓库，并命名
-$ git remote add [shortname] [url]
-
-# 取回远程仓库的变化，并与本地分支合并
-$ git pull [remote] [branch]
-
-# 上传本地指定分支到远程仓库
-$ git push [remote] [branch]
-
-# 强行推送当前分支到远程仓库，即使有冲突
-$ git push [remote] --force
-
-# 推送所有分支到远程仓库
-$ git push [remote] --all</code></pre><h2 id="-24"><a href="#-24" class="headerlink" title=""></a></h2><h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><h2 id="-25"><a href="#-25" class="headerlink" title=""></a></h2><pre><code># 恢复暂存区的指定文件到工作区
-$ git checkout [file]
-
-# 恢复某个commit的指定文件到暂存区和工作区
-$ git checkout [commit] [file]
-
-# 恢复暂存区的所有文件到工作区
-$ git checkout .
-
-# 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变
-$ git reset [file]
-
-# 重置暂存区与工作区，与上一次commit保持一致
-$ git reset --hard
-
-# 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变
-$ git reset [commit]
-
-# 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致
-$ git reset --hard [commit]
-
-# 重置当前HEAD为指定commit，但保持暂存区和工作区不变
-$ git reset --keep [commit]
-
-# 新建一个commit，用来撤销指定commit
-# 后者的所有变化都将被前者抵消，并且应用到当前分支
-$ git revert [commit]
-
-暂时将未提交的变化移除，稍后再移入
-$ git stash
-$ git stash pop</code></pre><p>##</p>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>##</p>
-<pre><code># 生成一个可供发布的压缩包
-$ git archive</code></pre><hr>
-<h1 id="git命令学习"><a href="#git命令学习" class="headerlink" title="git命令学习"></a><a href="https://oschina.gitee.io/learn-git-branching/" target="_blank" rel="noopener">git命令学习</a></h1>
             </div>
             <hr/>
 
@@ -839,7 +535,7 @@ $ git archive</code></pre><hr>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://DXYD.github.io/DXYD.github.io/2020/06/20/git-github/">https://DXYD.github.io/DXYD.github.io/2020/06/20/git-github/</a>
+                    <a href="https://DXYD.github.io/DXYD.github.io/2020/07/04/wo-de-di-yi-ge-gui-cheng-xu/">https://DXYD.github.io/DXYD.github.io/2020/07/04/wo-de-di-yi-ge-gui-cheng-xu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -877,8 +573,8 @@ $ git archive</code></pre><hr>
                     
                         <div class="article-tag">
                             
-                                <a href="/DXYD.github.io/tags/git/">
-                                    <span class="chip bg-color">git</span>
+                                <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
+                                    <span class="chip bg-color">尝试</span>
                                 </a>
                             
                         </div>
@@ -920,9 +616,10 @@ $ git archive</code></pre><hr>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/DXYD.github.io/2020/07/04/wo-de-di-yi-ge-gui-cheng-xu/">
                     <div class="card-image">
@@ -943,9 +640,9 @@ $ git archive</code></pre><hr>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -958,6 +655,7 @@ $ git archive</code></pre><hr>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -976,57 +674,33 @@ $ git archive</code></pre><hr>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/04/21/guan-yu-xin-mei-ti-yun-ying-de-yi-xie-dong-xi/">
+                <a href="/DXYD.github.io/2020/06/20/git-github/">
                     <div class="card-image">
                         
                         
-                        <img src="/DXYD.github.io/medias/featureimages/15.jpg" class="responsive-img" alt="关于新媒体运营的一些东西">
+                        <img src="/DXYD.github.io/medias/featureimages/23.jpg" class="responsive-img" alt="Git&amp;github">
                         
-                        <span class="card-title">关于新媒体运营的一些东西</span>
+                        <span class="card-title">Git&amp;github</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            关于新媒体运营的一些东西一个网站
-考拉新媒体导航
+                            git基础git Bash: Unix与Linux风格的命令行，使用最多git CMD:Windows风格的命令行git GUI:图形界面Git
 
-两个插件
-壹伴
+基本的Linux命令:
 
-
-新媒体管家
-
-
-​    这两个插件也能实现下文排版的功能，很强大。
-
-
-
-排版
-96编辑器
-135编辑器
-秀米
-i排版
-新榜
-易点
-
-思维导图
-MindMaster
-
+cd 改变目录cd.. 退回上一个目录pwd 显示当前文件路径ls
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/DXYD.github.io/categories/%E5%88%86%E4%BA%AB/" class="post-category">
-                                    分享
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Lrunn
                             
                         </span>
                     </div>
@@ -1034,8 +708,8 @@ MindMaster
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/%E6%96%B0%E5%AA%92%E4%BD%93%E5%B7%A5%E5%85%B7/">
-                        <span class="chip bg-color">新媒体工具</span>
+                    <a href="/DXYD.github.io/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
@@ -1173,13 +847,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
