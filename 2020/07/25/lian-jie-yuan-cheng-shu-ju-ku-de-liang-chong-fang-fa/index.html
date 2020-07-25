@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我的第一个GUI程序, 小汤圆のblog">
+    <meta name="keywords" content="连接远程数据库的两种方法, 小汤圆のblog">
     <meta name="description" content="peace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一个GUI程序 | 小汤圆のblog</title>
+    <title>连接远程数据库的两种方法 | 小汤圆のblog</title>
     <link rel="icon" type="image/png" href="/DXYD.github.io/medias/favicon-32x32-next.png">
 
     <link rel="stylesheet" type="text/css" href="/DXYD.github.io/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.downk.cc/item/5f0008c314195aa5946b5bb9.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.downk.cc/item/5f1bd8c014195aa59478a4dd.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一个GUI程序</h1>
+                    <h1 class="description center-align post-title">连接远程数据库的两种方法</h1>
                 </div>
             </div>
         </div>
@@ -438,8 +438,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
-                                <span class="chip bg-color">尝试</span>
+                            <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                                <span class="chip bg-color">笔记</span>
+                            </a>
+                        
+                            <a href="/DXYD.github.io/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                            <a href="/DXYD.github.io/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
+                            </a>
+                        
+                            <a href="/DXYD.github.io/tags/navicat/">
+                                <span class="chip bg-color">navicat</span>
                             </a>
                         
                     </div>
@@ -450,8 +462,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/DXYD.github.io/categories/python-GUI/" class="post-category">
-                                python-GUI
+                            <a href="/DXYD.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" class="post-category">
+                                数据库的远程连接
                             </a>
                         
                     </div>
@@ -463,21 +475,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-04
+                    2020-07-25
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-04
+                    2020-07-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    217
+                    283
                 </div>
                 
 
@@ -494,22 +506,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h1><p>一直想弄一个有图形界面的软件，最近摸索了pyqt5和pyside2，最后用pyqt5设置了一个简单的图形界面，逻辑部分则采用了之前的爬虫程序。</p>
-<a id="more"></a>
-
-<h2 id="界面部分"><a href="#界面部分" class="headerlink" title="界面部分"></a>界面部分</h2><p>采用qt设计师进行简单的布局</p>
-<p>准备有登陆界面和爬虫界面，及两者的交互，时间原因随便弄了弄。</p>
-<h2 id="逻辑部分"><a href="#逻辑部分" class="headerlink" title="逻辑部分"></a>逻辑部分</h2><p>仿照之前的豆瓣标签爬虫爬取豆瓣的标题的简单实例</p>
-<p>并通过qt的文本标记框和游标插入for循环遍历显示在界面上。</p>
-<p>具体可参考之前的文章</p>
-<h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><p><img src="https://pic.downk.cc/item/5f0008c314195aa5946b5bb9.png" alt=""></p>
-<h1 id="程序打包"><a href="#程序打包" class="headerlink" title="程序打包"></a>程序打包</h1><ul>
-<li>利用pyinstaller转换成.exe</li>
-<li>利用HM NIS Edit 进行程序安装向导打包</li>
-</ul>
-<h2 id="打包实现"><a href="#打包实现" class="headerlink" title="打包实现"></a>打包实现</h2><p><img src="https://pic.downk.cc/item/5f0008c314195aa5946b5bb6.png" alt=""></p>
+                <h1 id="数据库的远程连接"><a href="#数据库的远程连接" class="headerlink" title="数据库的远程连接"></a>数据库的远程连接</h1><blockquote>
+<p>​    已配置好服务器及宝塔安全组(放行3306端口)且已授权本地公网ip访问数据库</p>
+</blockquote>
+<h2 id="方法一：用navicat-ssh通道连接远程数据库"><a href="#方法一：用navicat-ssh通道连接远程数据库" class="headerlink" title="方法一：用navicat ssh通道连接远程数据库"></a>方法一：用navicat ssh通道连接远程数据库</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><img src="https://pic.downk.cc/item/5f1bdc9314195aa5947afb47.jpg" alt=""></p>
+<p>这里的用户名在<code>Windows</code>服务器上默认的是<code>administrator</code> ， <code>linux</code>服务器上默认登陆用户名是<code>root</code></p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p><img src="https://pic.downk.cc/item/5f1bde3114195aa5947bc748.jpg" alt=""></p>
 <hr>
-<p>有时间再讲讲通过何种方式打包压缩的文件大小的比较</p>
+<h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><h3 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h3><p>确保你的远程数据库允许你在本地访问，也就是对这个数据库授权</p>
+<p>找到自己的公网ip，可直接在浏览器上输入ip<img src="https://pic.downk.cc/item/5f1bdf2a14195aa5947c2c88.jpg" alt=""></p>
+<ul>
+<li>可利用宝塔面板指定该ip访问该数据库</li>
+</ul>
+<blockquote>
+<p>​    <img src="https://pic.downk.cc/item/5f1be4be14195aa5947f5806.jpg" alt="">)<img src="https://pic.downk.cc/item/5f1be50914195aa5947f7943.jpg" alt=""></p>
+</blockquote>
+<ul>
+<li>可用xshell等软件远程登陆自己的数据库，为你的本地主机ip授权</li>
+</ul>
+<pre class=" language-xshell"><code class="language-xshell">grant all privileges on *.* to '用户名'@'你主机地址' identified by '你的密码'; 
+flush privileges;</code></pre>
+<blockquote>
+<p>然后远程连接登陆可在命令行通过 <code>mysql -u用户名 -p密码 -h远程服务器ip</code></p>
+<p>在服务器上本地连接可在命令行通过<code>mysql -u用户名 -p</code></p>
+<p>登陆数据库</p>
+</blockquote>
+<h3 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h3><p>直接用navicat 常规连接</p>
+<p><img src="https://pic.downk.cc/item/5f1be7b214195aa59480d2a5.jpg" alt=""></p>
+<p>同理我用python连接成功</p>
+<p><img src="https://pic.downk.cc/item/5f1be6d314195aa594805da0.jpg" alt=""></p>
 
             </div>
             <hr/>
@@ -535,7 +560,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://DXYD.github.io/DXYD.github.io/2020/07/04/wo-de-di-yi-ge-gui-cheng-xu/">https://DXYD.github.io/DXYD.github.io/2020/07/04/wo-de-di-yi-ge-gui-cheng-xu/</a>
+                    <a href="https://DXYD.github.io/DXYD.github.io/2020/07/25/lian-jie-yuan-cheng-shu-ju-ku-de-liang-chong-fang-fa/">https://DXYD.github.io/DXYD.github.io/2020/07/25/lian-jie-yuan-cheng-shu-ju-ku-de-liang-chong-fang-fa/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -573,8 +598,20 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
-                                    <span class="chip bg-color">尝试</span>
+                                <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                                    <span class="chip bg-color">笔记</span>
+                                </a>
+                            
+                                <a href="/DXYD.github.io/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
+                                <a href="/DXYD.github.io/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
+                                </a>
+                            
+                                <a href="/DXYD.github.io/tags/navicat/">
+                                    <span class="chip bg-color">navicat</span>
                                 </a>
                             
                         </div>
@@ -616,9 +653,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/DXYD.github.io/2020/07/25/lian-jie-yuan-cheng-shu-ju-ku-de-liang-chong-fang-fa/">
                     <div class="card-image">
@@ -639,9 +677,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -654,6 +692,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -684,33 +723,36 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/06/20/git-github/">
+                <a href="/DXYD.github.io/2020/07/04/wo-de-di-yi-ge-gui-cheng-xu/">
                     <div class="card-image">
                         
+                        <img src="https://pic.downk.cc/item/5f0008c314195aa5946b5bb9.png" class="responsive-img" alt="我的第一个GUI程序">
                         
-                        <img src="/DXYD.github.io/medias/featureimages/23.jpg" class="responsive-img" alt="Git&amp;github">
-                        
-                        <span class="card-title">Git&amp;github</span>
+                        <span class="card-title">我的第一个GUI程序</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            git基础git Bash: Unix与Linux风格的命令行，使用最多git CMD:Windows风格的命令行git GUI:图形界面Git
+                            GUI一直想弄一个有图形界面的软件，最近摸索了pyqt5和pyside2，最后用pyqt5设置了一个简单的图形界面，逻辑部分则采用了之前的爬虫程序。
 
-基本的Linux命令:
 
-cd 改变目录cd.. 退回上一个目录pwd 显示当前文件路径ls
+界面部分采用qt设计师进行简单的布局
+准备有登陆界面和爬虫界面，及两者的交互，时间原因
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-04
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Lrunn
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/DXYD.github.io/categories/python-GUI/" class="post-category">
+                                    python-GUI
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -718,8 +760,8 @@ cd 改变目录cd.. 退回上一个目录pwd 显示当前文件路径ls
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/git/">
-                        <span class="chip bg-color">git</span>
+                    <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
+                        <span class="chip bg-color">尝试</span>
                     </a>
                     
                 </div>
@@ -857,6 +899,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
