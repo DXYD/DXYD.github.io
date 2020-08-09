@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="连接远程数据库的两种方法, 小汤圆のblog">
+    <meta name="keywords" content="Git新发现, 小汤圆のblog">
     <meta name="description" content="peace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>连接远程数据库的两种方法 | 小汤圆のblog</title>
+    <title>Git新发现 | 小汤圆のblog</title>
     <link rel="icon" type="image/png" href="/DXYD.github.io/medias/favicon-32x32-next.png">
 
     <link rel="stylesheet" type="text/css" href="/DXYD.github.io/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.downk.cc/item/5f1bd8c014195aa59478a4dd.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">连接远程数据库的两种方法</h1>
+                    <h1 class="description center-align post-title">Git新发现</h1>
                 </div>
             </div>
         </div>
@@ -442,18 +442,6 @@
                                 <span class="chip bg-color">笔记</span>
                             </a>
                         
-                            <a href="/DXYD.github.io/tags/python/">
-                                <span class="chip bg-color">python</span>
-                            </a>
-                        
-                            <a href="/DXYD.github.io/tags/mysql/">
-                                <span class="chip bg-color">mysql</span>
-                            </a>
-                        
-                            <a href="/DXYD.github.io/tags/navicat/">
-                                <span class="chip bg-color">navicat</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -462,8 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/DXYD.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" class="post-category">
-                                数据库的远程连接
+                            <a href="/DXYD.github.io/categories/git/" class="post-category">
+                                git
                             </a>
                         
                     </div>
@@ -475,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-25
+                    2020-08-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-07-25
+                    2020-08-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    283
+                    773
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -506,35 +494,73 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数据库的远程连接"><a href="#数据库的远程连接" class="headerlink" title="数据库的远程连接"></a>数据库的远程连接</h1><blockquote>
-<p>​    已配置好服务器及宝塔安全组(放行3306端口)且已授权本地公网ip访问数据库</p>
-</blockquote>
-<h2 id="方法一：用navicat-ssh通道连接远程数据库"><a href="#方法一：用navicat-ssh通道连接远程数据库" class="headerlink" title="方法一：用navicat ssh通道连接远程数据库"></a>方法一：用navicat ssh通道连接远程数据库</h2><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p><img src="https://pic.downk.cc/item/5f1bdc9314195aa5947afb47.jpg" alt=""></p>
-<p>这里的用户名在<code>Windows</code>服务器上默认的是<code>administrator</code> ， <code>linux</code>服务器上默认登陆用户名是<code>root</code></p>
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p><img src="https://pic.downk.cc/item/5f1bde3114195aa5947bc748.jpg" alt=""></p>
+                <h1 id="gitee-amp-amp-github"><a href="#gitee-amp-amp-github" class="headerlink" title="gitee&amp;&amp;github"></a>gitee&amp;&amp;github</h1><p>关于git以及gitee/github的操作 &amp;&amp; vscode/pycharm/idea等 git操作</p>
 <hr>
-<h2 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h2><h3 id="第一步-1"><a href="#第一步-1" class="headerlink" title="第一步"></a>第一步</h3><p>确保你的远程数据库允许你在本地访问，也就是对这个数据库授权</p>
-<p>找到自己的公网ip，可直接在浏览器上输入ip<img src="https://pic.downk.cc/item/5f1bdf2a14195aa5947c2c88.jpg" alt=""></p>
+<h2 id="关联github-gitee"><a href="#关联github-gitee" class="headerlink" title="关联github||gitee"></a>关联github||gitee</h2><p>由于你的本地 Git 仓库和 Gitee/GitHub 仓库之间的传输是通过SSH加密的，所以我们需要配置验证信息：</p>
+<p>使用以下命令生成 SSH Key：</p>
+<pre class=" language-git"><code class="language-git">ssh-keygen -t rsa -C <span class="token string">"youremail@example.com"</span></code></pre>
+<p>我们只需要将用户主目录下的 ~/.ssh/id_rsa.pub 文件的内容粘贴 Gitee/Github 上。（windows在c盘用户Administrator下的.ssh中）</p>
+<p>选择右上角用户头像 -&gt; 设置，然后选择 “SSH公钥”，填写一个便于识别的标题，然后把用户主目录下的 .ssh/id_rsa.pub 文件的内容粘贴进去。</p>
+<p>我们在本地库上使用命令 git remote add 把它和 Gitee 的远程库关联：</p>
+<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:LRDXYD/git-study.git</code></pre>
+<p>之后，就可以正常地用 git push 和 git pull 推送了！</p>
+<pre class=" language-git"><code class="language-git"><span class="token command">$ git init                                  # 初始化</span>
+<span class="token command">$ git add README.md                         # 添加文件</span>
+<span class="token command">$ git commit<span class="token parameter"> -m</span> </span><span class="token string">"添加 README.md 文件"</span>        # 提交并备注
+
+<span class="token comment" spellcheck="true"># 提交到 Github/Gitee</span>
+<span class="token command">$ git remote add origin git@gitee.com:LRDXYD/git-study.git</span>
+<span class="token command">$ git push<span class="token parameter"> -u</span> origin master</span></code></pre>
 <ul>
-<li>可利用宝塔面板指定该ip访问该数据库</li>
+<li>主要在于本地与远程仓库的关联</li>
+<li>git 克隆</li>
+<li>git 拉取操作</li>
+<li>git 提交到暂存区</li>
+<li>git 推送</li>
 </ul>
-<blockquote>
-<p>​    <img src="https://pic.downk.cc/item/5f1be4be14195aa5947f5806.jpg" alt="">)<img src="https://pic.downk.cc/item/5f1be50914195aa5947f7943.jpg" alt=""></p>
-</blockquote>
-<ul>
-<li>可用xshell等软件远程登陆自己的数据库，为你的本地主机ip授权</li>
-</ul>
-<pre class=" language-xshell"><code class="language-xshell">grant all privileges on *.* to '用户名'@'你主机地址' identified by '你的密码'; 
-flush privileges;</code></pre>
-<blockquote>
-<p>然后远程连接登陆可在命令行通过 <code>mysql -u用户名 -p密码 -h远程服务器ip</code></p>
-<p>在服务器上本地连接可在命令行通过<code>mysql -u用户名 -p</code></p>
-<p>登陆数据库</p>
-</blockquote>
-<h3 id="第二步-1"><a href="#第二步-1" class="headerlink" title="第二步"></a>第二步</h3><p>直接用navicat 常规连接</p>
-<p><img src="https://pic.downk.cc/item/5f1be7b214195aa59480d2a5.jpg" alt=""></p>
-<p>同理我用python连接成功</p>
-<p><img src="https://pic.downk.cc/item/5f1be6d314195aa594805da0.jpg" alt=""></p>
+<p>如果在使用命令 git remote add 时报错：</p>
+<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:imnoob/runoob-test.git
+fatal: remote origin already exists.</code></pre>
+<p>这说明本地库已经关联了一个名叫 origin 的远程库，此时，可以先用 git remote -v 查看远程库信息：</p>
+<pre class=" language-git"><code class="language-git">git remote -v
+origin    git@github.com:xxx/xxx.git (fetch)
+origin    git@github.com:xxx/xxx.git (push)
+可以看到，本地库已经关联了 origin 的远程库，并且，该远程库指向 GitHub。</code></pre>
+<p>我们可以删除已有的 GitHub 远程库：</p>
+<pre class=" language-git"><code class="language-git">git remote rm origin</code></pre>
+<p>再关联 Gitee 的远程库（注意路径中需要填写正确的用户名）：</p>
+<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:imnoob/runoob-test.git</code></pre>
+<p>此时，我们再查看远程库信息：</p>
+<pre class=" language-git"><code class="language-git">git remote -v
+origin    git@gitee.com:xxx/xxx-test.git (fetch)
+origin    git@gitee.com:xxx/xxx-test.git (push)
+现在可以看到，origin 已经被关联到 Gitee 的远程库了</code></pre>
+<p>接着通过 git push 命令就可以把本地库推送到 Gitee 上</p>
+<hr>
+<h2 id="同时关联gitee-amp-amp-github"><a href="#同时关联gitee-amp-amp-github" class="headerlink" title="同时关联gitee&amp;&amp;github"></a>同时关联gitee&amp;&amp;github</h2><p>git 给远程库起的默认名称是 origin，如果有多个远程库，我们需要用不同的名称来标识不同的远程库。</p>
+<p>仍然以 xxx-test 本地库为例，我们先删除已关联的名为 origin 的远程库：</p>
+<pre class=" language-git"><code class="language-git">git remote rm origin</code></pre>
+<p>先关联github的远程仓库</p>
+<pre class=" language-git"><code class="language-git">git remote add github git@github.com:xxx/xxx-git-test.git
+注意，远程库的名称叫 github，不叫 origin 了。</code></pre>
+<p>接着，再关联 Gitee 的远程库：</p>
+<pre class=" language-git"><code class="language-git">git remote add gitee git@gitee.com:xxx/xxx-test.git
+同样注意，远程库的名称叫 gitee，不叫 origin。</code></pre>
+<p>现在，我们用 git remote -v 查看远程库信息，可以看到两个远程库：</p>
+<pre class=" language-git"><code class="language-git">git remote -v
+gitee    git@gitee.com:xxx/xxx-test.git (fetch)
+gitee    git@gitee.com:xxx/xxx-test.git (push)
+github    git@github.com:xxx/xxx.git (fetch)
+github    git@github.com:xxx/xxx.git (push)</code></pre>
+<p>如果要推送到 GitHub，使用命令：</p>
+<pre class=" language-git"><code class="language-git">git push github master</code></pre>
+<p>如果要推送到 Gitee，使用命令：</p>
+<pre class=" language-git"><code class="language-git">git push gitee master</code></pre>
+<h2 id="images"><a href="#images" class="headerlink" title="images"></a>images</h2><p><img src="https://pic.downk.cc/item/5f30211d14195aa594ef9b0b.jpg" alt=""></p>
+<p><img src="https://pic.downk.cc/item/5f3021b114195aa594efbc77.jpg" alt=""></p>
+<p><img src="https://pic.downk.cc/item/5f30225a14195aa594efe399.jpg" alt=""></p>
+<p><img src="https://pic.downk.cc/item/5f3022ae14195aa594eff889.jpg" alt=""></p>
+<p><img src="https://pic.downk.cc/item/5f3022e714195aa594f003de.jpg" alt=""></p>
 
             </div>
             <hr/>
@@ -560,7 +586,7 @@ flush privileges;</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://DXYD.github.io/DXYD.github.io/2020/07/25/lian-jie-yuan-cheng-shu-ju-ku-de-liang-chong-fang-fa/">https://DXYD.github.io/DXYD.github.io/2020/07/25/lian-jie-yuan-cheng-shu-ju-ku-de-liang-chong-fang-fa/</a>
+                    <a href="https://DXYD.github.io/DXYD.github.io/2020/08/10/git-xin-fa-xian/">https://DXYD.github.io/DXYD.github.io/2020/08/10/git-xin-fa-xian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -602,18 +628,6 @@ flush privileges;</code></pre>
                                     <span class="chip bg-color">笔记</span>
                                 </a>
                             
-                                <a href="/DXYD.github.io/tags/python/">
-                                    <span class="chip bg-color">python</span>
-                                </a>
-                            
-                                <a href="/DXYD.github.io/tags/mysql/">
-                                    <span class="chip bg-color">mysql</span>
-                                </a>
-                            
-                                <a href="/DXYD.github.io/tags/navicat/">
-                                    <span class="chip bg-color">navicat</span>
-                                </a>
-                            
                         </div>
                     
                 </div>
@@ -653,9 +667,10 @@ flush privileges;</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/DXYD.github.io/2020/08/10/git-xin-fa-xian/">
                     <div class="card-image">
@@ -675,9 +690,9 @@ flush privileges;</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -690,6 +705,7 @@ flush privileges;</code></pre>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -708,34 +724,34 @@ flush privileges;</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/07/04/wo-de-di-yi-ge-gui-cheng-xu/">
+                <a href="/DXYD.github.io/2020/07/25/lian-jie-yuan-cheng-shu-ju-ku-de-liang-chong-fang-fa/">
                     <div class="card-image">
                         
-                        <img src="https://pic.downk.cc/item/5f0008c314195aa5946b5bb9.png" class="responsive-img" alt="我的第一个GUI程序">
+                        <img src="https://pic.downk.cc/item/5f1bd8c014195aa59478a4dd.jpg" class="responsive-img" alt="连接远程数据库的两种方法">
                         
-                        <span class="card-title">我的第一个GUI程序</span>
+                        <span class="card-title">连接远程数据库的两种方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            GUI一直想弄一个有图形界面的软件，最近摸索了pyqt5和pyside2，最后用pyqt5设置了一个简单的图形界面，逻辑部分则采用了之前的爬虫程序。
+                            数据库的远程连接
+​    已配置好服务器及宝塔安全组(放行3306端口)且已授权本地公网ip访问数据库
 
-
-界面部分采用qt设计师进行简单的布局
-准备有登陆界面和爬虫界面，及两者的交互，时间原因
+方法一：用navicat ssh通道连接远程数据库第一步
+这里的用户名在Windows服务器上默认的是administrator ，
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-04
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/DXYD.github.io/categories/python-GUI/" class="post-category">
-                                    python-GUI
+                            <a href="/DXYD.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" class="post-category">
+                                    数据库的远程连接
                                 </a>
                             
                             
@@ -745,8 +761,20 @@ flush privileges;</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/">
-                        <span class="chip bg-color">尝试</span>
+                    <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/DXYD.github.io/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/DXYD.github.io/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                    <a href="/DXYD.github.io/tags/navicat/">
+                        <span class="chip bg-color">navicat</span>
                     </a>
                     
                 </div>
@@ -884,13 +912,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
 
 
 
