@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>微信小程序+Flask的前后端交互</title>
+      <link href="/DXYD.github.io/2020/08/18/wei-xin-xiao-cheng-xu-flask-de-qian-hou-duan-jiao-hu/"/>
+      <url>/DXYD.github.io/2020/08/18/wei-xin-xiao-cheng-xu-flask-de-qian-hou-duan-jiao-hu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="微信小程序-flask"><a href="#微信小程序-flask" class="headerlink" title="微信小程序+flask"></a>微信小程序+flask</h1><h2 id="一些小问题及个人解决方案"><a href="#一些小问题及个人解决方案" class="headerlink" title="一些小问题及个人解决方案"></a>一些小问题及个人解决方案</h2><ul><li>前台如何通过 POST 请求与我们的 Flask 后台交互</li><li>微信小程序不同页面间如何传参</li><li>关于mysql中的commit()</li><li>wx.request的坑</li><li>flask接收post/get请求的坑</li><li>元祖、字典、列表之间的相互转换</li><li>Flask设置返回json格式数据</li></ul><h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>在用python的MysqlDB包对Mysql进行insert操作时出现了问题，程序运行不报错，insert语句也没有问题，但是新的数据一直没有插入到数据库中。在查阅了资料之后，发现是未提交的原因。<br>数据库语言可分为四种，<br>数据操作语言（Date Manipulation Language）DML语言，实现对数据的基本操作，”增删改”。<br><strong>UPDATE DELETE INSERT</strong><br>数据定义语言（Data Definition Language ）DDL语言，可以实现对数据库结构、操作方法等的定义：<br><strong>create table 创建表</strong><br><strong>alter table 修改表</strong><br><strong>drop table 删除表</strong><br><strong>truncate table 删除表中所有行</strong><br><strong>create index 创建索引</strong><br><strong>drop index 删除索引**</strong><br>数据库控制语言（Data Control Language）DCL授权，角色控制<br><strong>GRANT 授权</strong><br><strong>REVOKE 取消授权</strong><br>事务控制语言（Transaction Control Language）事务控制语言<br><strong>SAVEPOINT 设置保存点</strong><br><strong>ROLLBACK 回滚</strong><br><strong>SET TRANSACTION</strong><br>在这之中，DDL语句是自带commit的，而执行DML命令如果没有提交，将不会被其他会话看到。除非在DML命令之后执行了DDL命令或DCL命令，或用户退出会话，或终止实例，此时系统会自动发出commit命令，使未提交的DML命令提交。</p><p>建议每次 对MYSQL中的表修改或插入数据后 都提交一下(commit) ！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微信小程序 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> flask </tag>
+            
+            <tag> api </tag>
+            
+            <tag> 微信小程序 </tag>
+            
+            <tag> 前后端交互 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Git新发现</title>
       <link href="/DXYD.github.io/2020/08/10/git-xin-fa-xian/"/>
       <url>/DXYD.github.io/2020/08/10/git-xin-fa-xian/</url>

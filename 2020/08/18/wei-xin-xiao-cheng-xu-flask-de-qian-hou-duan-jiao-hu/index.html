@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Git新发现, 小汤圆のblog">
+    <meta name="keywords" content="微信小程序+Flask的前后端交互, 小汤圆のblog">
     <meta name="description" content="peace">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Git新发现 | 小汤圆のblog</title>
+    <title>微信小程序+Flask的前后端交互 | 小汤圆のblog</title>
     <link rel="icon" type="image/png" href="/DXYD.github.io/medias/favicon-32x32-next.png">
 
     <link rel="stylesheet" type="text/css" href="/DXYD.github.io/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/DXYD.github.io/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://static01.imgkr.com/temp/2ef00fcdddc149b48eea7015fa8ceaeb.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Git新发现</h1>
+                    <h1 class="description center-align post-title">微信小程序+Flask的前后端交互</h1>
                 </div>
             </div>
         </div>
@@ -438,8 +438,20 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">笔记</span>
+                            <a href="/DXYD.github.io/tags/flask/">
+                                <span class="chip bg-color">flask</span>
+                            </a>
+                        
+                            <a href="/DXYD.github.io/tags/api/">
+                                <span class="chip bg-color">api</span>
+                            </a>
+                        
+                            <a href="/DXYD.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                <span class="chip bg-color">微信小程序</span>
+                            </a>
+                        
+                            <a href="/DXYD.github.io/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/">
+                                <span class="chip bg-color">前后端交互</span>
                             </a>
                         
                     </div>
@@ -450,8 +462,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/DXYD.github.io/categories/git/" class="post-category">
-                                git
+                            <a href="/DXYD.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                微信小程序
                             </a>
                         
                     </div>
@@ -463,28 +475,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-18
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-10
+                    2020-08-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    773
+                    415
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -494,73 +506,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="gitee-amp-amp-github"><a href="#gitee-amp-amp-github" class="headerlink" title="gitee&amp;&amp;github"></a>gitee&amp;&amp;github</h1><p>关于git以及gitee/github的操作 &amp;&amp; vscode/pycharm/idea等 git操作</p>
-<hr>
-<h2 id="关联github-gitee"><a href="#关联github-gitee" class="headerlink" title="关联github||gitee"></a>关联github||gitee</h2><p>由于你的本地 Git 仓库和 Gitee/GitHub 仓库之间的传输是通过SSH加密的，所以我们需要配置验证信息：</p>
-<p>使用以下命令生成 SSH Key：</p>
-<pre class=" language-git"><code class="language-git">ssh-keygen -t rsa -C <span class="token string">"youremail@example.com"</span></code></pre>
-<p>我们只需要将用户主目录下的 ~/.ssh/id_rsa.pub 文件的内容粘贴 Gitee/Github 上。（windows在c盘用户Administrator下的.ssh中）</p>
-<p>选择右上角用户头像 -&gt; 设置，然后选择 “SSH公钥”，填写一个便于识别的标题，然后把用户主目录下的 .ssh/id_rsa.pub 文件的内容粘贴进去。</p>
-<p>我们在本地库上使用命令 git remote add 把它和 Gitee 的远程库关联：</p>
-<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:LRDXYD/git-study.git</code></pre>
-<p>之后，就可以正常地用 git push 和 git pull 推送了！</p>
-<pre class=" language-git"><code class="language-git"><span class="token command">$ git init                                  # 初始化</span>
-<span class="token command">$ git add README.md                         # 添加文件</span>
-<span class="token command">$ git commit<span class="token parameter"> -m</span> </span><span class="token string">"添加 README.md 文件"</span>        # 提交并备注
-
-<span class="token comment" spellcheck="true"># 提交到 Github/Gitee</span>
-<span class="token command">$ git remote add origin git@gitee.com:LRDXYD/git-study.git</span>
-<span class="token command">$ git push<span class="token parameter"> -u</span> origin master</span></code></pre>
-<ul>
-<li>主要在于本地与远程仓库的关联</li>
-<li>git 克隆</li>
-<li>git 拉取操作</li>
-<li>git 提交到暂存区</li>
-<li>git 推送</li>
+                <h1 id="微信小程序-flask"><a href="#微信小程序-flask" class="headerlink" title="微信小程序+flask"></a>微信小程序+flask</h1><h2 id="一些小问题及个人解决方案"><a href="#一些小问题及个人解决方案" class="headerlink" title="一些小问题及个人解决方案"></a>一些小问题及个人解决方案</h2><ul>
+<li>前台如何通过 POST 请求与我们的 Flask 后台交互</li>
+<li>微信小程序不同页面间如何传参</li>
+<li>关于mysql中的commit()</li>
+<li>wx.request的坑</li>
+<li>flask接收post/get请求的坑</li>
+<li>元祖、字典、列表之间的相互转换</li>
+<li>Flask设置返回json格式数据</li>
 </ul>
-<p>如果在使用命令 git remote add 时报错：</p>
-<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:imnoob/runoob-test.git
-fatal: remote origin already exists.</code></pre>
-<p>这说明本地库已经关联了一个名叫 origin 的远程库，此时，可以先用 git remote -v 查看远程库信息：</p>
-<pre class=" language-git"><code class="language-git">git remote -v
-origin    git@github.com:xxx/xxx.git (fetch)
-origin    git@github.com:xxx/xxx.git (push)
-可以看到，本地库已经关联了 origin 的远程库，并且，该远程库指向 GitHub。</code></pre>
-<p>我们可以删除已有的 GitHub 远程库：</p>
-<pre class=" language-git"><code class="language-git">git remote rm origin</code></pre>
-<p>再关联 Gitee 的远程库（注意路径中需要填写正确的用户名）：</p>
-<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:imnoob/runoob-test.git</code></pre>
-<p>此时，我们再查看远程库信息：</p>
-<pre class=" language-git"><code class="language-git">git remote -v
-origin    git@gitee.com:xxx/xxx-test.git (fetch)
-origin    git@gitee.com:xxx/xxx-test.git (push)
-现在可以看到，origin 已经被关联到 Gitee 的远程库了</code></pre>
-<p>接着通过 git push 命令就可以把本地库推送到 Gitee 上</p>
-<hr>
-<h2 id="同时关联gitee-amp-amp-github"><a href="#同时关联gitee-amp-amp-github" class="headerlink" title="同时关联gitee&amp;&amp;github"></a>同时关联gitee&amp;&amp;github</h2><p>git 给远程库起的默认名称是 origin，如果有多个远程库，我们需要用不同的名称来标识不同的远程库。</p>
-<p>仍然以 xxx-test 本地库为例，我们先删除已关联的名为 origin 的远程库：</p>
-<pre class=" language-git"><code class="language-git">git remote rm origin</code></pre>
-<p>先关联github的远程仓库</p>
-<pre class=" language-git"><code class="language-git">git remote add github git@github.com:xxx/xxx-git-test.git
-注意，远程库的名称叫 github，不叫 origin 了。</code></pre>
-<p>接着，再关联 Gitee 的远程库：</p>
-<pre class=" language-git"><code class="language-git">git remote add gitee git@gitee.com:xxx/xxx-test.git
-同样注意，远程库的名称叫 gitee，不叫 origin。</code></pre>
-<p>现在，我们用 git remote -v 查看远程库信息，可以看到两个远程库：</p>
-<pre class=" language-git"><code class="language-git">git remote -v
-gitee    git@gitee.com:xxx/xxx-test.git (fetch)
-gitee    git@gitee.com:xxx/xxx-test.git (push)
-github    git@github.com:xxx/xxx.git (fetch)
-github    git@github.com:xxx/xxx.git (push)</code></pre>
-<p>如果要推送到 GitHub，使用命令：</p>
-<pre class=" language-git"><code class="language-git">git push github master</code></pre>
-<p>如果要推送到 Gitee，使用命令：</p>
-<pre class=" language-git"><code class="language-git">git push gitee master</code></pre>
-<h2 id="images"><a href="#images" class="headerlink" title="images"></a>images</h2><p><img src="https://pic.downk.cc/item/5f30211d14195aa594ef9b0b.jpg" alt=""></p>
-<p><img src="https://pic.downk.cc/item/5f3021b114195aa594efbc77.jpg" alt=""></p>
-<p><img src="https://pic.downk.cc/item/5f30225a14195aa594efe399.jpg" alt=""></p>
-<p><img src="https://pic.downk.cc/item/5f3022ae14195aa594eff889.jpg" alt=""></p>
-<p><img src="https://pic.downk.cc/item/5f3022e714195aa594f003de.jpg" alt=""></p>
+<h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>在用python的MysqlDB包对Mysql进行insert操作时出现了问题，程序运行不报错，insert语句也没有问题，但是新的数据一直没有插入到数据库中。在查阅了资料之后，发现是未提交的原因。<br>数据库语言可分为四种，<br>数据操作语言（Date Manipulation Language）DML语言，实现对数据的基本操作，”增删改”。<br><strong>UPDATE DELETE INSERT</strong><br>数据定义语言（Data Definition Language ）DDL语言，可以实现对数据库结构、操作方法等的定义：<br><strong>create table 创建表</strong><br><strong>alter table 修改表</strong><br><strong>drop table 删除表</strong><br><strong>truncate table 删除表中所有行</strong><br><strong>create index 创建索引</strong><br><strong>drop index 删除索引**</strong><br>数据库控制语言（Data Control Language）DCL授权，角色控制<br><strong>GRANT 授权</strong><br><strong>REVOKE 取消授权</strong><br>事务控制语言（Transaction Control Language）事务控制语言<br><strong>SAVEPOINT 设置保存点</strong><br><strong>ROLLBACK 回滚</strong><br><strong>SET TRANSACTION</strong><br>在这之中，DDL语句是自带commit的，而执行DML命令如果没有提交，将不会被其他会话看到。除非在DML命令之后执行了DDL命令或DCL命令，或用户退出会话，或终止实例，此时系统会自动发出commit命令，使未提交的DML命令提交。</p>
+<p>建议每次 对MYSQL中的表修改或插入数据后 都提交一下(commit) ！</p>
 
             </div>
             <hr/>
@@ -586,7 +542,7 @@ github    git@github.com:xxx/xxx.git (push)</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://DXYD.github.io/DXYD.github.io/2020/08/10/git-xin-fa-xian/">https://DXYD.github.io/DXYD.github.io/2020/08/10/git-xin-fa-xian/</a>
+                    <a href="https://DXYD.github.io/DXYD.github.io/2020/08/18/wei-xin-xiao-cheng-xu-flask-de-qian-hou-duan-jiao-hu/">https://DXYD.github.io/DXYD.github.io/2020/08/18/wei-xin-xiao-cheng-xu-flask-de-qian-hou-duan-jiao-hu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -624,8 +580,20 @@ github    git@github.com:xxx/xxx.git (push)</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">笔记</span>
+                                <a href="/DXYD.github.io/tags/flask/">
+                                    <span class="chip bg-color">flask</span>
+                                </a>
+                            
+                                <a href="/DXYD.github.io/tags/api/">
+                                    <span class="chip bg-color">api</span>
+                                </a>
+                            
+                                <a href="/DXYD.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                    <span class="chip bg-color">微信小程序</span>
+                                </a>
+                            
+                                <a href="/DXYD.github.io/tags/%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/">
+                                    <span class="chip bg-color">前后端交互</span>
                                 </a>
                             
                         </div>
@@ -667,9 +635,10 @@ github    git@github.com:xxx/xxx.git (push)</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/DXYD.github.io/2020/08/18/wei-xin-xiao-cheng-xu-flask-de-qian-hou-duan-jiao-hu/">
                     <div class="card-image">
@@ -692,9 +661,9 @@ flask接收post/get请求的坑
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -707,6 +676,7 @@ flask接收post/get请求的坑
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -737,34 +707,33 @@ flask接收post/get请求的坑
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/DXYD.github.io/2020/07/25/lian-jie-yuan-cheng-shu-ju-ku-de-liang-chong-fang-fa/">
+                <a href="/DXYD.github.io/2020/08/10/git-xin-fa-xian/">
                     <div class="card-image">
                         
-                        <img src="https://pic.downk.cc/item/5f1bd8c014195aa59478a4dd.jpg" class="responsive-img" alt="连接远程数据库的两种方法">
                         
-                        <span class="card-title">连接远程数据库的两种方法</span>
+                        <img src="/DXYD.github.io/medias/featureimages/19.jpg" class="responsive-img" alt="Git新发现">
+                        
+                        <span class="card-title">Git新发现</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            数据库的远程连接
-​    已配置好服务器及宝塔安全组(放行3306端口)且已授权本地公网ip访问数据库
+                            gitee&amp;&amp;github关于git以及gitee/github的操作 &amp;&amp; vscode/pycharm/idea等 git操作
 
-方法一：用navicat ssh通道连接远程数据库第一步
-这里的用户名在Windows服务器上默认的是administrator ，
+关联github||gitee由于你的本地 Git 仓库和 Gitee/G
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/DXYD.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" class="post-category">
-                                    数据库的远程连接
+                            <a href="/DXYD.github.io/categories/git/" class="post-category">
+                                    git
                                 </a>
                             
                             
@@ -776,18 +745,6 @@ flask接收post/get请求的坑
                     
                     <a href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">笔记</span>
-                    </a>
-                    
-                    <a href="/DXYD.github.io/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/DXYD.github.io/tags/mysql/">
-                        <span class="chip bg-color">mysql</span>
-                    </a>
-                    
-                    <a href="/DXYD.github.io/tags/navicat/">
-                        <span class="chip bg-color">navicat</span>
                     </a>
                     
                 </div>
@@ -925,6 +882,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 </main>
 
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
 
 
 
