@@ -23,7 +23,7 @@
   
 <link rel="stylesheet" href="/DXYD.github.io/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
   <body>
     <div class="container">
       <header class="header">
@@ -79,24 +79,24 @@
 <h2 id="3-摘录txt格式的文本段落"><a href="#3-摘录txt格式的文本段落" class="headerlink" title="3 摘录txt格式的文本段落"></a>3 摘录txt格式的文本段落</h2><ul>
 <li>在互联网上自行寻找文字素材并保存</li>
 </ul>
-<h2 id="4-代码"><a href="#4-代码" class="headerlink" title="4 代码"></a>4 代码</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> jieba
-<span class="token keyword">import</span> wordcloud
-<span class="token keyword">import</span> imageio
-mk <span class="token operator">=</span> imageio<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">"hello.png"</span><span class="token punctuation">)</span>
+<h2 id="4-代码"><a href="#4-代码" class="headerlink" title="4 代码"></a>4 代码</h2><pre><code class="python">import jieba
+import wordcloud
+import imageio
+mk = imageio.imread(&quot;hello.png&quot;)
 
-w <span class="token operator">=</span> wordcloud<span class="token punctuation">.</span>WordCloud<span class="token punctuation">(</span>
-                        scale<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>
-                        background_color<span class="token operator">=</span><span class="token string">"white"</span><span class="token punctuation">,</span>
-                        font_path<span class="token operator">=</span><span class="token string">"msyh.ttc"</span><span class="token punctuation">,</span>
-                        mask<span class="token operator">=</span>mk<span class="token punctuation">)</span>
+w = wordcloud.WordCloud(
+                        scale=10,
+                        background_color=&quot;white&quot;,
+                        font_path=&quot;msyh.ttc&quot;,
+                        mask=mk)
 
-f <span class="token operator">=</span> open<span class="token punctuation">(</span><span class="token string">"WordCloud.txt"</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
-text <span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
-_text <span class="token operator">=</span> jieba<span class="token punctuation">.</span>lcut<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
-string <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>_text<span class="token punctuation">)</span>
-f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-w<span class="token punctuation">.</span>generate<span class="token punctuation">(</span>string<span class="token punctuation">)</span>
-w<span class="token punctuation">.</span>to_file<span class="token punctuation">(</span><span class="token string">"word.png"</span><span class="token punctuation">)</span></code></pre>
+f = open(&quot;WordCloud.txt&quot;,encoding=&quot;utf-8&quot;)
+text = f.read()
+_text = jieba.lcut(text)
+string = &quot;&quot;.join(_text)
+f.close()
+w.generate(string)
+w.to_file(&quot;word.png&quot;)</code></pre>
 <h2 id="5-结果"><a href="#5-结果" class="headerlink" title="5 结果"></a>5 结果</h2><p><img src="%E5%9F%BA%E4%BA%8Epython%E7%9A%84WordCloud%E8%AF%8D%E4%BA%91%E7%9A%84%E7%AE%80%E5%8D%95%E5%B0%9D%E8%AF%95/word.png" alt="word"></p>
 <h1 id="关于党徽"><a href="#关于党徽" class="headerlink" title="关于党徽"></a>关于党徽</h1><p><a href="党旗制作和使用的若干规定.pdf">《中国共产党党旗党徽制作和使用的若干规定》附件</a></p>
 <p><a href="ab.pdf">《网络信息内容生态治理规定》附件</a></p>

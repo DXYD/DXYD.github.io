@@ -23,7 +23,7 @@
   
 <link rel="stylesheet" href="/DXYD.github.io/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
   <body>
     <div class="container">
       <header class="header">
@@ -61,20 +61,20 @@
 <p>用Google浏览器开发者工具中的network进行抓包</p>
 <ul>
 <li><p>时间戳</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> time
+<pre><code class="python">import time
 
-get now_time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">'''获取时间戳
+get now_time():
+    &#39;&#39;&#39;获取时间戳
     秒级 10位
     毫秒级 13位
     微秒级 16位
-    '''</span>
-    now_time <span class="token operator">=</span> int<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"now time:"</span><span class="token punctuation">,</span>now_time<span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>now_time<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> now_time
+    &#39;&#39;&#39;
+    now_time = int(time.time())
+    print(&quot;now time:&quot;,now_time)
+    print(now_time)
+    return now_time
 
-get now_time<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+get now_time()</code></pre>
 <ul>
 <li><p>例如现在的时间戳为：1586600279</p>
 <p>即：2020-04-11 18:17:59</p>
@@ -83,11 +83,11 @@ get now_time<span class="token punctuation">(</span><span class="token punctuati
 </li>
 <li><p>代理人</p>
 <p>headers = {‘User-Agent’: ‘ ‘}   #字典类型</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#例如</span>
+<pre><code class="python">#例如
 
-<span class="token keyword">import</span> requests
+import requests
 
-R <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span>headers<span class="token operator">=</span>headers<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true">#Response 对象</span>
+R = requests.get(url,headers=headers)     #Response 对象
 </code></pre>
 </li>
 <li><p>time_one = get_now_time</p>
@@ -95,11 +95,11 @@ R <span class="token operator">=</span> requests<span class="token punctuation">
 <li><p>准备请求参数</p>
 </li>
 <li><p>发送获取验证码图片请求</p>
-<pre class=" language-python"><code class="language-python">img_url <span class="token operator">=</span> <span class="token string">''</span> <span class="token operator">+</span> time_one
-response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>img_url<span class="token punctuation">)</span>
-img_data <span class="token operator">=</span> response<span class="token punctuation">.</span>content
-<span class="token keyword">with</span> open<span class="token punctuation">(</span><span class="token string">'xxx.jpg'</span><span class="token punctuation">,</span>mode <span class="token operator">=</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span> <span class="token comment" spellcheck="true">##写入</span>
-    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>img_data<span class="token punctuation">)</span></code></pre>
+<pre><code class="python">img_url = &#39;&#39; + time_one
+response = requests.get(img_url)
+img_data = response.content
+with open(&#39;xxx.jpg&#39;,mode = &#39;wb&#39;) as f: ##写入
+    f.write(img_data)</code></pre>
 </li>
 <li><p>对接打码平台，智能 图形识别、图片分类</p>
 </li>

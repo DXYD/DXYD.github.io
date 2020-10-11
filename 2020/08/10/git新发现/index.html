@@ -23,7 +23,7 @@
   
 <link rel="stylesheet" href="/DXYD.github.io/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
   <body>
     <div class="container">
       <header class="header">
@@ -61,19 +61,19 @@
 <hr>
 <h2 id="关联github-gitee"><a href="#关联github-gitee" class="headerlink" title="关联github||gitee"></a>关联github||gitee</h2><p>由于你的本地 Git 仓库和 Gitee/GitHub 仓库之间的传输是通过SSH加密的，所以我们需要配置验证信息：</p>
 <p>使用以下命令生成 SSH Key：</p>
-<pre class=" language-git"><code class="language-git">ssh-keygen -t rsa -C <span class="token string">"youremail@example.com"</span></code></pre>
+<pre><code class="git">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code></pre>
 <p>我们只需要将用户主目录下的 ~/.ssh/id_rsa.pub 文件的内容粘贴 Gitee/Github 上。（windows在c盘用户Administrator下的.ssh中）</p>
 <p>选择右上角用户头像 -&gt; 设置，然后选择 “SSH公钥”，填写一个便于识别的标题，然后把用户主目录下的 .ssh/id_rsa.pub 文件的内容粘贴进去。</p>
 <p>我们在本地库上使用命令 git remote add 把它和 Gitee 的远程库关联：</p>
-<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:LRDXYD/git-study.git</code></pre>
+<pre><code class="git">git remote add origin git@gitee.com:LRDXYD/git-study.git</code></pre>
 <p>之后，就可以正常地用 git push 和 git pull 推送了！</p>
-<pre class=" language-git"><code class="language-git"><span class="token command">$ git init                                  # 初始化</span>
-<span class="token command">$ git add README.md                         # 添加文件</span>
-<span class="token command">$ git commit<span class="token parameter"> -m</span> </span><span class="token string">"添加 README.md 文件"</span>        # 提交并备注
+<pre><code class="git">$ git init                                  # 初始化
+$ git add README.md                         # 添加文件
+$ git commit -m &quot;添加 README.md 文件&quot;        # 提交并备注
 
-<span class="token comment" spellcheck="true"># 提交到 Github/Gitee</span>
-<span class="token command">$ git remote add origin git@gitee.com:LRDXYD/git-study.git</span>
-<span class="token command">$ git push<span class="token parameter"> -u</span> origin master</span></code></pre>
+# 提交到 Github/Gitee
+$ git remote add origin git@gitee.com:LRDXYD/git-study.git
+$ git push -u origin master</code></pre>
 <ul>
 <li>主要在于本地与远程仓库的关联</li>
 <li>git 克隆</li>
@@ -82,19 +82,19 @@
 <li>git 推送</li>
 </ul>
 <p>如果在使用命令 git remote add 时报错：</p>
-<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:imnoob/runoob-test.git
+<pre><code class="git">git remote add origin git@gitee.com:imnoob/runoob-test.git
 fatal: remote origin already exists.</code></pre>
 <p>这说明本地库已经关联了一个名叫 origin 的远程库，此时，可以先用 git remote -v 查看远程库信息：</p>
-<pre class=" language-git"><code class="language-git">git remote -v
+<pre><code class="git">git remote -v
 origin    git@github.com:xxx/xxx.git (fetch)
 origin    git@github.com:xxx/xxx.git (push)
 可以看到，本地库已经关联了 origin 的远程库，并且，该远程库指向 GitHub。</code></pre>
 <p>我们可以删除已有的 GitHub 远程库：</p>
-<pre class=" language-git"><code class="language-git">git remote rm origin</code></pre>
+<pre><code class="git">git remote rm origin</code></pre>
 <p>再关联 Gitee 的远程库（注意路径中需要填写正确的用户名）：</p>
-<pre class=" language-git"><code class="language-git">git remote add origin git@gitee.com:imnoob/runoob-test.git</code></pre>
+<pre><code class="git">git remote add origin git@gitee.com:imnoob/runoob-test.git</code></pre>
 <p>此时，我们再查看远程库信息：</p>
-<pre class=" language-git"><code class="language-git">git remote -v
+<pre><code class="git">git remote -v
 origin    git@gitee.com:xxx/xxx-test.git (fetch)
 origin    git@gitee.com:xxx/xxx-test.git (push)
 现在可以看到，origin 已经被关联到 Gitee 的远程库了</code></pre>
@@ -102,23 +102,23 @@ origin    git@gitee.com:xxx/xxx-test.git (push)
 <hr>
 <h2 id="同时关联gitee-amp-amp-github"><a href="#同时关联gitee-amp-amp-github" class="headerlink" title="同时关联gitee&amp;&amp;github"></a>同时关联gitee&amp;&amp;github</h2><p>git 给远程库起的默认名称是 origin，如果有多个远程库，我们需要用不同的名称来标识不同的远程库。</p>
 <p>仍然以 xxx-test 本地库为例，我们先删除已关联的名为 origin 的远程库：</p>
-<pre class=" language-git"><code class="language-git">git remote rm origin</code></pre>
+<pre><code class="git">git remote rm origin</code></pre>
 <p>先关联github的远程仓库</p>
-<pre class=" language-git"><code class="language-git">git remote add github git@github.com:xxx/xxx-git-test.git
+<pre><code class="git">git remote add github git@github.com:xxx/xxx-git-test.git
 注意，远程库的名称叫 github，不叫 origin 了。</code></pre>
 <p>接着，再关联 Gitee 的远程库：</p>
-<pre class=" language-git"><code class="language-git">git remote add gitee git@gitee.com:xxx/xxx-test.git
+<pre><code class="git">git remote add gitee git@gitee.com:xxx/xxx-test.git
 同样注意，远程库的名称叫 gitee，不叫 origin。</code></pre>
 <p>现在，我们用 git remote -v 查看远程库信息，可以看到两个远程库：</p>
-<pre class=" language-git"><code class="language-git">git remote -v
+<pre><code class="git">git remote -v
 gitee    git@gitee.com:xxx/xxx-test.git (fetch)
 gitee    git@gitee.com:xxx/xxx-test.git (push)
 github    git@github.com:xxx/xxx.git (fetch)
 github    git@github.com:xxx/xxx.git (push)</code></pre>
 <p>如果要推送到 GitHub，使用命令：</p>
-<pre class=" language-git"><code class="language-git">git push github master</code></pre>
+<pre><code class="git">git push github master</code></pre>
 <p>如果要推送到 Gitee，使用命令：</p>
-<pre class=" language-git"><code class="language-git">git push gitee master</code></pre>
+<pre><code class="git">git push gitee master</code></pre>
 <h2 id="images"><a href="#images" class="headerlink" title="images"></a>images</h2><p><img src="https://pic.downk.cc/item/5f30211d14195aa594ef9b0b.jpg" alt=""></p>
 <p><img src="https://pic.downk.cc/item/5f3021b114195aa594efbc77.jpg" alt=""></p>
 <p><img src="https://pic.downk.cc/item/5f30225a14195aa594efe399.jpg" alt=""></p>

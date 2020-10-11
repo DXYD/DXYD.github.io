@@ -23,7 +23,7 @@
   
 <link rel="stylesheet" href="/DXYD.github.io/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
   <body>
     <div class="container">
       <header class="header">
@@ -60,18 +60,18 @@
     <h1 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h1><ul>
 <li><p>先模拟浏览器发送requests请求——requests.get()</p>
 <blockquote>
-<h2 id="requests发送请求"><a href="#requests发送请求" class="headerlink" title="requests发送请求"></a>requests发送请求</h2><pre class=" language-python"><code class="language-python"><span class="token number">1</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>‘https<span class="token punctuation">:</span><span class="token operator">//</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>timeline<span class="token punctuation">.</span>json’<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># GET请求</span>
+<h2 id="requests发送请求"><a href="#requests发送请求" class="headerlink" title="requests发送请求"></a>requests发送请求</h2><pre><code class="python">1 requests.get(‘https://github.com/timeline.json’)# GET请求
 
-<span class="token number">2</span>   requests<span class="token punctuation">.</span>post<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>post”<span class="token punctuation">)</span>  
-<span class="token comment" spellcheck="true"># POST请求</span>
+2   requests.post(“http://httpbin.org/post”)  
+# POST请求
 
-<span class="token number">3</span>   requests<span class="token punctuation">.</span>put<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>put”<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># PUT请求</span>
+3   requests.put(“http://httpbin.org/put”)     # PUT请求
 
-<span class="token number">4</span>  requests<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>delete”<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># DELETE请求</span>
+4  requests.delete(“http://httpbin.org/delete”) # DELETE请求
 
-<span class="token number">5</span>   requests<span class="token punctuation">.</span>head<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>get”<span class="token punctuation">)</span>     <span class="token comment" spellcheck="true"># HEAD请求</span>
+5   requests.head(“http://httpbin.org/get”)     # HEAD请求
 
-<span class="token number">6</span>   requests<span class="token punctuation">.</span>options<span class="token punctuation">(</span>“http<span class="token punctuation">:</span><span class="token operator">//</span>httpbin<span class="token punctuation">.</span>org<span class="token operator">/</span>get” <span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># OPTIONS请求</span></code></pre>
+6   requests.options(“http://httpbin.org/get” ) # OPTIONS请求</code></pre>
 </blockquote>
 </li>
 <li><p>response 收到服务器回应的网页（未解析）</p>

@@ -23,7 +23,7 @@
   
 <link rel="stylesheet" href="/DXYD.github.io/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
   <body>
     <div class="container">
       <header class="header">
@@ -75,7 +75,7 @@
 <ul>
 <li>可用xshell等软件远程登陆自己的数据库，为你的本地主机ip授权</li>
 </ul>
-<pre class=" language-xshell"><code class="language-xshell">grant all privileges on *.* to '用户名'@'你主机地址' identified by '你的密码'; 
+<pre><code class="xshell">grant all privileges on *.* to &#39;用户名&#39;@&#39;你主机地址&#39; identified by &#39;你的密码&#39;; 
 flush privileges;</code></pre>
 <blockquote>
 <p>然后远程连接登陆可在命令行通过 <code>mysql -u用户名 -p密码 -h远程服务器ip</code></p>

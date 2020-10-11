@@ -23,7 +23,7 @@
   
 <link rel="stylesheet" href="/DXYD.github.io/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="/DXYD.github.io/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.0"></head>
   <body>
     <div class="container">
       <header class="header">
@@ -69,23 +69,23 @@
 <h2 id="from-bs4-import-BeautifulSoup"><a href="#from-bs4-import-BeautifulSoup" class="headerlink" title="from bs4 import BeautifulSoup"></a>from bs4 import BeautifulSoup</h2><p>soup = BeautifilSoup(html,’lxml’)</p>
 <hr>
 <p>tag  先获取tag（标签），再获取属性</p>
-<h2 id="01-获取属性"><a href="#01-获取属性" class="headerlink" title="01 获取属性"></a>01 获取属性</h2><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#获取所有属性</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>title<span class="token punctuation">.</span>attrs<span class="token punctuation">)</span>
+<h2 id="01-获取属性"><a href="#01-获取属性" class="headerlink" title="01 获取属性"></a>01 获取属性</h2><pre><code class="python">#获取所有属性
+print(soup.title.attrs)
 
-<span class="token comment" spellcheck="true">#获取单个属性</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>div<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'class'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>div<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>a<span class="token punctuation">[</span><span class="token string">'href'</span><span class="token punctuation">]</span><span class="token punctuation">)</span></code></pre>
+#获取单个属性
+print(soup.div.get(&#39;class&#39;))
+print(soup.div[&#39;class&#39;])
+print(soup.a[&#39;href&#39;])</code></pre>
 <hr>
 <p>先取tag，再取内容</p>
-<h2 id="02-NvigableString获取内容"><a href="#02-NvigableString获取内容" class="headerlink" title="02 NvigableString获取内容"></a>02 NvigableString获取内容</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>title<span class="token punctuation">.</span>string<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>title<span class="token punctuation">.</span>text<span class="token punctuation">)</span></code></pre>
+<h2 id="02-NvigableString获取内容"><a href="#02-NvigableString获取内容" class="headerlink" title="02 NvigableString获取内容"></a>02 NvigableString获取内容</h2><pre><code class="python">print(soup.title.string)
+print(soup.title.text)</code></pre>
 <hr>
-<h2 id="03-Beautiful-soup"><a href="#03-Beautiful-soup" class="headerlink" title="03 Beautiful soup"></a>03 Beautiful soup</h2><h2 id="04-comment"><a href="#04-comment" class="headerlink" title="04 comment"></a>04 comment</h2><h2 id="搜素文档树"><a href="#搜素文档树" class="headerlink" title="搜素文档树"></a>搜素文档树</h2><h1 id="find-all"><a href="#find-all" class="headerlink" title="find_all"></a>find_all</h1><pre class=" language-python"><code class="language-python">soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'title'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#根据标签去找</span>
-soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'id = title'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#根据id去找</span>
-soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span>class_ <span class="token operator">=</span> <span class="token string">"info"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#根据class去找</span>
-soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span>attrs <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'float'</span><span class="token punctuation">:</span><span class="token string">'left'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#根据参数</span>
-soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">,</span>attrs<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'float'</span><span class="token punctuation">,</span><span class="token string">'left'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#过滤器</span></code></pre>
+<h2 id="03-Beautiful-soup"><a href="#03-Beautiful-soup" class="headerlink" title="03 Beautiful soup"></a>03 Beautiful soup</h2><h2 id="04-comment"><a href="#04-comment" class="headerlink" title="04 comment"></a>04 comment</h2><h2 id="搜素文档树"><a href="#搜素文档树" class="headerlink" title="搜素文档树"></a>搜素文档树</h2><h1 id="find-all"><a href="#find-all" class="headerlink" title="find_all"></a>find_all</h1><pre><code class="python">soup.find_all(&#39;title&#39;)  #根据标签去找
+soup.find_all(&#39;id = title&#39;)  #根据id去找
+soup.find_all(class_ = &quot;info&quot;)  #根据class去找
+soup.find_all(attrs = {&#39;float&#39;:&#39;left&#39;})   #根据参数
+soup.find_all(&quot;div&quot;,attrs={&#39;float&#39;,&#39;left&#39;})  #过滤器</code></pre>
 <h1 id="Requests的使用"><a href="#Requests的使用" class="headerlink" title="Requests的使用"></a>Requests的使用</h1><ul>
 <li>req = requests.get(“url”)</li>
 <li>req = requests.post(“url”)</li>
