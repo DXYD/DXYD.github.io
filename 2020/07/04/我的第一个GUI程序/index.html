@@ -1,5 +1,94 @@
-extends base
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>我的第一个GUI程序 - CodeMilk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content=尝试>
+  
+    <meta name="description" content="peace">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="/DXYD.github.io/favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="/DXYD.github.io/atom.xml " title="CodeMilk" type="application/atom+xml">
+  
 
-block content
-  include _partial/article
-  +article(page)
+  
+<link rel="stylesheet" href="/DXYD.github.io/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="/DXYD.github.io/" class="logo">CodeMilk</a>
+    <div class="subtitle">绝境</div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="/DXYD.github.io/" class="menu-item-link">主页</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/DXYD.github.io/archives" class="menu-item-link">归档</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="/DXYD.github.io/about" class="menu-item-link">关于</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">我的第一个GUI程序</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2020-07-04</span>
+  </div>
+  <div class="post-content">
+    <h1 id="GUI"><a href="#GUI" class="headerlink" title="GUI"></a>GUI</h1><p>一直想弄一个有图形界面的软件，最近摸索了pyqt5和pyside2，最后用pyqt5设置了一个简单的图形界面，逻辑部分则采用了之前的爬虫程序。</p>
+<a id="more"></a>
+
+<h2 id="界面部分"><a href="#界面部分" class="headerlink" title="界面部分"></a>界面部分</h2><p>采用qt设计师进行简单的布局</p>
+<p>准备有登陆界面和爬虫界面，及两者的交互，时间原因随便弄了弄。</p>
+<h2 id="逻辑部分"><a href="#逻辑部分" class="headerlink" title="逻辑部分"></a>逻辑部分</h2><p>仿照之前的豆瓣标签爬虫爬取豆瓣的标题的简单实例</p>
+<p>并通过qt的文本标记框和游标插入for循环遍历显示在界面上。</p>
+<p>具体可参考之前的文章</p>
+<h2 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h2><p><img src="https://pic.downk.cc/item/5f0008c314195aa5946b5bb9.png" alt=""></p>
+<h1 id="程序打包"><a href="#程序打包" class="headerlink" title="程序打包"></a>程序打包</h1><ul>
+<li>利用pyinstaller转换成.exe</li>
+<li>利用HM NIS Edit 进行程序安装向导打包</li>
+</ul>
+<h2 id="打包实现"><a href="#打包实现" class="headerlink" title="打包实现"></a>打包实现</h2><p><img src="https://pic.downk.cc/item/5f0008c314195aa5946b5bb6.png" alt=""></p>
+<hr>
+<p>有时间再讲讲通过何种方式打包压缩的文件大小的比较</p>
+
+  </div>
+  <div class="post-footer">
+    
+      <ul class="post-tag-list" itemprop="keywords"><li class="post-tag-list-item"><a class="post-tag-list-link" href="/DXYD.github.io/tags/%E5%B0%9D%E8%AF%95/" rel="tag">尝试</a></li></ul>
+    
+
+    <a href="#top" class="top">返回顶部</a>
+  </div>
+</article>
+<footer>
+  &copy; 2020
+  <span class="author">
+    Lrunn
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
