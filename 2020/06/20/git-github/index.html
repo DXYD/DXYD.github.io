@@ -1,83 +1,158 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-
-<!-- Head tag -->
+<html lang=zh>
 <head>
+    <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--Description-->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="git基础git Bash: Unix与Linux风格的命令行，使用最多git CMD:Windows风格的命令行git GUI:图形界面Git  基本的Linux命令:  cd 改变目录cd.. 退回上一个目录pwd 显示当前文件路径ls 列出当前目录内容touch 新建一个文件 例如 touch index.js 就会在当前目录下新建一个index.js 文件rm 删除一个文件，rm inde">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git&amp;github">
+<meta property="og:url" content="https://dxyd.github.io/2020/06/20/git-github/index.html">
+<meta property="og:site_name" content="CodeMilk">
+<meta property="og:description" content="git基础git Bash: Unix与Linux风格的命令行，使用最多git CMD:Windows风格的命令行git GUI:图形界面Git  基本的Linux命令:  cd 改变目录cd.. 退回上一个目录pwd 显示当前文件路径ls 列出当前目录内容touch 新建一个文件 例如 touch index.js 就会在当前目录下新建一个index.js 文件rm 删除一个文件，rm inde">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-20T06:37:02.000Z">
+<meta property="article:modified_time" content="2020-07-04T04:11:15.264Z">
+<meta property="article:author" content="Lrunn">
+<meta property="article:tag" content="git">
+<meta name="twitter:card" content="summary">
     
-        <meta name="description" content="peace">
     
-
-    <!--Author-->
+        
+          
+              <link rel="shortcut icon" href="/DXYD.github.io/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/DXYD.github.io/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/DXYD.github.io/images/apple-touch-icon.png">
+          
+        
     
-        <meta name="author" content="Lrunn">
-    
-
-    <!-- Title -->
-    
-    <title>Git&amp;github | CodeMilk</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
+    <!-- title -->
+    <title>Git&amp;github</title>
+    <!-- styles -->
     
 <link rel="stylesheet" href="/DXYD.github.io/css/style.css">
 
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/DXYD.github.io/css/rtl.css">
 
-    <!-- Custom Fonts -->
-    <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Noto+Serif:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- jQuery -->
-    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    
+    <!-- rss -->
+    
+    
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/DXYD.github.io/">首页</a></li>
+         
+          <li><a href="/DXYD.github.io/about/">关于</a></li>
+         
+          <li><a href="/DXYD.github.io/archives/">归档</a></li>
+         
+          <li><a href="/DXYD.github.io/projects_url">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/DXYD.github.io/2020/07/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AAGUI%E7%A8%8B%E5%BA%8F/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/DXYD.github.io/2020/04/21/%E5%85%B3%E4%BA%8E%E6%96%B0%E5%AA%92%E4%BD%93%E8%BF%90%E8%90%A5%E7%9A%84%E4%B8%80%E4%BA%9B%E4%B8%9C%E8%A5%BF/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://dxyd.github.io/2020/06/20/git-github/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://dxyd.github.io/2020/06/20/git-github/&text=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dxyd.github.io/2020/06/20/git-github/&is_video=false&description=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git&amp;github&body=Check out this article: https://dxyd.github.io/2020/06/20/git-github/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://dxyd.github.io/2020/06/20/git-github/&name=Git&amp;github&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://dxyd.github.io/2020/06/20/git-github/&t=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-    <!-- Content -->
-    <section class="article-container">
-    <!-- Back Home -->
-    <a class="nav-back" href="/DXYD.github.io/">
-    <i class="fa fa-puzzle-piece"></i>
-</a>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git"><span class="toc-number">1.</span> <span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础"><span class="toc-number">1.1.</span> <span class="toc-text">基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本理论"><span class="toc-number">1.2.</span> <span class="toc-text">基本理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目搭建"><span class="toc-number">1.3.</span> <span class="toc-text">项目搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git文件操作p"><span class="toc-number">1.4.</span> <span class="toc-text">git文件操作p</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh-公钥"><span class="toc-number">1.5.</span> <span class="toc-text">ssh 公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-分支"><span class="toc-number">1.6.</span> <span class="toc-text">git 分支</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-大全"><span class="toc-number">2.</span> <span class="toc-text">Git 大全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Git-GUI-客户端"><span class="toc-number">2.1.</span> <span class="toc-text">一、Git GUI 客户端</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Git-IDE-插件"><span class="toc-number">3.1.</span> <span class="toc-text">二、Git IDE 插件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-1"><span class="toc-number">4.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三、Git-浏览器插件"><span class="toc-number">4.1.</span> <span class="toc-text">三、Git 浏览器插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-2"><span class="toc-number">4.2.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-3"><span class="toc-number">5.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#四、在线-Git-代码托管平台"><span class="toc-number">5.1.</span> <span class="toc-text">四、在线 Git 代码托管平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-4"><span class="toc-number">5.2.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-5"><span class="toc-number">6.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#五、搭建-Git-服务"><span class="toc-number">6.1.</span> <span class="toc-text">五、搭建 Git 服务</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-6"><span class="toc-number">7.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#六、Git-教程"><span class="toc-number">7.1.</span> <span class="toc-text">六、Git 教程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-7"><span class="toc-number">7.2.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-8"><span class="toc-number">8.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#七、Git-常用命令"><span class="toc-number">8.1.</span> <span class="toc-text">七、Git 常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-9"><span class="toc-number">8.2.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#仓库"><span class="toc-number">8.2.1.</span> <span class="toc-text">仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-10"><span class="toc-number">8.3.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-11"><span class="toc-number">8.4.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">8.4.1.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-12"><span class="toc-number">8.5.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-13"><span class="toc-number">8.6.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#增加-删除文件"><span class="toc-number">8.6.1.</span> <span class="toc-text">增加&#x2F;删除文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-14"><span class="toc-number">8.7.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-15"><span class="toc-number">8.8.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码提交"><span class="toc-number">8.8.1.</span> <span class="toc-text">代码提交</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-16"><span class="toc-number">8.9.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-17"><span class="toc-number">8.10.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分支"><span class="toc-number">8.10.1.</span> <span class="toc-text">分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-18"><span class="toc-number">8.11.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-19"><span class="toc-number">8.12.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标签"><span class="toc-number">8.12.1.</span> <span class="toc-text">标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-20"><span class="toc-number">8.13.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-21"><span class="toc-number">8.14.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看信息"><span class="toc-number">8.14.1.</span> <span class="toc-text">查看信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-22"><span class="toc-number">8.15.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程同步"><span class="toc-number">8.15.1.</span> <span class="toc-text">远程同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-23"><span class="toc-number">8.16.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-24"><span class="toc-number">8.17.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#撤销"><span class="toc-number">8.17.1.</span> <span class="toc-text">撤销</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-25"><span class="toc-number">8.18.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-number">8.18.1.</span> <span class="toc-text">其他</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git命令学习"><span class="toc-number">9.</span> <span class="toc-text">git命令学习</span></a></li></ol>
+    </div>
+  </span>
+</div>
 
-        <!-- Page Header -->
-        <header class="intro-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <div class="post-heading">
-                            <h1>
-                                Git&github
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Git&amp;github
+    </h1>
 
-        <!-- Post Content -->
-        <article>
-            <div class="container">
-                <div class="row">
-                    <!-- Post Main Content -->
-                    <div class="post-content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>git Bash: Unix与Linux风格的命令行，使用最多<br>git CMD:Windows风格的命令行<br>git GUI:图形界面Git</p>
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">CodeMilk</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-06-20T06:37:02.000Z" itemprop="datePublished">2020-06-20</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/DXYD.github.io/tags/git/" rel="tag">git</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>git Bash: Unix与Linux风格的命令行，使用最多<br>git CMD:Windows风格的命令行<br>git GUI:图形界面Git</p>
 <hr>
 <p>基本的Linux命令:</p>
 <blockquote>
@@ -407,78 +482,138 @@ $ git stash pop</code></pre><p>##</p>
 <pre><code># 生成一个可供发布的压缩包
 $ git archive</code></pre><hr>
 <h1 id="git命令学习"><a href="#git命令学习" class="headerlink" title="git命令学习"></a><a href="https://oschina.gitee.io/learn-git-branching/" target="_blank" rel="noopener">git命令学习</a></h1>
-
-                            <!-- Meta -->
-                            <div class="post-meta">
-                                <hr>
-                                <br>
-                                <div class="post-tags">
-                                    
-                                        
-
-<a href="/DXYD.github.io/tags/git/">#git</a>
+  </div>
+</article>
 
 
-                                            
-                                </div>
-                                <div class="post-date">
-                                    2020-06-20
-                                </div>
-                            </div>
-                    </div>
 
-                    <!-- Comments -->
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <!-- Disqus Comments -->
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
 
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/DXYD.github.io/">首页</a></li>
+         
+          <li><a href="/DXYD.github.io/about/">关于</a></li>
+         
+          <li><a href="/DXYD.github.io/archives/">归档</a></li>
+         
+          <li><a href="/DXYD.github.io/projects_url">项目</a></li>
+        
+      </ul>
+    </div>
 
-                    </div>
-                </div>
-            </div>
-        </article>
-</section>
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git"><span class="toc-number">1.</span> <span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础"><span class="toc-number">1.1.</span> <span class="toc-text">基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#基本理论"><span class="toc-number">1.2.</span> <span class="toc-text">基本理论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目搭建"><span class="toc-number">1.3.</span> <span class="toc-text">项目搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git文件操作p"><span class="toc-number">1.4.</span> <span class="toc-text">git文件操作p</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ssh-公钥"><span class="toc-number">1.5.</span> <span class="toc-text">ssh 公钥</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-分支"><span class="toc-number">1.6.</span> <span class="toc-text">git 分支</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git-大全"><span class="toc-number">2.</span> <span class="toc-text">Git 大全</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Git-GUI-客户端"><span class="toc-number">2.1.</span> <span class="toc-text">一、Git GUI 客户端</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#"><span class="toc-number">3.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#二、Git-IDE-插件"><span class="toc-number">3.1.</span> <span class="toc-text">二、Git IDE 插件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-1"><span class="toc-number">4.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三、Git-浏览器插件"><span class="toc-number">4.1.</span> <span class="toc-text">三、Git 浏览器插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-2"><span class="toc-number">4.2.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-3"><span class="toc-number">5.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#四、在线-Git-代码托管平台"><span class="toc-number">5.1.</span> <span class="toc-text">四、在线 Git 代码托管平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-4"><span class="toc-number">5.2.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-5"><span class="toc-number">6.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#五、搭建-Git-服务"><span class="toc-number">6.1.</span> <span class="toc-text">五、搭建 Git 服务</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-6"><span class="toc-number">7.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#六、Git-教程"><span class="toc-number">7.1.</span> <span class="toc-text">六、Git 教程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-7"><span class="toc-number">7.2.</span> <span class="toc-text"></span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#-8"><span class="toc-number">8.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#七、Git-常用命令"><span class="toc-number">8.1.</span> <span class="toc-text">七、Git 常用命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-9"><span class="toc-number">8.2.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#仓库"><span class="toc-number">8.2.1.</span> <span class="toc-text">仓库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-10"><span class="toc-number">8.3.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-11"><span class="toc-number">8.4.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-number">8.4.1.</span> <span class="toc-text">配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-12"><span class="toc-number">8.5.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-13"><span class="toc-number">8.6.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#增加-删除文件"><span class="toc-number">8.6.1.</span> <span class="toc-text">增加&#x2F;删除文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-14"><span class="toc-number">8.7.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-15"><span class="toc-number">8.8.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码提交"><span class="toc-number">8.8.1.</span> <span class="toc-text">代码提交</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-16"><span class="toc-number">8.9.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-17"><span class="toc-number">8.10.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#分支"><span class="toc-number">8.10.1.</span> <span class="toc-text">分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-18"><span class="toc-number">8.11.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-19"><span class="toc-number">8.12.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标签"><span class="toc-number">8.12.1.</span> <span class="toc-text">标签</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-20"><span class="toc-number">8.13.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-21"><span class="toc-number">8.14.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看信息"><span class="toc-number">8.14.1.</span> <span class="toc-text">查看信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-22"><span class="toc-number">8.15.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#远程同步"><span class="toc-number">8.15.1.</span> <span class="toc-text">远程同步</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-23"><span class="toc-number">8.16.</span> <span class="toc-text"></span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-24"><span class="toc-number">8.17.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#撤销"><span class="toc-number">8.17.1.</span> <span class="toc-text">撤销</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-25"><span class="toc-number">8.18.</span> <span class="toc-text"></span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#其他"><span class="toc-number">8.18.1.</span> <span class="toc-text">其他</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git命令学习"><span class="toc-number">9.</span> <span class="toc-text">git命令学习</span></a></li></ol>
+    </div>
 
-<!-- Image viewer-->
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://dxyd.github.io/2020/06/20/git-github/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://dxyd.github.io/2020/06/20/git-github/&text=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dxyd.github.io/2020/06/20/git-github/&is_video=false&description=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git&amp;github&body=Check out this article: https://dxyd.github.io/2020/06/20/git-github/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://dxyd.github.io/2020/06/20/git-github/&title=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://dxyd.github.io/2020/06/20/git-github/&name=Git&amp;github&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://dxyd.github.io/2020/06/20/git-github/&t=Git&amp;github" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
-    <!-- Custom picture view-->
-    <link href="/DXYD.github.io/css/viewer.min.css" rel="stylesheet" />
-    <script
-      src="/DXYD.github.io/js/viewer.min.js"
-      type="text/javascript"
-      charset="utf-8"
-    ></script>
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
     
-    <script type="text/javascript">
-      // set image viewer
-      Viewer.setDefaults({
-        zoomRatio: [0.5],
-        navbar: false,
-        toolbar: false,
-        button: false,
-        title: [2, (image, imageData) => `${image.alt}`],
-        show: function() {
-          this.viewer.zoomTo(0.5);
-        }
-      });
-      var imageList = document.getElementsByTagName("img");
-      Array.prototype.forEach.call(imageList, element => {
-        var viewer = new Viewer(element);
-      });
-    </script>
-
     
-    <!-- Scripts -->
-    <script type="text/javascript">
-    console.log("© zchen9 🙋 2015-" + new Date().getFullYear());
-</script>
+    2016-2020
+    Lrunn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/DXYD.github.io/">首页</a></li>
+         
+          <li><a href="/DXYD.github.io/about/">关于</a></li>
+         
+          <li><a href="/DXYD.github.io/archives/">归档</a></li>
+         
+          <li><a href="/DXYD.github.io/projects_url">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/DXYD.github.io/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/DXYD.github.io/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/DXYD.github.io/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/DXYD.github.io/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
   
-    <!-- Google Analytics -->
-    
+<script src="/DXYD.github.io/lib/clipboard/clipboard.min.js"></script>
 
-    <!-- Service Worker -->
-    <!-- if using service worker -->
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
 
-    
+
+<script src="/DXYD.github.io/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
 </body>
-
 </html>

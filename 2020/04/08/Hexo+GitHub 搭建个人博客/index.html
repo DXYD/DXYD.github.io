@@ -1,83 +1,173 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-
-<!-- Head tag -->
+<html lang=zh>
 <head>
+    <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!--Description-->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="准备[^0]: 这里只在Windows10 64 位下演示 01安装Node.js 打开官方网站安装所需版本的node.js  02安装Git 打开官方网站安装所需版本的git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+GitHub 搭建个人博客">
+<meta property="og:url" content="https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="CodeMilk">
+<meta property="og:description" content="准备[^0]: 这里只在Windows10 64 位下演示 01安装Node.js 打开官方网站安装所需版本的node.js  02安装Git 打开官方网站安装所需版本的git">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/DXYD/pic/master/img/YKO3%247%5DRM%5D6O%7D%5BOFBK1%7EIMO.png">
+<meta property="article:published_time" content="2020-04-08T07:09:55.000Z">
+<meta property="article:modified_time" content="2020-04-08T10:46:02.583Z">
+<meta property="article:author" content="Lrunn">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="建站">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/DXYD/pic/master/img/YKO3%247%5DRM%5D6O%7D%5BOFBK1%7EIMO.png">
     
-        <meta name="description" content="peace">
     
-
-    <!--Author-->
+        
+          
+              <link rel="shortcut icon" href="/DXYD.github.io/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/DXYD.github.io/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/DXYD.github.io/images/apple-touch-icon.png">
+          
+        
     
-        <meta name="author" content="Lrunn">
-    
-
-    <!-- Title -->
-    
-    <title>Hexo+GitHub 搭建个人博客 | CodeMilk</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
+    <!-- title -->
+    <title>Hexo+GitHub 搭建个人博客</title>
+    <!-- styles -->
     
 <link rel="stylesheet" href="/DXYD.github.io/css/style.css">
 
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/DXYD.github.io/css/rtl.css">
 
-    <!-- Custom Fonts -->
-    <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Noto+Serif:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- jQuery -->
-    <script src="//cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="//cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    
+    <!-- rss -->
+    
+    
 <meta name="generator" content="Hexo 4.2.0"></head>
 
-<body>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/DXYD.github.io/">首页</a></li>
+         
+          <li><a href="/DXYD.github.io/about/">关于</a></li>
+         
+          <li><a href="/DXYD.github.io/archives/">归档</a></li>
+         
+          <li><a href="/DXYD.github.io/projects_url">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/DXYD.github.io/2020/04/09/%E6%88%91%E5%A4%AA%E9%9A%BE%E4%BA%86/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/DXYD.github.io/2020/04/06/My-Gallery/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&is_video=false&description=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hexo+GitHub 搭建个人博客&body=Check out this article: https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&name=Hexo+GitHub 搭建个人博客&description=&lt;h1 id=&#34;准备&#34;&gt;&lt;a href=&#34;#准备&#34; class=&#34;headerlink&#34; title=&#34;准备&#34;&gt;&lt;/a&gt;准备&lt;/h1&gt;&lt;p&gt;[^0]: 这里只在Windows10 64 位下演示&lt;/p&gt;
+&lt;h2 id=&#34;01安装Node-js&#34;&gt;&lt;a href=&#34;#01安装Node-js&#34; class=&#34;headerlink&#34; title=&#34;01安装Node.js&#34;&gt;&lt;/a&gt;01安装Node.js&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;打开官方网站安装所需版本的node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;02安装Git&#34;&gt;&lt;a href=&#34;#02安装Git&#34; class=&#34;headerlink&#34; title=&#34;02安装Git&#34;&gt;&lt;/a&gt;02安装Git&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;打开官方网站安装所需版本的git&lt;/li&gt;
+&lt;/ul&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&t=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-    <!-- Content -->
-    <section class="article-container">
-    <!-- Back Home -->
-    <a class="nav-back" href="/DXYD.github.io/">
-    <i class="fa fa-puzzle-piece"></i>
-</a>
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#准备"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01安装Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">01安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02安装Git"><span class="toc-number">1.2.</span> <span class="toc-text">02安装Git</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用git安装hexo"><span class="toc-number">2.</span> <span class="toc-text">用git安装hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署到云端"><span class="toc-number">3.</span> <span class="toc-text">部署到云端</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01在github上新建仓库"><span class="toc-number">3.1.</span> <span class="toc-text">01在github上新建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02将github-page与hexo联系起来"><span class="toc-number">3.2.</span> <span class="toc-text">02将github page与hexo联系起来</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-d"><span class="toc-number">4.</span> <span class="toc-text">hexo d</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
+    </div>
+  </span>
+</div>
 
-        <!-- Page Header -->
-        <header class="intro-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <div class="post-heading">
-                            <h1>
-                                Hexo+GitHub 搭建个人博客
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Hexo+GitHub 搭建个人博客
+    </h1>
 
-        <!-- Post Content -->
-        <article>
-            <div class="container">
-                <div class="row">
-                    <!-- Post Main Content -->
-                    <div class="post-content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>[^0]: 这里只在Windows10 64 位下演示</p>
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">CodeMilk</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-04-08T07:09:55.000Z" itemprop="datePublished">2020-04-08</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/DXYD.github.io/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/DXYD.github.io/tags/hexo/" rel="tag">hexo</a>, <a class="tag-link" href="/DXYD.github.io/tags/%E5%BB%BA%E7%AB%99/" rel="tag">建站</a>, <a class="tag-link" href="/DXYD.github.io/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><p>[^0]: 这里只在Windows10 64 位下演示</p>
 <h2 id="01安装Node-js"><a href="#01安装Node-js" class="headerlink" title="01安装Node.js"></a>01安装Node.js</h2><ul>
 <li>打开官方网站安装所需版本的node.js</li>
 </ul>
@@ -159,78 +249,144 @@ hexo d</code></pre>
 <p>此时你就可通过 xxx.github.io 对你的博客进行访问了</p>
 <h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>ssh：因为GitHub要求每次推送代码都是合法用户，所以每次推送都需要输入账号密码验证推送用户是否是合法用户，为了省去每次输入密码的步骤，采用了ssh，当然你也可以再每次推送时输入一遍账号和密码而跳过ssh这一步</p>
 
-
-                            <!-- Meta -->
-                            <div class="post-meta">
-                                <hr>
-                                <br>
-                                <div class="post-tags">
-                                    
-                                        
-
-<a href="/DXYD.github.io/tags/笔记/">#笔记</a> <a href="/DXYD.github.io/tags/hexo/">#hexo</a> <a href="/DXYD.github.io/tags/建站/">#建站</a>
+  </div>
+</article>
 
 
-                                            
-                                </div>
-                                <div class="post-date">
-                                    2020-04-08
-                                </div>
-                            </div>
-                    </div>
 
-                    <!-- Comments -->
-                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <!-- Disqus Comments -->
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
 
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/DXYD.github.io/">首页</a></li>
+         
+          <li><a href="/DXYD.github.io/about/">关于</a></li>
+         
+          <li><a href="/DXYD.github.io/archives/">归档</a></li>
+         
+          <li><a href="/DXYD.github.io/projects_url">项目</a></li>
+        
+      </ul>
+    </div>
 
-                    </div>
-                </div>
-            </div>
-        </article>
-</section>
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#准备"><span class="toc-number">1.</span> <span class="toc-text">准备</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01安装Node-js"><span class="toc-number">1.1.</span> <span class="toc-text">01安装Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02安装Git"><span class="toc-number">1.2.</span> <span class="toc-text">02安装Git</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用git安装hexo"><span class="toc-number">2.</span> <span class="toc-text">用git安装hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署到云端"><span class="toc-number">3.</span> <span class="toc-text">部署到云端</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#01在github上新建仓库"><span class="toc-number">3.1.</span> <span class="toc-text">01在github上新建仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#02将github-page与hexo联系起来"><span class="toc-number">3.2.</span> <span class="toc-text">02将github page与hexo联系起来</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo-d"><span class="toc-number">4.</span> <span class="toc-text">hexo d</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后"><span class="toc-number">5.</span> <span class="toc-text">最后</span></a></li></ol>
+    </div>
 
-<!-- Image viewer-->
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&text=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&is_video=false&description=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hexo+GitHub 搭建个人博客&body=Check out this article: https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&title=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&name=Hexo+GitHub 搭建个人博客&description=&lt;h1 id=&#34;准备&#34;&gt;&lt;a href=&#34;#准备&#34; class=&#34;headerlink&#34; title=&#34;准备&#34;&gt;&lt;/a&gt;准备&lt;/h1&gt;&lt;p&gt;[^0]: 这里只在Windows10 64 位下演示&lt;/p&gt;
+&lt;h2 id=&#34;01安装Node-js&#34;&gt;&lt;a href=&#34;#01安装Node-js&#34; class=&#34;headerlink&#34; title=&#34;01安装Node.js&#34;&gt;&lt;/a&gt;01安装Node.js&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;打开官方网站安装所需版本的node.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;02安装Git&#34;&gt;&lt;a href=&#34;#02安装Git&#34; class=&#34;headerlink&#34; title=&#34;02安装Git&#34;&gt;&lt;/a&gt;02安装Git&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;打开官方网站安装所需版本的git&lt;/li&gt;
+&lt;/ul&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://dxyd.github.io/2020/04/08/Hexo+GitHub%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/&t=Hexo+GitHub 搭建个人博客" target="_blank" rel="noopener"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
-    <!-- Custom picture view-->
-    <link href="/DXYD.github.io/css/viewer.min.css" rel="stylesheet" />
-    <script
-      src="/DXYD.github.io/js/viewer.min.js"
-      type="text/javascript"
-      charset="utf-8"
-    ></script>
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
     
-    <script type="text/javascript">
-      // set image viewer
-      Viewer.setDefaults({
-        zoomRatio: [0.5],
-        navbar: false,
-        toolbar: false,
-        button: false,
-        title: [2, (image, imageData) => `${image.alt}`],
-        show: function() {
-          this.viewer.zoomTo(0.5);
-        }
-      });
-      var imageList = document.getElementsByTagName("img");
-      Array.prototype.forEach.call(imageList, element => {
-        var viewer = new Viewer(element);
-      });
-    </script>
-
     
-    <!-- Scripts -->
-    <script type="text/javascript">
-    console.log("© zchen9 🙋 2015-" + new Date().getFullYear());
-</script>
+    2016-2020
+    Lrunn
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/DXYD.github.io/">首页</a></li>
+         
+          <li><a href="/DXYD.github.io/about/">关于</a></li>
+         
+          <li><a href="/DXYD.github.io/archives/">归档</a></li>
+         
+          <li><a href="/DXYD.github.io/projects_url">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/DXYD.github.io/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/DXYD.github.io/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/DXYD.github.io/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/DXYD.github.io/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
   
-    <!-- Google Analytics -->
-    
+<script src="/DXYD.github.io/lib/clipboard/clipboard.min.js"></script>
 
-    <!-- Service Worker -->
-    <!-- if using service worker -->
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功!");
+      e.clearSelection();
+    })
+  })
+  </script>
 
-    
+
+<script src="/DXYD.github.io/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
 </body>
-
 </html>
