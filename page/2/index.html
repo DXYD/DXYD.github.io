@@ -1,52 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  
-  <title>小汤圆のblog - 绝境</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  
-  <meta name="keywords" content=生活,博客,前端,游戏>
-  
-    <meta name="description" content="peace">
-  
-  
-    <link rel="shortcut icon" type="image/x-icon" href="/DXYD.github.io/favicon.ico?v=1.02">
-  
-  
-    <link rel="alternate" href="/DXYD.github.io/atom.xml " title="小汤圆のblog" type="application/atom+xml">
-  
+extends base
 
-  
-<link rel="stylesheet" href="/DXYD.github.io/css/style.css">
-
-<meta name="generator" content="Hexo 4.2.0"></head>
-  <body>
-    <div class="container">
-      <div class="home">
-  <div class="info">
-    <a href="/" class="logo">小汤圆のblog</a>
-    <div class="subtitle">绝境</div>
-    <div class="sns">
-      
-          <a href="/DXYD.github.io/archives">Blog</a>
-      
-          <a href="https://github.com/chunqiuyiyu" target="_blank" rel="noopener">GitHub</a>
-      
-          <a href="https://www.v2ex.com/member/chunqiuyiyu" target="_blank" rel="noopener">V2EX</a>
-      
-    </div>
-    <footer>
-  &copy; 2020
-  <span class="author">
-    Lrunn
-  </span>
-</footer>
-  </div>
-</div>
-    </div>
-  </body>
-</html>
+block content
+  ul.abstract-list
+    include _partial/list
+    +list(page)
+  nav.pagination
+    if page.prev
+      a#left-navigator(href=url_for(page.prev_link))
+        = __('newer')
+    if page.next
+      a#right-navigator(href=url_for(page.next_link))
+        = __('older')
