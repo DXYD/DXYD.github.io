@@ -1,0 +1,21 @@
+{
+  "name": "dxyd.gitlab.io",
+  "version": "1.0.0",
+  "description": "dxyd site",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "author": "dxyd",
+  "license": "ISC",
+  "devDependencies": {
+    "@vuepress/bundler-vite": "^2.0.0-rc.23",
+    "@vuepress/plugin-docsearch": "^2.0.0-rc.108",
+    "@vuepress/plugin-search": "^2.0.0-rc.108",
+    "@vuepress/theme-default": "^2.0.0-rc.108",
+    "sass-embedded": "^1.89.2",
+    "vuepress": "^2.0.0-rc.23"
+  },
+  "repository": "git@gitlab.com:DXYD/dxyd.gitlab.io.git"
+}
